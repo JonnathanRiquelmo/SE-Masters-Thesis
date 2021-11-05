@@ -1,0 +1,64 @@
+% \begin{tikzpicture}
+%   \begin{axis}
+%     [
+    % boxplot/draw direction=y,
+    % xtick={1, 2},
+    % ylabel={\footnotesize Time (minutes)},
+    % xticklabels={{\footnotesize Graphical Treatment}, {\footnotesize Textual Treatment}},
+    % height= 5cm
+%     ]
+%     \addplot+[fill=olive, fill opacity=0.7, draw=black,
+%     boxplot prepared={
+%       median=25.00,
+%       upper quartile=28.00,
+%       lower quartile=21.00,
+%       upper whisker=60.00,
+%       lower whisker=12.00
+%     },
+%     ] coordinates {};
+%     \addplot+[fill=teal, fill opacity=0.7, draw=black,
+%     boxplot prepared={
+%       median=33.00,
+%       upper quartile=43.00,
+%       lower quartile=27.00,
+%       upper whisker=60.00,
+%       lower whisker=15.00
+%     },
+%     ] coordinates {};
+%   \end{axis}
+% \end{tikzpicture}
+
+\begin{filecontents*}{data.csv}
+11,12,14,15,17,17,19,19,20,21,30,30,32,32,32,33,35,35,35,37,39,42,43,45,45,46,48,50,51,51,51,60,60
+17,20,21,21,23,23,24,26,26,26,27,27,30,31,31,34,36,38,38,38,39,40,40,40,40,44,46,47,48,49,50,52,60
+\end{filecontents*}
+
+\begin{tikzpicture}
+    \pgfplotstableread[col sep=comma]{data.csv}\csvdata
+    % Boxplot groups columns, but we want rows
+    \pgfplotstabletranspose\datatransposed{\csvdata} 
+    \begin{axis}[
+        boxplot/draw direction=y,
+        xtick={1, 2},
+        ylabel={\scriptsize Time (minutes)},
+        xticklabels={{\scriptsize Graphical Treatment}, {\scriptsize Textual Treatment}},
+        height=7cm,
+        width=10cm,
+        % boxplot/draw direction = y,
+        % axis x line* = bottom,
+        % axis y line = left,
+        % enlarge y limits,
+        ymajorgrids,
+        % xtick = {1, 2},
+        % xticklabel style = {align=center, font=\small},
+        % xticklabels = {Graphical Treatment, Textual Treatment},
+        % ylabel = {Time (minutes)},
+        ytick = {15, 30, 45, 60},
+        yticklabel style = {font=\scriptsize}
+    ]
+        \foreach \n in {1,...,2} {
+            \addplot+[boxplot, fill, fill opacity=0.4, draw=black] table[y index=\n] {\datatransposed};
+        }
+    \end{axis}
+\end{tikzpicture}
+

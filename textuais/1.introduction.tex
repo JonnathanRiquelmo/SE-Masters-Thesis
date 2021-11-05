@@ -1,0 +1,170 @@
+%====================================================================
+\chapter{Introduction}
+\label{chap:introduction}
+%====================================================================
+
+% Nos dias de hoje o uso de bancos de dados, bem como o volume de dados manipulados, cresceu de forma exponencial. 
+% O seu uso está inserido em diversas áreas da sociedade moderna, como na educação, comunicações, infraestrutura, saúde, segurança, economia e no desenvolvimento para a internet no geral.
+% Os bancos de dados e suas tecnologias associadas são a base para a utilização, manipulação e administração dos principais ativos das organizações modernas: a informação.
+% Com este cenário estabelecido, é notável que existe um dever crescente da academia em fornecer um bom nível de preparo para os futuros profissionais que vão ingressar em uma indústria cada vez mais exigente.
+Nowadays the use of \acp{db}, as well as the volume of manipulated data, increase exponentially.
+Its use is inserted in several areas of modern society, such as education, communications, infrastructure, healthcare, security, economy and internet development in general.
+\acp{db} and their associated technologies are a basis for the use, manipulation and administration of the main assets of modern organizations: the information.
+With this established scenario, it is notable that there is a growing duty of the academy to provide a good level of preparation for future professionals who will enter an increasingly demanding industry.
+
+% O princípio elementar que justifica o uso de técnicas de modelagem de dados para a definição de estruturas de armazenamento eficientes é a capacidade de manipulação e recuperação das dados de forma mais simples.
+% Estes dados representam a menor porção de valores em estado bruto, que em conjunto representam informações, ou seja, outro conjunto de dados já tratados que possuem um significado relevante para o domínio onde está inserido.
+The elementary principle that justifies the use of data modeling techniques for defining efficient storage structures is the ability to manipulate and retrieve data in a simpler way.
+These data represent the smallest portion of raw values, which together represent information, that is, another set of already processed data that has a relevant meaning for the domain where it is embedded.
+
+% Segundo \citeonline{Date:1990}, uma base de dados pode ser definida como uma coleção de dados operacionais armazenados, usados pelos sistemas de aplicação de uma determinada organização. 
+% Já para \citeonline{Elmasri:2011}, um banco de dados pode ser definido como uma abstração do mundo real, também chamado de minimundo, uma vez que representa aspectos que, em conjunto, carregam um significado implícito.
+According to \citeonline{Date:1990}, a \ac{db} can be defined as a collection of stored operational data used by the application systems of a given organization.
+For \citeonline{Elmasri:2011}, a \ac{db} can be defined as an abstraction of the real world, also called a miniworld, since it represents aspects that, together, carry an implicit meaning.
+
+% A literatura no geral indica três etapas básicas que compõem o processo de modelagem e projeto de um banco de dados: Modelagem Conceitual, Modelagem Lógica e Modelagem Física.
+% A primeira etapa visa descrever em alto nível o domínio e como o banco de dados deve ser estruturado.
+% Esta fase geralmente utiliza a abordagem Entidade-Relacionamento (ER), ou ainda seu modelo aprimorado (EER).
+% A abordagem ER trata, resumidamente, dos objetos e suas relações.
+% A segunda fase do processo, a modelagem lógica, faz o mapeamento destes objetos e das relações descritas no modelo conceitual para elementos correspondentes, dentro do modelo de dados de implementação. 
+% Existem muitos modelos relatados na literatura (Relacional, Orientado a Objeto, semi-estruturado, grafo, chave-valor, etc), sendo o mais difundido o modelo Relacional.
+% Finalmente, o projeto físico corresponde na transformação do modelo lógico para código de banco de dados. 
+% Esta é uma etapa normalmente automatizada que resulta em uma especificação em linguagem SQL com o esquema do banco de dados a ser criado em um database management system (DBMS).
+
+The literature in general indicates three basic steps that make up the process of modeling and designing a \ac{db}:
+Conceptual Modeling, Logical Modeling and Physical Modeling.
+The first step aims to describe at a high level the domain and how the \ac{db} should be structured.
+This phase usually uses the Entity-Relationship (ER) approach, or its enhanced model (EER).
+The \ac{er} approach deals, in short, with objects and their relationships.
+The second phase of the process, logical modeling, maps these objects and the relationships described in the conceptual model to corresponding elements within the implementation data model.
+There are many models reported in the literature (relational, object-oriented, semi-structured, graph, key-value, etc), the most widespread being the Relational Model.
+Finally, the physical design corresponds in transforming the logical model to \ac{db} code.
+This is a typically automated step that results in a \ac{sql} specification with the \ac{db} schema to be created in a \ac{dbms}.
+
+% Todo este processo pode ser classificado como parte da Model Driven Engineering (MDE), uma abordagem de desenvolvimento de software na qual os modelos são os principais artefatos de entrada no processo de desenvolvimento.
+% Uma das principais vantagens desta abordagem é o poder fornecido para expressar modelos usando conceitos mais simples e que são independentes de detalhes de implementação, ou seja, resultando em uma abstração de complexidade \cite{Brambilla:2017}. 
+This entire process can be classified as part of \ac{mde}, a software development approach in which models are the main input artifacts in the development process.
+One of the main advantages of this approach is the power provided to express models using simpler concepts and that are independent of implementation details, ie, resulting in a complexity abstraction \cite{Brambilla:2017}.
+
+% Os conceitos da abordagem MDE permitem a criação de ferramentas de modelagem que suportam o desenvolvimento de modelos, sua transformação e integração em diferentes etapas do processo de desenvolvimento de software e, no caso deste estudo, a modelagem de banco de dados.
+The concepts of the \ac{mde} approach allow the creation of modeling tools that support the development of models, their transformation and integration at different stages of the software development process and, in the case of this study, \ac{db} modeling.
+
+
+%------------------------------------------------------------------------------
+\section{Motivation}
+%------------------------------------------------------------------------------
+
+% De acordo com \citeonline{Rashid:2014, Salgado:1995} o ensino na área de banco de dados é de suma importância no ensino superior durante a formação de profissionais de computação.
+% Portanto, o processo de ensino-aprendizagem deve assumir a responsabilidade de apresentar os aspectos teóricos e práticos desta área em cursos de tecnologia.
+% Vale ressaltar ainda que os instrutores de bancos de dados e cursos relacionados devem se preocupar em como ensinar seus alunos para que estes atendam às necessidades e expectativas oriundas das demandas tanto da acadêmia quanto da indústria.
+According to \citeonline{Rashid:2014, Salgado:1995} teaching in the \ac{db} area is very important in higher education during the training of computer professionals.
+Therefore, the teaching-learning process must take responsibility for presenting the theoretical and practical aspects of this area in technology courses.
+It is noteworthy that \ac{db} instructors and related courses should be concerned with how to teach their students so that they meet the needs and expectations due the demands of both the academic and the industry.
+
+% Temos a premissa de que existe uma crescente busca por instrumentos que apoiem o processo de ensino-aprendizagem na academia. 
+% Logo, esta dissertação tem foco na etapa de projeto e modelagem. 
+% O ensino de projeto e modelagem de banco de dados em geral compreende inicialmente a apresentação de tópicos teóricos essenciais de modelagem conceitual e regras de transformação de modelos.
+% Posteriormente ocorre a introdução ao uso de ferramentas de modelagem que utilizam abordagens geralmente gráficas. 
+% Este estudo tem como motivação oferecer um produto de software que dê apoio a esta fase, com o diferencial deste produto fazer uso de uma abordagem textual com uma gramática de fácil uso e compreensão.
+We have the premise that there is a growing search for instruments that support the teaching-learning process in academia.
+Therefore, this master's thesis focuses on the design and modeling stage.
+The teaching of \ac{db} design and modeling in general initially includes the presentation of essential theoretical topics of conceptual modeling and model transformation rules.
+Subsequently, there is an introduction to the use of modeling tools that use generally graphical approaches.
+This study is motivated to offer a software product that supports this phase, with the difference that this product uses a textual approach with a grammar that is easy to use and understand.
+
+%------------------------------------------------------------------------------
+\section{Objectives}
+%------------------------------------------------------------------------------
+
+% O objetivo principal deste trabalho é desenvolver uma ferramenta para modelagem conceitual, utilizando uma abordagem textual, para servir de opção de suporte ao processo de ensino-aprendizagem de modelagem de projeto de banco de dados em instituições de ensino superior.
+% Esta ferramenta tem como base a proposta de linguagem feita em um estudo anterior \cite{Lopes:2019}
+The main objective of this study is to develop a tool for conceptual modeling, using a textual approach, to support the teaching-learning process of \ac{db} design modeling in higher education institutions.
+This tool is based on the language proposal made in a previous study \cite{Lopes:2019}
+
+% Para atingir o objetivo geral proposto é fundamental que exista a divisão do problema nos seguintes objetivos específicos que precisam ser atingidos:
+To achieve the proposed general objective, it is essential to divide the problem into the following specific objectives that need to be achieved:
+
+% \begin{enumerate}[label={\arabic*)}]
+%     \item Investigar tecnologias que auxiliem no processo de criação de linguagens específicas de domínio;
+%     \item Definir a tecnologia de apoio ao desenvolvimento e criar uma gramática básica;
+%     \item Pesquisar a literatura visando encontrar os mecanismos de transformação de modelos de banco de dados relacionais;
+%     \item Integrar a linguagem, e um mecanismo de transformação para outras tecnologias, em uma ferramenta open source;
+%     \item Realizar uma avaliação preliminar da solução proposta;
+%     \item Realizar melhorias na ferramenta;
+%     \item Realizar uma avaliação final da solução proposta;
+%     \item Contribuir com uma ferramenta que auxilie no processo de ensino de projeto e modelagem conceitual de bancos de dados.
+% \end{enumerate}
+\begin{enumerate}[label={\arabic*)}]
+     \item Investigate technologies that support the process of creating \acp{dsl};
+     \item Define the development support technology and create a basic grammar;
+     \item Search the literature to find the transformation mechanisms of relational \ac{db} models;
+     \item Integrate the language, and a transformation engine for other technologies, into an open source tool;
+     \item Conduct a preliminary evaluation of the proposed solution;
+     \item Make tool improvements;
+     \item Carry out a final evaluation of the proposed solution;
+     \item Contribute with a tool that helps in the process of teaching design and conceptual modeling of \acp{db}.
+\end{enumerate}
+
+
+%------------------------------------------------------------------------------
+\section{Justification}
+%------------------------------------------------------------------------------
+
+% Desde os primórdios os desenvolvedores utilizam texto para especificar produtos de software. 
+% As linguagens de programação aumentam o nível de abstração de maneira similar aos modelos. 
+% Logo, por consequência lógica, isso resulta em linguagens de modelagem textual.
+Since the beginning, developers have used text to specify software products.
+Programming languages increase the level of abstraction in a similar way to models.
+So, as a logical consequence, this results in textual modeling languages.
+
+% Uma linguagem de modelagem textual é geralmente processada por mecanismos que transformam as informações expressas em formato textual para modelos. 
+% Esses mecanismos baseiam sua execução na estrutura sintática de uma linguagem de modelagem textual, que é formalizada em uma gramática. 
+% Uma gramática define palavras-chave de uma linguagem, o aninhamento de seus elementos e também a notação de suas propriedades. 
+% Dito isto, pode-se inferir que os modelos textuais podem trazer diversos benefícios:
+A textual modeling language is usually processed by mechanisms that transform the information expressed in textual format for models.
+These mechanisms base their execution on the syntactic structure of a textual modeling language, which is formalized in a grammar.
+A grammar defines keywords of a language, the nesting of its elements and also the notation of its properties.
+That said, it can be inferred that textual models can bring several benefits:
+
+\begin{itemize}
+    % \item \textbf{Informar muitos detalhes}: Quando se trata de elementos com inúmeras propriedades, a abordagem textual geralmente se destaca em relação aos gráficos. 
+    % O mesmo pode ser dito quanto às estruturas formadas por um grande número de partes muito pequenas, como operações matemáticas ou sequências de instruções;
+    \item \textbf{Inform a lot of details}: When it comes to elements with numerous properties, the textual approach usually stands out over graphics.
+    The same can be said for structures formed by a large number of very small parts, such as mathematical operations or sequences of instructions;
+    % \item \textbf{Aumentar coesão do modelo}: Um modelo textual geralmente especifica os elementos inteiramente em um só local. 
+    % Se por um lado isso pode ser uma desvantagem para uma exibição em alto nível, em contrapartida pode facilitar a localização de definições de propriedades em baixo nível. 
+    % Na proposta deste trabalho toda a modelagem conceitual é realizada em apenas um arquivo;
+    \item \textbf{Increase model cohesion}: A textual model usually specifies elements entirely in one place.
+    While this can be a disadvantage for a high-level view, it can make it easier to find low-level property definitions.
+    In the proposal of this work, all the conceptual modeling is carried out in just one file;
+    % \item \textbf{Realizar uma edição rápida}: Durante a criação e edição de modelos textuais não é necessário a recorrente alternância entre teclado e \textit{mouse}. 
+    % Logo, é provável que se gaste menos tempo formatando modelos textuais do que, por exemplo, refinando a posição, as ligações ou mesmo as bordas de elementos em diagramas;
+    \item \textbf{Perform quick edits}: During the creation and editing of textual templates it is not necessary to recurrently switch between keyboard and mouse.
+    Therefore, less time is likely to be spent formatting textual models than, for example, refining the position, links or even edges of elements in diagrams;
+    % \item \textbf{Utilizar editores genéricos}: Não existe necessariamente a exigência de uma ferramenta específica para criar ou modificar modelos textuais, como é o caso de linguagens específicas de domínio com esta abordagem. 
+    % Para alterações simples é possível o uso de qualquer editor de texto genérico. 
+    % Entretanto, para tarefas maiores é melhor se ter algum suporte para a linguagem de modelagem. 
+    % Na proposta desse trabalho está incluso a integração da linguagem definida com um editor Eclipse, fornecendo assim um alto nível de auxílio para a escrita.
+    \item \textbf{Use of generic editors}: There is not necessarily a requirement for a specific tool to create or modify textual models, as is the case for domain-specific languages with this approach.
+    For simple changes it is possible to use any generic text editor.
+    However, for larger tasks it is better to have some support for the modeling language.
+    In the proposal of this work, the integration of the defined language with an Eclipse editor is included, thus providing a high level of writing assistance.
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\section{Organization}
+%------------------------------------------------------------------------------
+
+We organized this document as follows.
+
+\begin{itemize}
+    \item Chapter \ref{chap:methodology} details our research design and the planned schedule;
+    \item Chapter \ref{chap:background} describes the theoretical background of our study, addressing the main concepts related to \ac{er} modeling, \ac{mde}, \acp{dsl}, \acp{lw} and the Xtext framework;
+    \item Chapter \ref{chap:slm} presents a systematic mapping performed for the investigation of the literature regarding the transformation mechanisms of relational database models;
+    \item Chapter \ref{chap:ERtext} presents the proposed modeling tool;
+    \item Chapter \ref{chap:experiments} describes the experimental evaluations with the produced tool;
+    \item Finally, in Chapter \ref{chap:conclusion} we presents the conclusion and also our future perspectives regarding this study.
+\end{itemize}
+
+
+

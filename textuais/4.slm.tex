@@ -1,0 +1,287 @@
+%=================================================================
+\chapter{Systematic Literature Mapping}
+\label{chap:slm}
+%=================================================================
+
+% http://200.132.136.13/Thoth/
+
+% Esse capítulo descreve os procedimentos adotados para a investigação da literatura realizada para este estudo. 
+% Para este propósito ser alcançado foi realizado o planejamento e a execução de um Mapeamento da Literatura. 
+% Para isto foram aplicadas diretrizes bem estabelecidas conceitualmente com base em propostas de diversos trabalhos \cite{Kitchenham:2007, Petersen:2008, Nakagawa:2017}.  
+This chapter describes the procedures adopted for the investigation of the literature carried out for this study.
+For this purpose to be achieved, the planning and execution of a Literature Mapping was carried out.
+For this, conceptually well-established guidelines were applied based on proposals from several works \cite{Kitchenham:2007, Petersen:2008, Nakagawa:2017}.
+
+% Transformation Mechanisms of Relational Database Models: A Systematic Mapping
+
+% Description
+% Mapping of transformation heuristics/strategies/guidelines for generation of relational databases
+
+% Objectives
+% Gather similar studies evaluating them critically in their methodology and bringing them together in a careful analysis.
+
+%------------------------------------------------------------------------------
+\section{Protocol}\label{sec:slr_protocol}
+%------------------------------------------------------------------------------
+
+% Um Mapeamento Sistemático de Literatura é útil para pesquisadores e profissionais pois fornecem visões abrangentes sobre o estado da arte em uma área específica.
+% Neste estudo conduziu-se um mapeamento utilizando o processo de definido por Petersen \cite{Petersen:2008}.
+
+A Systematic Literature Mapping is useful for researchers and practitioners as it provides comprehensive insights into the state of the art in a specific area.
+In this study a mapping was conducted using the process defined by Petersen \cite{Petersen:2008}.
+
+%#################################################################
+\subsection{Research Questions} \label{ssec_slm:researchQuestions}
+%#################################################################
+
+% Levando-se em consideração o objetivo geral deste trabalho, o qual é desenvolver desenvolver uma ferramenta de modelagem para a modelagem conceitual de BDs que implemente uma DSL previamente proposta, foram formulados os seguintes questionamentos com o objetivo de investigar os mecanismos de transformação utilizados por DSLs:
+Taking into account the general objective of this work, which is to develop a modeling tool for the conceptual modeling of \acp{db} that implements a previously proposed DSL, the following questions were formulated in order to investigate the transformation mechanisms used by \acp{dsl}:
+
+\begin{itemize}
+    \item \textbf{RQ1.} What is the state of the art of mechanisms for transforming conceptual models?
+    \item \textbf{RQ2.} What transformation mechanisms among conceptual models are applied in the context of DSLs?
+    \item \textbf{RQ3.} What representations of database objects do the transformation mechanisms support?
+\end{itemize}
+
+%#################################################################
+\subsection{Research Sources} \label{ssec_slm:researchSources}
+%#################################################################
+
+% As bibliotecas digitais são a principal fonte de busca em um \ac{SLM} \cite{Petersen:2008}. 
+% Para a escolha das fontes de busca desse \ac{SLM} são considerados três requisitos obrigatórios que as bases devem contemplar: 
+% \textbf{(i)} possuir mecanismo de pesquisa baseado na \textit{Web}; 
+% \textbf{(ii)} ser capaz de usar palavras-chave durante a pesquisa, e;
+% \textbf{(iii)} abranger estudos primários da grande área da Ciência da Computação.
+% Na Tabela \ref{tab:BasesDePesquisa} são listadas as bibliotecas digitais selecionadas para este mapeamento.
+Digital libraries are the main source of research in an systematic mapping \cite{Petersen:2008}.
+To choose the research sources for this systematic mapping, three mandatory requirements that the databases must meet are considered:
+\textbf{(i)} have search engine based on \textit{Web};
+\textbf{(ii)} be able to use keywords when searching, and;
+\textbf{(iii)} cover primary studies Computer Science area.
+Table \ref{tab:reserchSources} lists the digital libraries selected for this mapping.
+        
+\rowcolors{1}{gray!15}{white}
+\begin{table}[!ht]
+    \centering
+    \footnotesize
+    \caption{Digital libraries used.}
+    \label{tab:reserchSources}
+    \begin{tabular}{m{4cm}m{4cm}m{4cm}}
+    \bottomrule
+    \rowcolor[HTML]{C0C0C0}
+    \textbf{Source} & \textbf{Address} & \textbf{Type} \\ 
+    \hline
+    ACM Digital library & \textit{dl.acm.org}           & Hybrid\\
+    IEEE Xplore         & \textit{ieeexplore.ieee.org}  & Bibliographic Database \\ 
+    Scopus       & \textit{scopus.com}   & Search Engine \\
+    Google Scholar        & \textit{scholar.google.com}    & Search Engine \\ 
+    \bottomrule
+    \end{tabular}
+    \fonte{Adapted from \cite{Nakagawa:2017}.}
+\end{table}
+
+%#################################################################
+\subsection{Search String} \label{ssec_slm:searchString}
+%#################################################################
+
+% A elaboração da \textit{string} de busca não é uma tarefa trivial. 
+% A identificação de uma combinação de termos que permitam encontrar o maior número de estudos primários relevantes de forma objetiva necessita, na maioria dos casos, de experiência e profundo conhecimento sobre a área de pesquisa abordada.  
+The elaboration of the search string is not a trivial task.
+The identification of a combination of terms that allow finding the greatest number of relevant primary studies in an objective way requires, in most cases, experience and in-depth knowledge of the research area addressed.
+
+% Para a formação da string de busca é fundamental definir um conjunto de palavras referentes ao tema de pesquisa, bem como os sinônimos considerados expressivos. 
+% Estes termos devem representar de forma abrangente o tema central do estudo. 
+% Para este trabalho foram estabelecidos os termos e sinônimos cuja sua combinação gerou a string genérica da Firgura \ref{fig:searchString}. 
+% Posteriormente, as strings foram derivadas para se adequarem as restrições de cada mecanismo de busca, sendo apresentadas na Tabela \ref{tab:StringsDatabases}.
+For the formation of the search string, it is essential to define a set of words referring to the research topic, as well as the synonyms considered expressive.
+These terms should comprehensively represent the central theme of the study.
+For this work, the terms and synonyms whose combination generated the generic string of the Figure \ref{fig:searchString} were established.
+Subsequently, the strings were derived to fit the constraints of each search engine, and are presented in Table \ref{tab:StringsDatabases}.
+
+\begin{figure}[htb]
+\centering
+\caption{Generic Search String.}
+\label{fig:searchString}
+\fbox{\
+\small
+\parbox{14cm}{
+\centering
+\tiny\texttt{
+("Domain-Specific Language" OR "Domain Specific Language" OR DSL OR "Domain-Specific Modeling Language" OR "Domain Specific Modeling Language" OR DSML OR "Domain-Specific Modeling" OR DSM) AND (Entity-Relationship OR ER OR "Enhanced Entity-Relationship" OR EER OR "Entity Relationship Diagram" OR ERD) AND ("Model Transformation" OR Model-to-Text OR M2T OR Model-to-Model OR M2M OR "Code Generation")}}}
+\fonte{Author.}
+\end{figure}
+
+
+\begin{table}[!htb]
+\caption{Search strings derived by databases.}
+\label{tab:StringsDatabases}
+\tiny
+\begin{tabular}{m{1.0cm}m{14.0cm}}
+\bottomrule
+\textbf{DBs} & \textbf{Search String} \\
+\midrule
+\T ACM & \texttt{Abstract:(("Domain-Specific Language" OR "Domain Specific Language" OR DSL OR "Domain-Specific Modeling Language" OR "Domain Specific Modeling Language" OR DSML OR "Domain-Specific Modeling" OR DSM) AND (Entity-Relationship OR ER OR "Enhanced Entity-Relationship" OR EER OR "Entity Relationship Diagram" OR ERD) AND ("Model Transformation" OR Model-to-Text OR M2T OR Model-to-Model OR M2M OR "Code Generation")} \\
+\midrule
+\T Google & \texttt{("Domain-Specific Language" OR "Domain-Specific Modeling Language" OR "Domain-Specific Modeling") AND (Entity-Relationship OR "Enhanced Entity-Relationship") AND ("Model Transformation" OR Model-to-Text OR M2T OR Model-to-Model OR M2M OR "Code Generation")} \\
+\midrule
+\T Scopus & \texttt{TITLE-ABS-KEY ( "Domain-Specific Language"  OR  "Domain Specific Language"  OR  dsl  OR  "Domain-Specific Modeling Language"  OR  "Domain Specific Modeling Language"  OR  dsm  OR  "Domain-Specific Modeling"  OR  dsm )  AND  ( entity-relationship  OR  per  OR  "Enhanced Entity-Relationship"  OR  eer  OR  "Entity Relationship Diagram"  OR  erd )  AND  ( "Model Transformation"  OR  model-to-text  OR  met  OR  model-to-model  OR  mcm  OR  "code generation")} \\
+\midrule
+\T IEEE & \texttt{(("Full Text .AND. Metadata":"Domain-Specific Language" OR "Full Text .AND. Metadata":"Domain Specific Language" OR "Full Text .AND. Metadata":DSL OR "Full Text .AND. Metadata":"Domain-Specific Modeling Language" OR "Full Text .AND. Metadata":"Domain Specific Modeling Language" OR "Full Text .AND. Metadata":DSML OR "Full Text .AND. Metadata":"Domain-Specific Modeling" OR "Full Text .AND. Metadata"::DSM) AND ("Full Text .AND. Metadata":"Entity-Relationship" OR "Full Text .AND. Metadata"::ER OR "Full Text .AND. Metadata"::"Enhanced Entity-Relationship" OR "Full Text .AND. Metadata"::EER OR "Full Text .AND. Metadata":"Entity Relationship Diagram" OR "Full Text .AND. Metadata":ERD) AND ("Full Text .AND. Metadata":"Model Transformation" OR "Full Text .AND. Metadata":"Model-to-Text" OR "Full Text .AND. Metadata":M2T OR "Full Text .AND. Metadata":"Model-to-Model" OR "Full Text .AND. Metadata":M2M OR "Full Text .AND. Metadata":"Code Generation")} \\
+\noalign{\smallskip} 
+\toprule
+\end{tabular}
+\end{table}    
+
+% Para a geração das strings, bem como todo o processo de mapeamento, foi utilizado o apoio da ferramenta Thoth\footnote{Thoth Tool: \url{http://lesse.com.br/tools/thoth/}}. 
+% A string para a ACM era a versão base gerada pela ferramenta, limitando ao conjunto \textit{The ACM Full-Text Collection} (com 606,408 registros na época) e limitando ao abstract.
+For the generation of strings, as well as the entire mapping process, the support of the tool Thoth\footnote{Thoth Tool: \url{http://lesse.com.br/tools/thoth/}} was used.
+The string for the ACM was the base version generated by the tool, limiting it to the \textit{The ACM Full-Text Collection} set (with 606,408 records at the time) and limiting it to the abstract.
+% No Google Scholar a string foi limitada a 256 caracteres, sendo que os hífens não fazem diferença. 
+% A string derivada que foi usada ficou com exatos 256 caracteres e os resultados trouxeram estudos aparentemente relevantes.
+In Google Scholar the string was limited to 256 characters, with hyphens making no difference.
+The derived string that was used was exactly 256 characters long and the results brought apparently relevant studies.
+% A string para a IEEE precisou ser limitado a 20 termos.
+% O resultado foi obtido buscando full text e metadata dos estudos. 
+% Isso foi necessário por quando feita apenas verificando os abstracts havia o retorno de 0 resultados.
+The string for IEEE needed to be limited to 20 terms.
+The result was obtained by searching full text and metadata of the studies.
+This was necessary because when only checking the abstracts, no results were returned.
+
+%#################################################################
+\subsection{Selection Criteria} \label{ssec_slm:selectionCriteria}
+%#################################################################
+
+% Segundo \cite{Kitchenham:2007}, os critérios de inclusão indicam por qual ou quais parâmetros um estudo é incluído, ou seja, considerado relevante. 
+% Da mesma forma, os critérios de exclusão indicam por qual ou quais parâmetros um estudo é excluído, ou seja, considerado não relevante na pesquisa realizada. 
+% Para o este trabalho foram determinados os critérios de seleção listados a seguir.
+According to \cite{Kitchenham:2007}, the inclusion criteria indicate by which parameters a study is included, that is, considered relevant.
+Likewise, the exclusion criteria indicate by which parameters a study is excluded, that is, considered not relevant in the research.
+For this work, the selection criteria listed below were determined.
+
+\begin{itemize}
+    \item \textbf{Inclusion Criteria (IC)}    
+    \begin{itemize}
+        \item \textbf{IC1.} Primary study reporting mechanisms, guidelines, heuristics or strategies for transforming conceptual data models of relational databases. 
+    \end{itemize}
+    \item \textbf{Exclusion Criteria (EC)}
+    \begin{itemize}
+        \item \textbf{EC1.} Duplicate primary studies;
+        \item \textbf{EC2.} Primary studies with less than 4 pages;
+        \item \textbf{EC3.} Primary study that is not written in English;
+        \item \textbf{EC4.} Secondary and tertiary studies;
+        \item \textbf{EC5.} Primary study that does not provide full access;
+        \item \textbf{EC6.} Primary study does not satisfy the inclusion criteria.
+    \end{itemize}
+\end{itemize}
+
+ 
+ %#################################################################
+\subsection{Quality Assessment Criteria} \label{ssec_slm:qualityCriteria}
+%#################################################################
+
+% Segundo \cite{Nakagawa:2017}, embora exemplos de formulários de avaliação de qualidade possam ser encontrados com certa facilidade na literatura, para a elaboração de critérios e definição de seus pesos os pesquisadores envolvidos em cada revisão ou mapeamento devem levar em consideração as particularidades conforme o tema e as questões de pesquisa.
+% Portanto, em pesquisas desse tipo existe total liberdade para definição o número de critérios de qualidade e seus pesos relacionados. 
+According to \cite{Nakagawa:2017}, although examples of quality assessment forms can be found with some ease in the literature, for the elaboration of criteria and definition of their weights, the researchers involved in each review or mapping must take into account the particularities depending on the theme and the research questions.
+Therefore, in research of this type, there is complete freedom to define the number of quality criteria and their related weights.
+
+% Foram definidos três (3) critérios de qualidade para a avaliação dos estudos primários aprovados após a aplicação dos critérios de seleção. 
+% Os critérios de qualidade visam quantificar a relevância para que seja possível realizar uma comparação entre os estudos selecionados. 
+% Foi definido também uma pontuação para ser atribuída a partir dos critérios de qualidade. 
+% Para a definição das pontuações foram estabelecidas siglas para as representar.
+Three (3) quality criteria were defined for the assessment of primary studies approved after applying the selection criteria.
+The quality criteria aim to quantify the relevance so that it is possible to make a comparison between the selected studies.
+A score was also defined to be assigned based on the quality criteria.
+To define the scores, acronyms were established to represent them.
+
+\begin{itemize}
+     \item \textbf{G: Good}, contemplating most of the evaluated quality criteria;
+     \item \textbf{A: Average}, partially contemplating the quality criteria evaluated;
+     \item \textbf{P: Poor}, does not contemplating the assessed quality criteria at all.
+\end{itemize}
+
+% A pontuação máxima possível era, avaliados todos os critérios, três (3.0) e a mínima zero (0). 
+% Os critérios de qualidade são apresentados na Tabela \ref{tab:CAQ}.
+The maximum possible score was, when all criteria were evaluated, three (3.0) and the minimum zero (0).
+The quality criteria are shown in Table \ref{tab:CAQ}.
+
+\rowcolors{1}{gray!15}{white}
+\begin{table}[!htb]
+    \centering
+    %\small
+    \footnotesize
+    \caption{Quality Assessment Criteria.}
+    \label{tab:CAQ}
+    \begin{tabular}{l|p{12cm}|c}
+    \bottomrule
+    \rowcolor[HTML]{C0C0C0}
+    \textbf{ID} & \textbf{Description} & \textbf{Weight} 
+    \\ 
+    \hline
+    QC1. & Does the study present refinement techniques, guidelines, mechanisms or heuristics based on conceptual data models for relational databases? & 1,0 
+    \\
+    QC2. & Does the study provide details of the model transformation mechanisms? & 1,0 
+    \\
+    QC3. & Does the study present any evaluation way of the transformation mechanisms presented? & 1,0 
+    \\
+    \toprule
+    \end{tabular}
+    \fonte{Author.}
+\end{table}
+
+%#################################################################
+\subsection{Data Extraction Strategy} \label{ssec_slm:dataExtraction}
+%#################################################################
+
+% Definiu-se um formulário de dados para a extração e análise dos dados relevantes contidos nos estudos primários selecionados. 
+% A descrição detalhada deste formulário de extração é apresentado na Tabela \ref{tab:DataExtractionForm}.
+A data form was defined for the extraction and analysis of relevant data contained in the selected primary studies.
+The detailed description of this extraction form is presented in Table \ref{tab:DataExtractionForm}.
+
+\rowcolors{1}{gray!15}{white}
+\begin{table}[!htb]
+    \centering
+    \scriptsize
+    \caption{Data Extraction Form.}
+    \label{tab:DataExtractionForm}
+    \begin{tabular}{p{5cm}|p{10cm}}
+    \bottomrule
+    \rowcolor[HTML]{C0C0C0} 
+    \textbf{Data} & \textbf{Description} \\
+    \hline
+    Solution Origin & Organization or University of the study authors
+    \\
+    Year of Publication & Year of publication of the study
+    \\
+    Solution Objective & Proposed Solution Description
+    \\
+    Purpose of the paper & Description of the article's objectives
+    \\
+    Reported strengths & Description of reported strengths
+    \\
+    Reported shortcomings & Description of reported shortcomings
+    \\
+    Database objects & Description of objects supported in the transformation process
+    \\
+    DSL names & DSLs that apply transformation mechanisms among conceptual data models
+    \\
+    Transformation mechanism type & Reported Guideline, Heuristic, Strategy or Technique
+    \\
+    \toprule
+    \end{tabular}
+    \fonte{Author.}
+\end{table}
+
+%#################################################################
+\subsection{Selection Process} \label{ssec_slm:selectionProcess}
+%#################################################################
+
+...
+
+%------------------------------------------------------------------------------
+\section{Results and Discussion} \label{sec_slm:resultsDiscussion}
+%------------------------------------------------------------------------------
+...
+%------------------------------------------------------------------------------
+\section{Chapter Lessons} \label{sec_slm:lessons}
+%------------------------------------------------------------------------------
+...

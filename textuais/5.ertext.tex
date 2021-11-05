@@ -1,0 +1,436 @@
+%===================================================================
+\chapter{ERtext Tool} \label{chap:ERtext}
+%===================================================================
+
+% Este capítulo apresenta a proposta central deste estudo. 
+% Aspectos sobre a definição da DSL são detalhados bem como a ferramenta de modelagem construída. 
+This chapter presents the main proposal of this study.
+Aspects about the definition of \ac{dsl} are detailed as well as the modeling tool built.
+
+%------------------------------------------------------------------------------
+\section{Development} \label{sec_tool:development}
+%------------------------------------------------------------------------------
+
+% O desenvolvimento da proposta de ferramenta de modelagem se deu a partir da continuação do trabalho de \cite{Lopes:2019}, recomeçando a apartir do mês de junho de 2020. 
+% Naquele estudo foram definidos requisitos da linguagem, as decisões de projeto e a gramática derivada.
+% Na altura daquele estudo havia apenas a implementação de um protótipo de ferramenta com um gerador para um modelo lógico. 
+% Este gerador foi totalmente reescrito para se adequar aos padrões adotados, principalmente no que diz respeito a modularização de métodos, no desenvolvimento dos outros geradores.
+% Nós utilizamos todos estes conceitos para a implementação da nova infraestrutura do editor que suporta esta DSL.
+The development of the modeling tool proposal took place from the continuation of the work of \cite{Lopes:2019}, restarting from June 2020.
+In that study, language requirements, design decisions, and derived grammar were defined.
+% At the time of that study there was only the implementation of a tool prototype with a generator for a logical model.
+% This generator was completely rewritten to fit the adopted standards, mainly with regard to methods modularization, in the development of other generators.
+We use all these concepts to implement the new editor infrastructure that supports this \ac{dsl}.
+
+%------------------------------------------------------------------------------
+\subsection{Language Requirements} \label{ssec_tool:langRequirements}
+%------------------------------------------------------------------------------
+% Esta seção lista os requisitos que foram definidos com base na literatura utilizada neste trabalho, bem como no conhecimento prévio dos pesquisadores envolvidos na condução do estudo. 
+% Estes requisitos são relacionados diretamente com as decisões de projeto.
+This section lists the requirements that were defined based on the literature used in this work, as well as the prior knowledge of the researchers involved in conducting the study.
+These requirements are directly related to design decisions.
+
+\begin{itemize}
+
+% \item\textit{\textbf{RQ1. A \ac{DSL} precisa ser disponibilizada sob uma licença open source.}} 
+% Como o foco da proposta é no processo de ensino é fundamental que a linguagem seja de código aberto. 
+% A vantagem que este requisito proporciona é a posterior evolução e manutenção colaborativa com o envolvimento de outros desenvolvedores.
+\item\textit{\textbf{RQ1. The \ac{dsl} must be made available under an open source license.}}
+As the focus of the proposal is on the teaching process, it is essential that the language be open source.
+The advantage that this requirement provides is the further evolution and collaborative maintenance with the involvement of other developers.
+
+% \item\textit{\textbf{RQ2. A \ac{DSL} deve permitir representar textualmente modelos conceituais de \acp{BD}.}} 
+% Como é um objetivo que a solução seja outra opção em relação às abordagens gráficas, esse requisito se justifica. 
+% Isso permite o foco na compreensão do domínio e no desenvolvimento da \ac{DSL}.
+\item\textit{\textbf{RQ2. The \ac{dsl} must allow the textual representation of conceptual \ac{db} models.}}
+As it is an objective that the solution is another option in relation to graphical approaches, this requirement is justified.
+This allows to focus on understanding the domain and developing the \ac{dsl}.
+
+% \item\textit{\textbf{RQ3. Os modelos conceituais devem dar suporte à definição de entidades, atributos, relações e cardinalidades.}} 
+% As ferramentas utilizadas para o desenvolvimento da linguagem precisam permitir que sejam implementados os conceitos de domínio que regem a estrutura de \ac{DER} tradicional.
+\item\textit{\textbf{RQ3. The conceptual models must support the definition of entities, attributes, relationships and cardinalities.}}
+The tool used to develop the language needs to allow the domain concepts that govern the traditional \ac{er} diagram structure to be implemented.
+
+% \item\textit{\textbf{RQ4. Os modelos conceituais devem dar suporte a definição de atributos identificadores, generalização/especialização, auto-relacionamentos e relacionamentos ternários.}} 
+% A linguagem deve permitir que conceitos mais sofisticados dos domínios sejam definidos.
+\item\textit{\textbf{RQ4. The conceptual models must support the definition of identifying attributes, generalization/specialization, self-relationships, and ternary relationships.}}
+The language should allow more sophisticated domain concepts to be defined.
+
+% \item\textit{\textbf{RQ5. A implementação da \ac{DSL} deve realizar a transformação do modelo conceitual para o lógico.}} 
+% A solução deve realizar a transformação do conceitual para o lógico, exibindo o resultado gerado ao usuário.
+\item\textit{\textbf{RQ5. The implementation of \ac{dsl} must perform the transformation from the conceptual to the logical model.}}
+The solution must perform the transformation from conceptual to logical, displaying the generated result to the user.
+
+% \item\textit{\textbf{RQ6. A implementação da \ac{DSL} deve gerar instruções \ac{SQL} equivalentes, com base no modelo conceitual ou lógico.}} 
+% A solução precisa realizar a geração de instruções \ac{SQL} para diferentes \acp{SGBD}.
+\item\textit{\textbf{RQ6. The implementation of \ac{dsl} must generate equivalent \ac{sql} statements, based on the conceptual or logical model.}}
+The solution needs to generate \ac{sql} statements for different \acp{dbms}.
+
+% \item\textit{\textbf{RQ7. A implementação da \ac{DSL} deve gerar alguma forma de representação gráfica.}} 
+% A solução precisa realizar a geração de diagramas com base no modelo conceitual.
+\item\textit{\textbf{RQ7. The implementation of \ac{dsl} should generate some form of graphical representation.}}
+The solution needs to perform diagram generation based on the conceptual model.
+
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{Design Decisions} \label{ssec_tool:designDecisions}
+%------------------------------------------------------------------------------
+
+% Nesta seção são descritas as decisões de projeto para criar a \ac{DSL} textual que suporte todos os requisitos apresentados na Seção \ref{sec:reqDSL}.
+This section describes the design decisions to create the textual \ac{dsl} that supports all the requirements presented in Section \ref{ssec_tool:langRequirements}.
+
+% Para cada decisão de projeto são indicados os seus requisitos associados.
+For each design decision, its associated requirements are indicated.
+
+
+\begin{itemize}
+    % \item\textit{\textbf{DP1. A solução deve adotar um \ac{LW} open source no auxílio da implementação da \ac{dsl} textual (RQ1, RQ2).}} 
+    % Mediante a investigação conduzida no estudo previamente citado \cite{Lopes:2019}, foi selecionado o \ac{lw} Xtext para o desenvolvimento da proposta por ser um framework open source focado no desenvolvimento de \acp{dsl} textuais, fornecendo toda a infraestrutura necessária. 
+    % Além disto, o Xtext é uma ferramenta com alto nível de maturidade, documentação detalhada e uma comunidade extremamente ativa. 
+    \item\textit{\textbf{DP1. The solution should adopt an open source \ac{lw} to help implement the textual \ac{dsl} (RQ1, RQ2).}}
+     Through the investigation conducted in the previously cited study \cite{Lopes:2019}, \ac{lw} Xtext was selected for the development of the proposal as it is an open source framework focused on the development of textual \acp{dsl}, providing all the necessary infrastructure.
+     Furthermore, Xtext is a tool with a high level of maturity, detailed documentation and an extremely active community.
+    
+    % \item\textit{\textbf{DP2. A \ac{DSL} deve fornecer uma representação textual que seja equivalente ao modelo \ac{ER} gráfico usualmente utilizado (RQ3, RQ4).}} 
+    % Para os requisitos cobertos por esta decisão de projeto foi adotada a estratégia de se realizar uma análise nas ferramentas averiguadas no mapeamento descrito no \autoref{mapeamentoLiteratura}, bem como no livro referência de \citeonline{Heuser:2009}.
+    \item\textit{\textbf{DP2. The \ac{dsl} must provide a textual representation that is equivalent to the commonly used graphical \ac{er} models (RQ3, RQ4).}}
+    For the requirements covered by this design decision, the strategy of performing an analysis in the tools verified in the mapping described in \cite{Lopes:2019}, as well as in the reference book by \cite{Heuser:2009} was adopted.
+    
+    % \item\textit{\textbf{DP3. A solução deve realizar a transformação entre os modelos (RQ5).}} 
+    % O Xtext usa modelos do \ac{EMF} como a representação na memória de qualquer arquivo de texto analisado. 
+    % Esse grafo de objetos na memória é chamado de árvore sintática abstrata, do inglês \ac{AST}. 
+    % Esses conceitos também são chamados de gráficos de objeto de documento, do inglês \ac{DOM}, modelo semântico ou simplesmente modelo. 
+    % Desta forma, existe a representação do modelo da gramática na forma de um metamodelo central no núcleo do \ac{EMF}, chamado de modelo \textit{Ecore}. 
+    % Tendo o \textit{Ecore} da \ac{DSL} proposta como uma representação, é possível então aplicar regras de transformação, gerando assim outros modelos.
+    \item\textit{\textbf{DP3. The solution must perform the transformation between models (RQ5).}}
+    Xtext uses \ac{emf} templates as the in-memory representation of any parsed text file.
+    This in-memory object graph is called an \ac{ast}.
+    These concepts are also called \ac{dom}, semantic model, or simply model.
+    Thus, there is a representation of the grammar model in the form of a central metamodel in the core of \ac{emf}, called the Ecore model.
+    Having the proposed \ac{dsl} Ecore as a representation, it is then possible to apply transformation rules, thus generating other models.
+    
+    % \item\textit{\textbf{DP4. A solução deve prover a integração entre a \ac{DSL} e outras tecnologias (RQ6).}} 
+    % A solução deve permitir a realização da exportação dos modelos construídos para um formato de instruções \ac{SQL}, representando assim o modelo físico. % Inicialmente, essa integração será realizada para PostgreSQL e MySQL.
+    \item\textit{\textbf{DP4. The solution must provide the integration between the \ac{dsl} and other technologies (RQ6).}}
+    The solution should allow the export of the built models to an \ac{sql} statement format, thus representing the physical model.
+    Initially, this integration will be performed for PostgreSQL and MySQL.
+    
+    % \item\textit{\textbf{DP5. A solução deve prover a geração e visualização de diagrams dos modelos contruídos com a \ac{dsl} (RQ7).}} 
+    % A solução deve permitir a visualização dos modelos construídos para um formato gráfico, representando assim o modelo conceitual. 
+    % Inicialmente, essa integração será realizada utilizando o PlantUml.
+    % O PlantUML é uma ferramenta de código aberto que permite a criação de diagramas a partir de uma linguagem de texto simples.
+    \item\textit{\textbf{DP5. The solution should provide the generation and visualization of diagrams of the models built with \ac{dsl} (RQ7).}}
+    The solution must allow the visualization of the models built in a graphical format, thus representing the conceptual model.
+    Initially, this integration will be performed using PlantUML.
+    PlantUML is an open source tool that allows the creation of diagrams from a simple text language.
+\end{itemize}
+
+
+%------------------------------------------------------------------------------
+\subsection{DSL Grammar} \label{ssec_tool:grammar}
+%------------------------------------------------------------------------------
+
+% Na fase atual do trabalho a linguagem a nível conceitual se encontra atendendo os requisitos da linguagem definidos na Seção \ref{ssec_tool:langRequirements}. 
+% A definição da \ac{DSL}, criada utilizando uma variação da metassintaxe \ac{ebnf},  é exibida na Figura \autoref{fig:DSLvs1}.
+In the current phase of the work, the language at the conceptual level is meeting the language requirements defined in Section \ref{ssec_tool:langRequirements}.
+The definition of \ac{dsl} using a variation of the \ac{ebnf} metasyntax notation is displayed in Figure \autoref{fig:DSLvs1}.
+
+% DESCREVER A GRAMÁTICA APÓS APRESENTAR O CODE BNF (EBNF)
+
+\input{languages}
+\lstset{basicstyle=\tiny}
+\begin{figure} [!htb]
+    \centering
+    \caption{Definition of implemented \ac{dsl} grammar.}
+    \label{fig:DSLvs1}
+    \begin{scriptsize}
+    \begin{lstlisting}[language = Xtext , frame = trbl]
+grammar org.xtext.unipampa.erdsl.ErDsl with org.eclipse.xtext.common.Terminals
+generate erDsl "http://www.xtext.org/unipampa/erdsl/ErDsl"
+
+ERModel:
+	("Generate" targetGenerator= ("LogicalSchema" | "PostgreSQL" | 
+	                              "MySQL" | "Diagram" | "All") ";")?
+	domain=Domain ";"
+	("Entities" "{") entities+=Entity+ ("}" ";")
+	("Relationships" "{") relations+=Relation* ("}" ";");
+
+Domain:
+	"Domain" name=ID;
+
+Attribute:
+	name=ID type=DataType (isKey?="isIdentifier")?;
+
+Entity:
+	name=ID ("is" generalization=("total/disjoint"   | "total/overlapped" |
+	                              "partial/disjoint" | "partial/overlapped") 
+	is=[Entity])?
+	("{" attributes+=Attribute
+	("," attributes+=Attribute)* "}")?;
+
+Relation:
+	(name=ID) ("[" leftEnding=RelationSideLeft
+	"relates"
+	rightEnding=RelationSideRight "]")
+	("{" attributes+=Attribute
+	("," attributes+=Attribute)* "}")*;
+
+RelationSideLeft:
+	target=[Entity] | target=[Relation]
+	cardinality=("(0:1)" | "(1:1)" | "(0:N)" | "(1:N)") ;
+
+RelationSideRight:
+	cardinality=("(0:1)" | "(1:1)" | "(0:N)" | "(1:N)")
+	target=[Entity] | target=[Relation];
+
+enum DataType:
+	INT="int" | DOUBLE="double" | MONEY="money" | STRING="string" |
+	BOOLEAN="boolean" | DATETIME="datetime" | BLOB="file";
+    \end{lstlisting}
+    \end{scriptsize}    
+    \fonte{Author.}
+\end{figure}
+
+% Existem tópicos relativos a validação de escopo, como no caso do tratamento de referências cruzadas indesejadas e outras restrições inerentes ao modelo \ac{er} que que foram analisadas e então implementadas. 
+% Contudo, reconhecemos que outros pontos referentes a validação de escopo que podem ser evoluídos.
+There are topics related to scope validation, as in the case of handling unwanted cross-references and other restrictions inherent to the \ac{er} model that were analyzed and then implemented.
+However, we recognize that other points regarding scope validation can be evolved.
+
+% O comando \texttt{grammar} especifica o nome da \ac{DSL}, enquanto a instrução \texttt{with} declara uma herança de outra linguagem. 
+% No caso da gramática proposta, é utilizado uma gramática padrão do Xtext, chamada \texttt{Terminals}, que fornece algumas regras predefinidas como, por exemplo, a regra \texttt{ID} para identificadores. 
+% O comando \texttt{generate} é a instrução que produz a \ac{AST} da linguagem.
+The \texttt{grammar} command specifies the name of the \ac{dsl}, while the \texttt{with} statement declares an inheritance from another language.
+In the case of the proposed grammar, a standard Xtext grammar called \texttt{Terminals} is used, which provides some predefined rules, such as the \texttt{ID} rule for identifiers.
+The command \texttt{generate} is the statement that produces the \ac{ast} of the language.
+
+% A primeira regra, chamada de regra de entrada, é a \texttt{ERModel} e define como é a estrutura geral da linguagem. 
+% Palavras e símbolos entre aspas duplas ou simples indicam as palavras reservadas. 
+% Por exemplo, o objeto \texttt{Entities} é obrigatoriamente precedido de "\texttt{Entities\{}". 
+% Este objeto representa uma espécie de \textit{container}, sendo isto indicado por meio do operador de atribuição \texttt{+=}. 
+% Ele é um objeto que pode conter outros objetos, no caso um ou mais \texttt{Entity} (entidades). 
+% É estabelecido que cada arquivo da \ac{DSL} deve também ser composto de um \texttt{Domain} (domínio) e zero ou mais \texttt{Relation} (relações). 
+% Além disso, um arquivo contém opcionalmente um comando \texttt{Generate}, que indica qual(is) arquivos devem ser gerados.
+The first rule, called the input rule, is \texttt{ERModel} and defines the general structure of the language.
+Words and symbols enclosed in double or single quotes indicate reserved words (keywords).
+For example, the \texttt{Entities} object must be preceded by "\texttt{Entities\{}".
+This object represents a kind of \textit{container}, which is indicated by the \texttt{+=} assignment operator.
+It is an object that can contain other objects, in this case one or more \texttt{Entity} (entities).
+It is established that each \ac{dsl} file must also be composed of a \texttt{Domain} (domain) and zero or more \texttt{Relation} (relations).
+In addition, a file optionally contains a \texttt{Generate} command, which indicates which file(s) should be generated.
+
+
+% Para melhor entendimento, deve-se deixar claro que a multiplicidade é indicada por \texttt{*} (zero ou muitos), \texttt{+} (um ou muitos) ou \texttt{?} (zero ou um). 
+% Ao não se colocar nenhum desses operadores, implicitamente espera-se então apenas uma ocorrência. 
+% Em relação às atribuições, quando apenas um \texttt{=} for especificado significa que o objeto da esquerda espera apenas um registro. 
+% Logo, para \texttt{+=} espera-se então zero, uma ou mais ocorrências, e assim por diante. 
+For a better understanding, it should be clear that the multiplicity is indicated by \texttt{*} (zero or many), \texttt{+} (one or many) or \texttt{?} (zero or one).
+By not placing any of these operators, only one occurrence is implicitly expected.
+Regarding assignments, when only one \texttt{=} is specified it means that the left object expects only one record.
+So, for \texttt{+=} then zero is expected, one or more occurrences, and so on.
+
+% O objeto \texttt{Domain} é precedido de uma palavra reservada com o mesmo nome, seguido de um identificador. 
+% A entidade é definida pela palavra \texttt{Entity} e um nome identificador específico para este objeto. 
+% A definição de uma herança é opcional por meio da palavra reservada \texttt{is}. 
+% Quando especificado uma herança é necessário indicar o tipo entre as quatro (4) possíveis para então apontar a classe herdada e.g. Entity02 is total/disjoint Entity01.
+% Após a definição do nome, abre-se um corpo de chaves em que são especificados os atributos da entidade. 
+% Uma entidade deve conter ao menos um atributo, mas ele não precisa ser identificador por conta da possível existência de entidades fracas. 
+The \texttt{Domain} object is preceded by a reserved word with the same name, followed by an identifier.
+The entity is defined by the word \texttt{Entity} and a specific identifier name for this object.
+Setting an inheritance is optional via the \texttt{is} keyword.
+When specifying an inheritance, it is necessary to indicate the type among the four (4) possible ones to then point to the inherited class e.g. \textit{EntityB is total/disjoint EntityA}.
+After defining the name, a curly bracket opens a snippet in which the attributes of the entity are specified.
+An entity must contain at least one attribute, but it does not need to be an identifier due to the possible existence of weak entities.
+
+% As regras compostas só são realizadas devido à possibilidade de se agrupar expressões com o uso de parênteses, além da possibilidade de se utilizar outras regras por meio de referências cruzadas. 
+% Os colchetes no atributo \texttt{is} da regra \texttt{Entity} servem para indicar que nós almejamos usar apenas o atributo \texttt{name} que identifica o objeto referenciado. 
+% Se esse detalhe não for especificado então o compilador da linguagem interpretaria que é necessário aplicar toda a regra \texttt{Entity} novamente, ou seja, se iniciaria a definição obrigatória de outra entidade entrando assim em um loop.
+% Os atributos das entidades são definidos por um nome, herdando a regra \texttt{ID} de \texttt{Terminals}, assim como por um tipo de dado. 
+% Opcionalmente um atributo pode ter a keyword \texttt{isIdentifier} para simbolizar chaves primárias. 
+Composed rules are only performed due to the possibility of grouping expressions using parentheses, in addition to the possibility of using other rules through cross-references.
+The square brackets in the \texttt{is} attribute of the \texttt{Entity} rule are meant to indicate that we aim to use only the \texttt{name} attribute that identifies the referenced object.
+If this detail is not specified then the language compiler would interpret that it is necessary to apply the whole \texttt{Entity} rule again, that is, the mandatory definition of another entity would be started, thus entering in a loop.
+Entity attributes are defined by a name, inheriting the \texttt{ID} rule from \texttt{Terminals}, as well as by a data type. 
+Optionally an attribute can have the keyword \texttt{isIdentifier} to symbolize primary keys.
+
+% Uma relação é definida, já dentro do corpo do bloco \texttt{Relationships}, com uma declaração obrigatória de sua identificação. 
+% Em seguida, são abertos colchetes e deve-se especificar dois elementos que representam os lados da relação. 
+% Estes elementos são separados como \texttt{RelationSideLeft} e \texttt{RelationSideRight}. 
+% Estes objetos devem ser separados pela expressão \texttt{relates}. 
+% Estes ambos os elementos tem dois atributos, um que indica a cardinalidade e outro referente ao objeto relacionado (entidade ou outra relação).
+% Uma relação pode ainda ter atributos declarados entre chaves, e para estes casos a regra \texttt{Attribute} é aplicada.
+A relationship is defined, already inside the body of the \texttt{Relationships} block, with a mandatory declaration of its identification.
+Then square brackets are opened and we must specify two elements that represent the sides of the relationship.
+These elements are the \texttt{RelationSideLeft} and \texttt{RelationSideRight}.
+These objects must be separated by the expression \texttt{relates}.
+These both elements have two attributes, one indicating cardinality and the other referring to the related object (a entity or other relationship).
+A relationship can still have attributes declared between curly braces, and for these cases the \texttt{Attribute} rule is applied.
+
+
+% Os tipos de atributo estão contidos em uma lista enumerada chamada \texttt{DataType}, sendo que na esquerda fica a representação dentro do modelo Ecore e a direita está palavra reservada disponível para o usuário.
+% O símbolo condicional \texttt{|} significa o operador lógico \textit{OR} (ou) e serve para separar cada definição \texttt{<chave> = <valor>} como uma opção dentro da lista.
+Attribute types are contained in an enumerated list called \texttt{DataType}, on the left is the representation within the Ecore model and on the right is the keyword available to the user.
+The conditional symbol \texttt{|} means the logical operator \textit{OR} and serves to separate each \texttt{<key> = <value>} definition as an option within the list.
+
+%------------------------------------------------------------------------------
+\subsection{The Metamodel}
+%------------------------------------------------------------------------------
+
+% Os metamodelos (ou modelos semânticos) no contexto de MDA são expressos usando MOF (Meta-Object Facility), um padrão da OMG para MDE.
+% Um metamodelo especifica a sintaxe abstrata de uma linguagem de modelagem e, como tal, é um tipo especial de modelo. 
+% Pode ser entendido como a especificação do conjunto de todos os modelos possíveis expressos em uma dada linguagem de modelagem. 
+% Cada modelo deve estar em conformidade com seu(s) metamodelo(s), ou seja, deve seguir os padrões de sintaxe, semântica, regras e relações entre conceitos.
+% Toda a DSL pode ser metamodelada, e a gramática que implementamos tem o metamodelo apresentado na Figura \label{fig:metamodel}.
+Metamodels (or semantic models) in the context of MDA are expressed using MOF (Meta-Object Facility), an OMG standard for MDE.
+A metamodel specifies the abstract syntax of a modeling language and as such is a special type of model.
+It can be understood as the specification of the set of all possible models expressed in a given modeling language.
+Each model must conform to its metamodel(s), that is, it must follow the standards of syntax, semantics, rules and relationships between concepts.
+As any DSL can be metamodeled, and the grammar we implement has the metamodel shown in Figure \ref{fig:metamodel}.
+
+
+% \begin{figure}[htbp]
+%   \centering
+%   \includesvg[width=0.5\columnwidth]{img/erDsl_class_diagram.svg}
+%   \caption{svg image}
+% \end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \caption{DSL grammar metamodel.}
+    \label{fig:metamodel}
+    \includegraphics[width=\textwidth]{img/erDsl_class_diagram.png}
+    \fonte{Author.}
+\end{figure}
+
+% O metamodelo da linguagem é importante na abordagem utilizada no Xtext pois permitiu que a DSL e os geradores sejam construídos separadamente. 
+The language metamodel is important in the approach used in Xtext as it allowed the DSL and generators to be built separately.
+
+
+%------------------------------------------------------------------------------
+\subsection{Tool Architecture}
+%------------------------------------------------------------------------------
+
+% O framework Xtext gera grande parte da infraestrutura para linguagens com base fundamentalmente nas gramáticas definidas. 
+% A Figura \ref{fig:arqXtext} fornece uma visão geral em um nível abstrato da arquitetura final da ERtext, arquitetura esta modificada com adição dos geradores SQL e gerador de diagramas com a PlantUML.
+The Xtext framework generates much of the infrastructure for languages based fundamentally on defined grammars.
+% FALAR DA ENGINE MWE2 ?
+Figure \ref{fig:arqERtext} provides an abstract level overview of the final ERtext architecture, which has been modified with the addition of SQL generators and diagram generator with PlantUML.
+
+\begin{figure}[!htb]
+    \centering
+    \caption{ERtext architecture.}
+    \label{fig:arqERtext}
+    \include{img/Arquitetura}
+    \fonte{Author.}
+\end{figure}
+
+% Dizemos que o Xtext gera grande parte, e não completamente, pois existem diversos aspectos que devem ser implementados de acordo com os requisitos e objetivos da linguagem.
+% Por exemplo, toda a parte de validação com com base no escopo, marcação e feedback de erros, sugestão de trechos de código, criação de templates, e wizards de criação de projetos e arquivos específicos para a linguagem precisam e foram implementados manualmente.
+We say that Xtext generates a large part, and not completely, as there are several aspects that must be implemented according to the requirements and objectives of the language.
+For example, all of the scope-based validation, bug marking and feedback, snippet suggestion, template creation, and language-specific project and file creation wizards need and have been implemented manually.
+
+%------------------------------------------------------------------------------
+\subsection{Stable Version}
+%------------------------------------------------------------------------------
+
+% O código fonte da versão estável da ferramenta de modelagem produzida está disponível em um repositório público no GitHub\footnote{Repositório: \url{https://github.com/ProjetoDSL/ERDSL}}.
+% Esta versão será irá para a última avaliação experimental que será planejada para avaliar não só a \ac{dsl} como também os artefatos que podem ser produzidos por ela, bem como sua usabilidade.
+% A Figura \ref{fig:stableVersion} apresenta um fragmento visual da ferramenta em uso.
+The source code of the stable version of the produced modeling tool is available in a public repository on GitHub\footnote{Repository: \url{https://github.com/ProjetoDSL/ERDSL}}.
+This version will go to the last experimental evaluation which will be designed to evaluate not only the \ac{dsl} but also the artifacts that can be produced by it, as well as its usability.
+Figure \ref{fig:stableVersion} presents a visual fragment of the tool in use.
+
+\begin{figure} [!htb]
+    \centering
+    \caption{ERtext Modeling Tool Stable Version.}
+    \label{fig:stableVersion}
+    \includegraphics[width=1\textwidth]{img/ToolOverview2.png}
+    \fonte{Author.}
+\end{figure}
+
+% A legenda (1) na figura demonstra o editor com um modelo descrito na DSL implementada. A legenda (2) apresenta uma representação gráfica (diagrama) utilizando a integração com PlantUML. 
+% Para isto o modelo é transformado da nossa DSL para a notação necessária para o PlantUML gerar o diagrama utilizando bibliotecas do Graphviz.
+% A legenda (3) mostra o modelo transformado para uma notação lógica, já resolvendo as relações, ou seja, as chaves primárias e estrangeiras.
+% Finalmente, na legenda (4) apresentamos o código SQL DDL gerada para o \ac{dbms} PostgreSQL 
+The caption (1) in the figure demonstrates the editor with a model described in the implemented \ac{dsl} notation.
+Caption (2) presents a graphical representation (diagram) using the integration with PlantUML.
+For this the model is transformed from our \ac{dsl} to the necessary notation for PlantUML to generate the diagram using Graphviz libraries.
+Caption (3) shows the model transformed to a logical notation, already solving the relations, that is, the primary and foreign keys.
+Finally, in caption (4) we present the generated \ac{sql} \ac{ddl} code for \ac{dbms} PostgreSQL.
+
+% Para as tranformações dos modelos foi avaliado as opções de regras de transformações descritas por \cite{Heuser:2009}.
+% Em relação aos relacionamentos do tipo 1:1 adotou-se a estratégia de adição de coluna para os três casos possíveis.
+% Para os relacionamentos 1:N seguiu-se a mesma premissa de transformação para os quatro (4) casos possíveis.
+% Já para a transformação de relacionamentos N:N optou-se pela única regra de transformação recomendada, ou seja, a regra de criação de tabelas próprias para os três (3) casos.
+For the transformations of the models, the transformation rule options described by \cite{Heuser:2009} were evaluated.
+Regarding 1:1 type relationships, the column addition strategy was adopted for the three possible cases.
+For the 1:N relationships, the same transformation premise was followed for the four (4) possible cases.
+For the transformation of N:N relationships, the only recommended transformation rule was chosen, that is, the rule for creating own tables for the three (3) cases.
+
+% Basicamente durante a atividade de modelagem um arquivo de texto plano é criado com a extensão da linguagem (.erdsl) no sistema que está rodando a ferramenta.
+% A cada vez que este arquivo é salvo um modelo Ecore é criado ou atualizado para então ser chamado aos geradores que lidam com os artefatos que devem ser criados.
+% Isto acontece através da interface \ texttt {IFileSystemAccess2} que oferece o meio para percorrer o modelo criado e aplicar como regras de transformação em um cenário standalone.
+% Esta interface oferece uma abstração para operações no sistema de arquivos, possibilitando o mapeamento de caminho lógico (artefato de saída). 
+% Esta interface compõe todas as interfaces de extensão para \ texttt {IFileSystemAccess} com outras melhorias implementadas diretamente.
+Basically, during the modeling activity a plain text file is created with the language extension (.erdsl) on the system running the tool.
+Each time this file is saved, an Ecore model is created or updated and then called to the generators that handle the artifacts that must be created.
+This happens through the \texttt {IFileSystemAccess2} interface that provides the means to iterate through the created model and apply as transformation rules in a standalone scenario.
+This interface provides an abstraction for file system operations, enabling logical path mapping (output artifact).
+This interface composes all the extension interfaces for \texttt {IFileSystemAccess} with other improvements implemented.
+
+% \begin{figure}[!htb]
+%     \centering
+%     \caption{Transformation rules adopted.}
+%     \label{fig:transformationRules}
+%     \include{img/TransformationRules}
+%     \fonte{Author.}
+% \end{figure}
+
+% Esta versão estável ainda conta com a implementação de outros recursos de usabilidade.
+% Entre os que podemos destacar estão os wizards de criação de projetos e arquivos para a \ac{dsl} e as recomendações de templates de código durante o uso.
+% Finalmente, mas não menos importante, essas funcionalidades não poderiam ter sido implementadas sem a ajuda da comunidade de desenvolvedores Xtext\footnote{Xtext community forum: \url{https://www.eclipse.org/forums/eclipse.modeling.tmf}}. 
+This stable version also has the implementation of other usability features.
+Among the highlights are the project and file creation wizards (Figure \ref{fig:wizard}) for \ac{dsl} and code template proposals (Figure \ref{fig:templateProposal}) during use.
+Last but not least, these features could not have been implemented without the help of the Xtext developer community\footnote{Xtext community forum: \url{https://www.eclipse.org/forums/eclipse.modeling.tmf}}.
+
+\begin{figure}[!htb]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \caption{Project Wizard.}
+    \label{fig:wizard}
+    \includegraphics[width=\textwidth]{img/Wizard1.png}
+    \fonte{Author.}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.55\textwidth}
+    \caption{Template Proposals.}
+    \label{fig:templateProposal}
+    \includegraphics[width=\textwidth]{img/CodeSnippetRecomendation.png}
+    \fonte{Author.}
+  \end{minipage}
+\end{figure}
+
+%------------------------------------------------------------------------------
+\subsection{Toy Example}
+%------------------------------------------------------------------------------
+
+
+
+%------------------------------------------------------------------------------
+\section{Chapter Lessons}
+%------------------------------------------------------------------------------
+ 
+% Neste capítulo foram expostos os requisitos, as decisões de projeto e a arquitetura da \ac{dsl} proposta para a solução desenvolvida. 
+% Também é apresentada uma visão geral da versão estável que será testada na última avaliação experimental.
+% Esperamos que a ferramenta de modelagem desenvolvida possa colaborar com o processo de ensino-aprendizagem, fornecendo uma gramática de fácil compreensão e uma facilidade de uso facilitado pela integração com a IDE Eclipse. 
+% Finalmente, para que este objetivo seja alcançado, é imprescindível que a avaliação experimental seja devidamente planeada, executada e analisada tendo em conta as funcionalidades que nos propomos oferecer.
+In this chapter, the requirements, design decisions and architecture of the \ac{dsl} proposal for the developed solution were exposed.
+An overview of the stable version that will be tested in the last experimental evaluation is also presented.
+We hope that the developed modeling tool can collaborate with the teaching-learning process, providing an easy-to-understand grammar and an ease of use facilitated by the integration with the Eclipse \ac{ide}.
+Finally, in order to achieve this goal, it is imperative that the experimental evaluation be properly planned, executed and analyzed taking into account the features that we propose to offer.
+
+REFORÇAR O NETWORKING DOS FÓRUNS
+
+ALINHAR APRENDIZADO
+
+
