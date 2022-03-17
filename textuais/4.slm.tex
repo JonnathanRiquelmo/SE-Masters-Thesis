@@ -9,8 +9,8 @@
 % Para este propósito ser alcançado foi realizado o planejamento e a execução de um Mapeamento da Literatura. 
 % Para isto foram aplicadas diretrizes bem estabelecidas conceitualmente com base em propostas de diversos trabalhos \cite{Kitchenham:2007, Petersen:2008, Nakagawa:2017}.  
 This chapter describes the procedures adopted for the investigation of the literature carried out for this study.
-For this purpose to be achieved, the planning and execution of a Literature Mapping was carried out.
-For this, conceptually well-established guidelines were applied based on proposals from several works \cite{Kitchenham:2007, Petersen:2008, Nakagawa:2017}.
+For achieving this purpose, we have carried out the planning and execution of a Systematic Literature Mapping.
+For this, we have applied conceptually well-established guidelines based on proposals from several works \cite{Kitchenham:2007, Petersen:2008, Nakagawa:2017}.
 
 % Transformation Mechanisms of Relational Database Models: A Systematic Mapping
 
@@ -27,19 +27,20 @@ For this, conceptually well-established guidelines were applied based on proposa
 % Um Mapeamento Sistemático de Literatura é útil para pesquisadores e profissionais pois fornecem visões abrangentes sobre o estado da arte em uma área específica.
 % Neste estudo conduziu-se um mapeamento utilizando o processo de definido por Petersen \cite{Petersen:2008}.
 
-A Systematic Literature Mapping is useful for researchers and practitioners as it provides comprehensive insights into the state of the art in a specific area.
-In this study a mapping was conducted using the process defined by Petersen \cite{Petersen:2008}.
+A Systematic Literature Mapping is helpful for researchers and practitioners as it provides comprehensive insights into the state-of-the-art in a specific area.
+In this study, we have conducted a mapping using the process defined by Petersen \cite{Petersen:2008}.
 
 %#################################################################
 \subsection{Research Questions} \label{ssec_slm:researchQuestions}
 %#################################################################
 
 % Levando-se em consideração o objetivo geral deste trabalho, o qual é desenvolver desenvolver uma ferramenta de modelagem para a modelagem conceitual de BDs que implemente uma DSL previamente proposta, foram formulados os seguintes questionamentos com o objetivo de investigar os mecanismos de transformação utilizados por DSLs:
-Taking into account the general objective of this work, which is to develop a modeling tool for the conceptual modeling of \acp{db} that implements a previously proposed DSL, the following questions were formulated in order to investigate the transformation mechanisms used by \acp{dsl}:
+Taking into account the general objective of this work, which is to develop a modeling tool for the conceptual modeling of \acp{db} that implements a previously proposed DSL, we have formulated the following research questions to investigate the transformation mechanisms used by \acp{dsl}:
 
 \begin{itemize}
     \item \textbf{RQ1.} What is the state of the art of mechanisms for transforming conceptual models?
-    \item \textbf{RQ2.} What transformation mechanisms among conceptual models are applied in the context of DSLs?
+    % \item \textbf{RQ2.} What transformation mechanisms among conceptual models are applied in the context of DSLs?
+    \item \textbf{RQ2.} What are transformation mechanisms applied among conceptual models in the context of DSLs?
     \item \textbf{RQ3.} What representations of database objects do the transformation mechanisms support?
 \end{itemize}
 
@@ -53,8 +54,8 @@ Taking into account the general objective of this work, which is to develop a mo
 % \textbf{(ii)} ser capaz de usar palavras-chave durante a pesquisa, e;
 % \textbf{(iii)} abranger estudos primários da grande área da Ciência da Computação.
 % Na Tabela \ref{tab:BasesDePesquisa} são listadas as bibliotecas digitais selecionadas para este mapeamento.
-Digital libraries are the main source of research in an systematic mapping \cite{Petersen:2008}.
-To choose the research sources for this systematic mapping, three mandatory requirements that the databases must meet are considered:
+Digital libraries are the principal source of research in an systematic literature mapping \cite{Petersen:2008}.
+To choose the research sources for this systematic literature mapping, we have considered three mandatory requirements that the databases must meet:
 \textbf{(i)} have search engine based on \textit{Web};
 \textbf{(ii)} be able to use keywords when searching, and;
 \textbf{(iii)} cover primary studies Computer Science area.
@@ -63,7 +64,7 @@ Table \ref{tab:reserchSources} lists the digital libraries selected for this map
 \rowcolors{1}{gray!15}{white}
 \begin{table}[!ht]
     \centering
-    \footnotesize
+    \scriptsize
     \caption{Digital libraries used.}
     \label{tab:reserchSources}
     \begin{tabular}{m{4cm}m{4cm}m{4cm}}
@@ -75,7 +76,7 @@ Table \ref{tab:reserchSources} lists the digital libraries selected for this map
     IEEE Xplore         & \textit{ieeexplore.ieee.org}  & Bibliographic Database \\ 
     Scopus       & \textit{scopus.com}   & Search Engine \\
     Google Scholar        & \textit{scholar.google.com}    & Search Engine \\ 
-    \bottomrule
+    \toprule
     \end{tabular}
     \fonte{Adapted from \cite{Nakagawa:2017}.}
 \end{table}
@@ -87,59 +88,63 @@ Table \ref{tab:reserchSources} lists the digital libraries selected for this map
 % A elaboração da \textit{string} de busca não é uma tarefa trivial. 
 % A identificação de uma combinação de termos que permitam encontrar o maior número de estudos primários relevantes de forma objetiva necessita, na maioria dos casos, de experiência e profundo conhecimento sobre a área de pesquisa abordada.  
 The elaboration of the search string is not a trivial task.
-The identification of a combination of terms that allow finding the greatest number of relevant primary studies in an objective way requires, in most cases, experience and in-depth knowledge of the research area addressed.
+The identification of a terms combination that allow finding the greatest number of relevant primary studies in an objective way requires, in most cases, experience and in-depth knowledge of the research area addressed.
 
 % Para a formação da string de busca é fundamental definir um conjunto de palavras referentes ao tema de pesquisa, bem como os sinônimos considerados expressivos. 
 % Estes termos devem representar de forma abrangente o tema central do estudo. 
 % Para este trabalho foram estabelecidos os termos e sinônimos cuja sua combinação gerou a string genérica da Firgura \ref{fig:searchString}. 
 % Posteriormente, as strings foram derivadas para se adequarem as restrições de cada mecanismo de busca, sendo apresentadas na Tabela \ref{tab:StringsDatabases}.
-For the formation of the search string, it is essential to define a set of words referring to the research topic, as well as the synonyms considered expressive.
-These terms should comprehensively represent the central theme of the study.
-For this work, the terms and synonyms whose combination generated the generic string of the Figure \ref{fig:searchString} were established.
-Subsequently, the strings were derived to fit the constraints of each search engine, and are presented in Table \ref{tab:StringsDatabases}.
+For the search string definition, it is essential to define a set of words referring to the research topic as well as the synonyms are considered expressive. 
+These terms should comprehensively represent the central theme of the study. 
+For this work, we have established the terms and synonyms whose combination generated the generic string shown in Figure \ref{fig:searchString}. 
+Subsequently, Table \ref{tab:StringsDatabases} presents the strings that we have derived for fitting the constraints of each search engine. 
 
 \begin{figure}[htb]
 \centering
-\caption{Generic Search String.}
+\caption{Generic search string.}
 \label{fig:searchString}
 \fbox{\
 \small
 \parbox{14cm}{
 \centering
 \tiny\texttt{
-("Domain-Specific Language" OR "Domain Specific Language" OR DSL OR "Domain-Specific Modeling Language" OR "Domain Specific Modeling Language" OR DSML OR "Domain-Specific Modeling" OR DSM) AND (Entity-Relationship OR ER OR "Enhanced Entity-Relationship" OR EER OR "Entity Relationship Diagram" OR ERD) AND ("Model Transformation" OR Model-to-Text OR M2T OR Model-to-Model OR M2M OR "Code Generation")}}}
+("Domain-Specific Language" OR "Domain Specific Language" OR DSL OR \linebreak "Domain-Specific Modeling Language" OR "Domain Specific Modeling Language" \linebreak OR DSML OR "Domain-Specific Modeling" OR DSM) \linebreak 
+AND \linebreak
+(Entity-Relationship OR ER OR "Enhanced Entity-Relationship" OR \linebreak EER OR "Entity Relationship Diagram" OR ERD) \linebreak 
+AND \linebreak
+("Model Transformation" OR Model-to-Text OR M2T OR Model-to-Model OR \linebreak M2M OR "Code Generation")}}}
 \fonte{Author.}
 \end{figure}
 
 
 \begin{table}[!htb]
-\caption{Search strings derived by databases.}
+\caption{Search strings derived by sources.}
 \label{tab:StringsDatabases}
 \tiny
 \begin{tabular}{m{1.0cm}m{14.0cm}}
 \bottomrule
-\textbf{DBs} & \textbf{Search String} \\
+\textbf{Source} & \textbf{Search String} \\
 \midrule
-\T ACM & \texttt{Abstract:(("Domain-Specific Language" OR "Domain Specific Language" OR DSL OR "Domain-Specific Modeling Language" OR "Domain Specific Modeling Language" OR DSML OR "Domain-Specific Modeling" OR DSM) AND (Entity-Relationship OR ER OR "Enhanced Entity-Relationship" OR EER OR "Entity Relationship Diagram" OR ERD) AND ("Model Transformation" OR Model-to-Text OR M2T OR Model-to-Model OR M2M OR "Code Generation")} \\
+\T ACM & \texttt{Abstract:(("Domain-Specific Language" OR "Domain Specific Language" OR DSL OR "Domain-Specific Modeling Language" OR "Domain Specific Modeling Language" OR DSML OR "Domain-Specific Modeling" OR DSM) \linebreak AND \linebreak (Entity-Relationship OR ER OR "Enhanced Entity-Relationship" OR EER OR "Entity Relationship Diagram" OR ERD) \linebreak AND \linebreak ("Model Transformation" OR Model-to-Text OR M2T OR Model-to-Model OR M2M OR "Code Generation")} \\
 \midrule
-\T Google & \texttt{("Domain-Specific Language" OR "Domain-Specific Modeling Language" OR "Domain-Specific Modeling") AND (Entity-Relationship OR "Enhanced Entity-Relationship") AND ("Model Transformation" OR Model-to-Text OR M2T OR Model-to-Model OR M2M OR "Code Generation")} \\
+\T Google & \texttt{("Domain-Specific Language" OR "Domain-Specific Modeling Language" OR "Domain-Specific Modeling") \linebreak AND \linebreak (Entity-Relationship OR "Enhanced Entity-Relationship") \linebreak AND \linebreak ("Model Transformation" OR Model-to-Text OR M2T OR Model-to-Model OR M2M OR "Code Generation")} \\
 \midrule
-\T Scopus & \texttt{TITLE-ABS-KEY ( "Domain-Specific Language"  OR  "Domain Specific Language"  OR  dsl  OR  "Domain-Specific Modeling Language"  OR  "Domain Specific Modeling Language"  OR  dsm  OR  "Domain-Specific Modeling"  OR  dsm )  AND  ( entity-relationship  OR  per  OR  "Enhanced Entity-Relationship"  OR  eer  OR  "Entity Relationship Diagram"  OR  erd )  AND  ( "Model Transformation"  OR  model-to-text  OR  met  OR  model-to-model  OR  mcm  OR  "code generation")} \\
+\T Scopus & \texttt{TITLE-ABS-KEY ( "Domain-Specific Language"  OR  "Domain Specific Language"  OR  dsl  OR  "Domain-Specific Modeling Language"  OR  "Domain Specific Modeling Language"  OR  dsm  OR  "Domain-Specific Modeling"  OR  dsm )  \linebreak AND \linebreak ( entity-relationship  OR  per  OR  "Enhanced Entity-Relationship"  OR  eer  OR  "Entity Relationship Diagram"  OR  erd ) \linebreak AND \linebreak ( "Model Transformation"  OR  model-to-text  OR  met  OR  model-to-model  OR  mcm  OR  "code generation")} \\
 \midrule
-\T IEEE & \texttt{(("Full Text .AND. Metadata":"Domain-Specific Language" OR "Full Text .AND. Metadata":"Domain Specific Language" OR "Full Text .AND. Metadata":DSL OR "Full Text .AND. Metadata":"Domain-Specific Modeling Language" OR "Full Text .AND. Metadata":"Domain Specific Modeling Language" OR "Full Text .AND. Metadata":DSML OR "Full Text .AND. Metadata":"Domain-Specific Modeling" OR "Full Text .AND. Metadata"::DSM) AND ("Full Text .AND. Metadata":"Entity-Relationship" OR "Full Text .AND. Metadata"::ER OR "Full Text .AND. Metadata"::"Enhanced Entity-Relationship" OR "Full Text .AND. Metadata"::EER OR "Full Text .AND. Metadata":"Entity Relationship Diagram" OR "Full Text .AND. Metadata":ERD) AND ("Full Text .AND. Metadata":"Model Transformation" OR "Full Text .AND. Metadata":"Model-to-Text" OR "Full Text .AND. Metadata":M2T OR "Full Text .AND. Metadata":"Model-to-Model" OR "Full Text .AND. Metadata":M2M OR "Full Text .AND. Metadata":"Code Generation")} \\
+\T IEEE & \texttt{(("Full Text .AND. Metadata":"Domain-Specific Language" OR "Full Text .AND. Metadata":"Domain Specific Language" OR "Full Text .AND. Metadata":DSL OR "Full Text .AND. Metadata":"Domain-Specific Modeling Language" OR "Full Text .AND. Metadata":"Domain Specific Modeling Language" OR "Full Text .AND. Metadata":DSML OR "Full Text .AND. Metadata":"Domain-Specific Modeling" OR "Full Text .AND. Metadata"::DSM) \linebreak AND \linebreak ("Full Text .AND. Metadata":"Entity-Relationship" OR "Full Text .AND. Metadata"::ER OR "Full Text .AND. Metadata"::"Enhanced Entity-Relationship" OR "Full Text .AND. Metadata"::EER OR "Full Text .AND. Metadata":"Entity Relationship Diagram" OR "Full Text .AND. Metadata":ERD) \linebreak AND \linebreak ("Full Text .AND. Metadata":"Model Transformation" OR "Full Text .AND. Metadata":"Model-to-Text" OR "Full Text .AND. Metadata":M2T OR "Full Text .AND. Metadata":"Model-to-Model" OR "Full Text .AND. Metadata":M2M OR "Full Text .AND. Metadata":"Code Generation")} \\
 \noalign{\smallskip} 
 \toprule
 \end{tabular}
 \end{table}    
 
-% Para a geração das strings, bem como todo o processo de mapeamento, foi utilizado o apoio da ferramenta Thoth\footnote{Thoth Tool: \url{http://lesse.com.br/tools/thoth/}}. 
+% Para a geração das strings, bem como todo o processo de mapeamento, foi utilizado o apoio da ferramenta Thoth\footnote{Thoth Tool: \url{http://lesse.com.br/tools/thoth/}}, uma ferramenta web que fornece apoiar processos de revisão sistemáticas \cite{thoth:2019}. 
 % A string para a ACM era a versão base gerada pela ferramenta, limitando ao conjunto \textit{The ACM Full-Text Collection} (com 606,408 registros na época) e limitando ao abstract.
-For the generation of strings, as well as the entire mapping process, the support of the tool Thoth\footnote{Thoth Tool: \url{http://lesse.com.br/tools/thoth/}} was used.
-The string for the ACM was the base version generated by the tool, limiting it to the \textit{The ACM Full-Text Collection} set (with 606,408 records at the time) and limiting it to the abstract.
+For the generation of strings as far as the entire mapping process, we have used the support of the Thoth\footnote{Thoth Tool: \url{http://lesse.com.br/tools/thoth/}} tool, a web tool that provides support for systematic review processes \cite{thoth:2019}.
+The string for the ACM was the base version generated by the tool, limiting it to \textit{The ACM Full-Text Collection} set (with 606,408 records at the time) and limiting it to the abstract.
 % No Google Scholar a string foi limitada a 256 caracteres, sendo que os hífens não fazem diferença. 
 % A string derivada que foi usada ficou com exatos 256 caracteres e os resultados trouxeram estudos aparentemente relevantes.
 In Google Scholar the string was limited to 256 characters, with hyphens making no difference.
-The derived string that was used was exactly 256 characters long and the results brought apparently relevant studies.
+The derived string that was used was exactly 256 characters long and the results brought relevant studies.
 % A string para a IEEE precisou ser limitado a 20 termos.
 % O resultado foi obtido buscando full text e metadata dos estudos. 
 % Isso foi necessário por quando feita apenas verificando os abstracts havia o retorno de 0 resultados.
@@ -156,7 +161,7 @@ This was necessary because when only checking the abstracts, no results were ret
 % Para o este trabalho foram determinados os critérios de seleção listados a seguir.
 According to \cite{Kitchenham:2007}, the inclusion criteria indicate by which parameters a study is included, that is, considered relevant.
 Likewise, the exclusion criteria indicate by which parameters a study is excluded, that is, considered not relevant in the research.
-For this work, the selection criteria listed below were determined.
+For this work, we have determined the selection criteria listed below.
 
 \begin{itemize}
     \item \textbf{Inclusion Criteria (IC)}    
@@ -181,28 +186,33 @@ For this work, the selection criteria listed below were determined.
 
 % Segundo \cite{Nakagawa:2017}, embora exemplos de formulários de avaliação de qualidade possam ser encontrados com certa facilidade na literatura, para a elaboração de critérios e definição de seus pesos os pesquisadores envolvidos em cada revisão ou mapeamento devem levar em consideração as particularidades conforme o tema e as questões de pesquisa.
 % Portanto, em pesquisas desse tipo existe total liberdade para definição o número de critérios de qualidade e seus pesos relacionados. 
-According to \cite{Nakagawa:2017}, although examples of quality assessment forms can be found with some ease in the literature, for the elaboration of criteria and definition of their weights, the researchers involved in each review or mapping must take into account the particularities depending on the theme and the research questions.
-Therefore, in research of this type, there is complete freedom to define the number of quality criteria and their related weights.
+According to \cite{Nakagawa:2017}, although we can find with some ease in the literature examples of quality assessment forms for the criteria elaboration and their weights definition, the researchers involved in each review or mapping must consider the particularities depending on the theme and the research questions.
+% According to \cite{Nakagawa:2017}, although examples of quality assessment forms can be found with some ease in the literature, for the elaboration of criteria and definition of their weights, the researchers involved in each review or mapping must take into account the particularities depending on the theme and the research questions.
+Therefore, there is complete freedom to define the number of quality assessment criteria and their related weights in this research type.
 
 % Foram definidos três (3) critérios de qualidade para a avaliação dos estudos primários aprovados após a aplicação dos critérios de seleção. 
 % Os critérios de qualidade visam quantificar a relevância para que seja possível realizar uma comparação entre os estudos selecionados. 
 % Foi definido também uma pontuação para ser atribuída a partir dos critérios de qualidade. 
 % Para a definição das pontuações foram estabelecidas siglas para as representar.
-Three (3) quality criteria were defined for the assessment of primary studies approved after applying the selection criteria.
-The quality criteria aim to quantify the relevance so that it is possible to make a comparison between the selected studies.
+We have defined three (3) quality assessment criteria to assess primary studies approved after applying the selection criteria.
+The quality assessment criteria aim to quantify the relevance so that it is possible to realize a comparison among the selected studies.
 A score was also defined to be assigned based on the quality criteria.
-To define the scores, acronyms were established to represent them.
+We have established acronyms to define the scores to represent them.
 
 \begin{itemize}
-     \item \textbf{G: Good}, contemplating most of the evaluated quality criteria;
-     \item \textbf{A: Average}, partially contemplating the quality criteria evaluated;
-     \item \textbf{P: Poor}, does not contemplating the assessed quality criteria at all.
+    \item \textbf{G: Good}, the study fully meets the quality assessment criteria;
+    \item \textbf{A: Average}, the study partially meets the quality assessment criteria;
+    \item \textbf{P: Poor}, the study does not meet the quality assessment criteria.
 \end{itemize}
 
+% Para todos os critérios a sigla \textbf{P} (Poor) representava zero (0) e a sigla \textbf{G} (Good) representava o conceito máximo de valor um (1).
+% A sigla \textbf{A} (Average) se referia a um meio termo, valendo uma pontuação de 0.5. 
+For all criteria, the acronym \textbf{P} (Poor) represents zero (0) and the acronym \textbf{G} (Good) depicts the maximum concept of value one (1).
+The acronym \textbf{A} (Average) refers to a middle ground, with a score of 0.5.
 % A pontuação máxima possível era, avaliados todos os critérios, três (3.0) e a mínima zero (0). 
 % Os critérios de qualidade são apresentados na Tabela \ref{tab:CAQ}.
-The maximum possible score was, when all criteria were evaluated, three (3.0) and the minimum zero (0).
-The quality criteria are shown in Table \ref{tab:CAQ}.
+By the way, the maximum possible score when we evaluated all criteria is three (3.0), and the minimum is zero (0).
+Table \ref{tab:QAC} shows the quality assessment criteria.
 
 \rowcolors{1}{gray!15}{white}
 \begin{table}[!htb]
@@ -210,18 +220,18 @@ The quality criteria are shown in Table \ref{tab:CAQ}.
     %\small
     \footnotesize
     \caption{Quality Assessment Criteria.}
-    \label{tab:CAQ}
+    \label{tab:QAC}
     \begin{tabular}{l|p{12cm}|c}
     \bottomrule
     \rowcolor[HTML]{C0C0C0}
     \textbf{ID} & \textbf{Description} & \textbf{Weight} 
     \\ 
     \hline
-    QC1. & Does the study present refinement techniques, guidelines, mechanisms or heuristics based on conceptual data models for relational databases? & 1,0 
+    QC1. & Does the study present refinement techniques, guidelines, mechanisms, or heuristics based on conceptual data models for relational databases? & 1,0 
     \\
     QC2. & Does the study provide details of the model transformation mechanisms? & 1,0 
     \\
-    QC3. & Does the study present any evaluation way of the transformation mechanisms presented? & 1,0 
+    QC3. & Does the study present some evaluation way of the transformation mechanisms presented? & 1,0 
     \\
     \toprule
     \end{tabular}
@@ -234,8 +244,8 @@ The quality criteria are shown in Table \ref{tab:CAQ}.
 
 % Definiu-se um formulário de dados para a extração e análise dos dados relevantes contidos nos estudos primários selecionados. 
 % A descrição detalhada deste formulário de extração é apresentado na Tabela \ref{tab:DataExtractionForm}.
-A data form was defined for the extraction and analysis of relevant data contained in the selected primary studies.
-The detailed description of this extraction form is presented in Table \ref{tab:DataExtractionForm}.
+We have defined a data form for the extraction and analysis of relevant data of the selected primary studies.
+Table \ref{tab:DataExtractionForm} presents the detailed description of this extraction form.
 
 \rowcolors{1}{gray!15}{white}
 \begin{table}[!htb]
@@ -275,13 +285,187 @@ The detailed description of this extraction form is presented in Table \ref{tab:
 \subsection{Selection Process} \label{ssec_slm:selectionProcess}
 %#################################################################
 
-...
+% Todas as etapas de seleção também foram realizadas com a ajuda da ferramenta Thoth e um resumo geral é exibido na Figura \ ref {fig: selectionSteps}.
+% Inicialmente identificamos um total de 1602 estudos extraídos das quatro (4) fontes consultadas. 
+% A etapa seguinte compreendeu a verificação e exclusão de estudos duplicados.
+% Isso resultou na exclusão de 139 estudos, restando assim 1463 estudos para a aplicação dos critérios de inclusão e exclusão.
+% Nesse ponto os critérios foram aplicados específicamente com base nos títulos, palavras-chave e resumos.
+% Após esta tarefa ser terminada, restaram 30 estudos.
+We also have performed all selection steps with the help of the Thoth tool, and Figure \ref{fig:selectionSteps} depicts an overview.
+Initially, we identified a total of 1602 studies extracted from the four (4) sources consulted.
+The next step involved the verification and exclusion of duplicate studies.
+This step resulted in the exclusion of 139 studies, leaving 1463 studies to apply the inclusion and exclusion criteria step.
+At this point, we have specifically applied the criteria based on titles, keywords, and abstracts.
+After this task, we completed the selection process, where 30 studies remained.
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Selection process steps.}
+    \label{fig:selectionSteps}
+    \include{img/StepsSLM}
+    % \includegraphics[width=\columnwidth]{images/DesignExperimento.png}
+    \fonte{Author.}
+\end{figure}
+
+% Estes artigos foram então submetidos aos critérios de qualidade, que constituía-se da leitura dos textos completos.
+% Todos os artigos foram avaliados, sendo considerados aceitos no conjunto final aqueles que obtivessem ao menos um (1) ponto na pontuação da classificação geral.
+% Levando-se em consideração esta restrição de pontuação mínima, chegou-se ao número final de doze (12) estudos, que passaram então pela extração de dados para formularmos as considerações em relação as perguntas de pesquisa.
+Then, we have submitted these papers to the quality assessment criteria step, which consisted of reading the full texts.
+All papers were evaluated, with those that obtained at least one (1) point in the overall classification score being considered accepted in the final set.
+Thus, considering the minimum score restriction, we have reached the final number of twelve (12) studies, which then underwent data extraction to formulate considerations related to the research questions.
 
 %------------------------------------------------------------------------------
 \section{Results and Discussion} \label{sec_slm:resultsDiscussion}
 %------------------------------------------------------------------------------
-...
+
+% Os estudos primários foram avaliados com base nos critérios de qualidade definidos na \autoref{ssec_slm:qualityCriteria}.
+% A menor pontuação dos artigos aceitos foi de 1,0 com três (3) artigos, enquanto apenas um estudo alcançou a nota máxima 3,0. 
+% A Tabela \ref{tab:QualityEval} resume os resultados obtidos na avaliação da qualidade.
+We have evaluated the primary studies based on the quality criteria defined in Section \ref{ssec_slm:qualityCriteria}.
+The lowest score of accepted papers was 1.0 with three (3) articles, while only one study reached the maximum score of 3.0.
+Table \ref{tab:QualityEval} summarizes the results obtained in the quality assessment criteria.
+
+\rowcolors{1}{gray!15}{white}
+\begin{table}[!htb]
+\footnotesize
+\centering
+\caption{Quality Assessment Results.}
+\label{tab:QualityEval}
+\begin{tabular}{lcccccccr}
+\bottomrule
+\rowcolor[HTML]{C0C0C0}
+\multicolumn{1}{c}{\textbf{Studies}} &
+\multicolumn{3}{c}{\textbf{Quality Criteria}} &
+\multicolumn{1}{r}{\textbf{Score}} \\
+\hline
+\rowcolor[HTML]{C0C0C0}\textbf{Reference} & 
+\textbf{QC1} & \textbf{QC2} & \textbf{QC3} & 
+\textbf{Total} \\
+\hline
+\citeonline{deSousa:2018} & A & A & A & 1.5       \\
+\citeonline{Ristic:2016} & A & A & P & 1          \\
+\citeonline{Dimitrieski:2015} & G & G & G & 3     \\
+\citeonline{Dimitrieski:2014}  & G & G & P & 2    \\
+\citeonline{Subahi:2011} & A & G & P & 1.5        \\
+\citeonline{Kung:2010} & G & G & P & 2            \\
+\citeonline{Hartmann:2007} & G & G & P & 2        \\
+\citeonline{Vara:2007} & A & A & P & 1            \\
+\citeonline{Gogolla:2005} & G & G & P & 1         \\
+\citeonline{Dey:1999} & G & G & P & 2             \\
+\citeonline{Rosenthal:1994} & G & G & P & 2       \\
+\citeonline{Teorey:1986} & G & G & P & 2          \\
+\hline
+\end{tabular}
+\fonte{Author.}
+\end{table}
+
+
+% Em relação a RQ1 (estado da arte dos mecanismos para transformar modelos conceituais) identificamos como resultados mais significativos três estudos que são relacionados \cite{Ristic:2016, Dimitrieski:2015, Dimitrieski:2014}.
+% Estes estudos apresentam uma pesquisa que gerou a \textit{Multi-paradigm System Modeling Tool} (MIST), a qual utiliza uma \ac{dsl} bidirecional para modelagem conceitual de \acp{db}. 
+% Além disso, a proposta ainda argumenta utilizar heuristicas para as transformações e as descreve em alto nível. 
+% É importante salientar que o repositório público com o código do projeto\footnote{MIST repository: https://github.com/vdimitrieski/mist} apresenta o metamodelo da linguagem e codificação da \ac{dsl}, bem como a implementação em JAVA as heurísticas relatadas, mas não possui o código referente a transformação inversa proposta (de modelos gráficos ou SQL para a \ac{dsl}).
+% Como principal deficiência apontada está o fato da mudança no framework inicialmente utilizado durante o desenvolvimento devido à descontinuação do projeto que o mantinha.
+% Por este motivo, os autores afirmam terem feito a adoção do Xtext como framework de implementação final.
+Regarding \textbf{RQ1} (state of the art of mechanisms for transforming conceptual models), we identified as the most significant results three studies that are related \cite{Ristic:2016, Dimitrieski:2015, Dimitrieski:2014}.
+These studies present research that generated the \textit{Multi-paradigm System Modeling Tool} (MIST), which uses bidirectional \ac{dsl} for conceptual modeling of \acp{db}.
+Furthermore, the proposal also argues using heuristics for transformations and describes them at a high level.
+It is relevant to point out that the public repository with the project code\footnote{MIST repository: \urel{https://github.com/vdimitrieski/mist}} presents the metamodel of the \ac{dsl} language as far as the JAVA implementation the reported heuristics but does not have the code for the proposed inverse transformation (from graphical models or \ac{sql} to the \ac{dsl}).
+% As the main deficiency pointed out is the fact of the change in the framework initially used during development due to the discontinuation of the project that maintained it.
+As the main drawback pointed out, we highlighted the framework change initially used during development due to the project discontinuation that maintained it.
+For this reason, the authors claim to have adopted Xtext as the final implementation framework.
+
+% Também identificamos o estudo de \cite{Hartmann:2007}, que apresenta uma proposição de quatro (4) tipos de coleções para a abordagem ER, juntamente com uma visão geral para um processo de 
+% transformação de esquemas ER estendidos em esquemas de banco de dados relacionais. 
+% Contudo este trabalho relata como deficiência a falta de uma linguagem de consulta (sql estendido) que contemple as coleções propostas.
+We also identified the study of \cite{Hartmann:2007}, which presents a proposition of four (4) types of collections for the ER approach, along with an overview for a process of
+transforming extended ER schemes into relational databases schemes.
+However, this work reports a lack of a query language (extended SQL) that covers the proposed collections.
+
+% Como trabalhos também mais significativos no conjunto final (pontuação >= 2,0) citamos dois trabalhos que são mais antigos, de \cite{Rosenthal:1994, Teorey:1986}.
+% O primeiro apresenta um protótipo que é na verdade uma cadeia de ferramentas. 
+% Há uma descrição das etapas para a transformação de modelos de bancos de dados relacionais.
+% A principal deficiência apontada se refere aos dados subjacentes unificados, que podem ser redundantes em alguns casos.
+% O segundo define uma metodologia de design para bancos de dados relacionais em grande escala usando uma abordagem EER, porém a notação utilizada (linguagem) não é implementada.
+% Apesar de estar focado em bancos de dados de larga escala, os autores apontam que o estágio de normalização dos dados proposto na metodologia pode ser extenso e complexo para codificação.
+As more significant works in the final set (score >= 2.0), we cite two works that are older, from \cite{Rosenthal:1994, Teorey:1986}.
+The first presents a prototype that is actually a toolchain.
+There is a description of the steps for transforming relational database models.
+The principal lack indicated refers to the underlying unified data, which can be redundant in some cases.
+The second defines a design methodology for large-scale relational databases using an EER approach, but the notation used was not implemented.
+Despite being focused on large-scale databases, the authors point out that the data normalization stage proposed in the methodology can be extensive and complex for coding.
+
+% Como trabalhos que fogem um pouco do escopo desta pesquisa, mas ainda se mostram relevantes podemos citar o estudo de \cite{deSousa:2018}, que apresenta um processo para transformar uma modelagem conceitual em uma representação do modelo de dados de gráfico NoSQL.
+% No caso deste estudo, a solução suporta apenas bancos de dados gráficos, mas os autores afirmam que pretendem realizar a extensão para outros tipos de banco de dados NoSQL, bem como o modelo relacional clássico. 
+% De toda a forma, é apresentado ainda pseudo-algoritmos de mapeamento para elementos da abordagem ER.
+
+As works that are a little beyond the scope of this research but are still relevant, we can mention the study by \cite{deSousa:2018}, which presents a process to transform a conceptual model into a representation of the NoSQL graphical data model.
+In the case of this study, the solution only supports graphical databases but the authors state that they intend to extend it to other NoSQL databases types and even the classic relational model.
+At all events, the authors also presented pseudo-algorithms of mapping for elements of the ER approach.
+
+% Finalmente, podemos citar também o estudo de \cite{Dey:1999} que apresenta um framework genérico para a análise de relacionamentos em modelos de dados.
+% Ao contrário de outras abordagens, ele se concentra apenas em relacionamentos, relegando as entidades. 
+% Apresenta uma notação genérica para representar relacionamentos e fornece orientações que identificam quais construções de modelagem usar em diferentes situações. 
+% Fornece também regras explícitas para avaliar o grau de um relacionamento bem como compreender os relacionamentos recursivos. 
+% Os autores ainda analisam, utilizando uma semântica especial, os casos de relacionamentos fracos. 
+% Finalmente, as regras de design para transformar essas construções ER em um modelo relacional são descrita, junto com as regras de integridade associadas que podem ser derivadas do design conceitual.
+Finally, we can also cite the study by \cite{Dey:1999} that presents a generic framework for analyzing relationships in data models.
+Unlike other approaches, it focuses only on relationships, relegating entities.
+It introduces a generic notation for representing relationships and provides guidelines that identify which modeling constructs to use in different situations.
+It also provides explicit rules for evaluating the degree of a relationship as well as understanding recursive relationships.
+The authors also analyze, using special semantics, the cases of weak relationships.
+Finally, the study describes the design rules for transforming these ER constructs into a relational model, along with the associated integrity rules that can be derived from the conceptual design.
+
+% Em relação a \textbf{RQ2} (mecanismos de transformação entre modelos conceituais que são aplicados no contexto de DSLs), 
+% podemos mencionar que todos os estudos avaliados apresentam mecanismos de transformação em diferentes níveis de abstração (algoritmos e pseudo-algoritmos).
+% Apesar de haver similaridades entre praticamente todos os mecanismos reportados existem cinco (41,7\%) que relatam nomeando explicitamente como estratégias, três (25\%) estudos descrevem como guidelines e quatro (33,3\%) indicam como heurísticas.
+Regarding \textbf{RQ2} (transformation mechanisms applied among conceptual models in the context of DSLs), we can mention that all the studies evaluated present transformation mechanisms at different levels of abstraction (algorithms and pseudo-algorithms).
+Although there are similarities between practically all reported mechanisms, there are five (41.7\%) that report explicitly naming them as strategies, three (25\%) studies describe them as guidelines, and four (33.3\%) indicate them as heuristics.
+
+% Em relação a \textbf {RQ3} (representações de objetos de banco de dados suportados nos mecanismos de transformação) os estudos analisados, quando citam explicitamente os objetos, em geral convergem em relação aos mais comuns como tabelas e relações, salvo exceções \cite{Dey:1999}.
+% Outros objetos de banco são abordados também como gatilhos, visões e procedimentos armazenados. 
+% Destacamos novamente os trabalhos que se referem a MIST, pois estes afirmam que existe suporte a funções também.
+Regarding \textbf {RQ3} (representations of database objects supported in transformation mechanisms), the analyzed studies, when explicitly mentioning the database objects, in general, converge in relation to the most common ones such as tables and relations, with exceptions \cite{Dey:1999}.
+Other database objects are also covered such as triggers, views, and stored procedures.
+We highlighted again the studies that refer to MIST, as they claim that there is support for database functions as well.
+
+% Podemos mencionar que poucas \acp{dsl} são reportadas com um nome próprio.
+% Na realidade, entre os doze (12) estudos avaliados apenas dois (2) fazem nomeiam explicitamente suas linguagens, sendo elas a EERDSL \cite{Ristic:2016, Dimitrieski:2015, Dimitrieski:2014} e a ReMoDeL DBQ \cite{Subahi:2011}.
+% Finalmente, sobre os métodos usados para avaliar as propostas existe apenas um estudo preliminar que apresenta uma validação experimental da proposta \cite{Dimitrieski:2015} usando dezesseis (16) participantes, sendo dois (2) especialistas em IHC, três (3) especialistas em modelagem de sistemas e onze (11) estudantes. Entre os estudantes seis (6) eram mestrandos na área de \acp{db} e cinco (5) doutorandos com experiência em modelagem.
+% Em geral, todos os outros estudos indicam a falta de uma avaliação de suas proposições como um possível trabalho futuro.
+We can also mention that few \acp{dsl} report with a proper name.
+In fact, among the twelve (12) studies evaluated, only two (2) explicitly name their languages, namely EERDSL \cite{Ristic:2016, Dimitrieski:2015, Dimitrieski:2014} and ReMoDeL DBQ \cite{Subahi:2011}.
+Finally, on the methods used to evaluate the proposals, there is only one preliminary study that presents an experimental validation of the proposal \cite{Dimitrieski:2015} using sixteen (16) participants, two (2) IHC experts, three (3) experts in systems modeling and eleven (11) students. 
+Among the students, six (6) were masters in the area of \acp{db} and five (5) doctoral students with experience in modeling.
+In general, all other studies indicate the lack of an evaluation of their propositions as possible future work.
+
 %------------------------------------------------------------------------------
 \section{Chapter Lessons} \label{sec_slm:lessons}
 %------------------------------------------------------------------------------
-...
+
+% Todos os anos, várias contribuições para a modelagem \ac{ER} são publicadas. 
+% A modelagem de \ac{db} é uma área essencial na computação e as \acp{dsl} que suportam essa atividade não são encontradas trivialmente na literatura.
+% A fim de acompanhar a evolução e as tendências de vários sistemas de \acp{BD}, uma pesquisa de alternativas para o design é essencial. 
+% Neste capítulo é fornecido uma visão geral sobre as \acp{DSL} usadas pela tranformação de modelos de dados por meio de um mapeamento sistemático de literatura.
+Every year, several contributions to the ER modeling are published.
+% The modeling of \ac{db} is an fundamental area in computing and the \acp{dsl} that support this activity are not trivially found in the literature.
+Database modeling is a fundamental area in computing, and unfortunately, in the literature not trivially found DSLs that support this activity.
+To follow the evolution and trends of various \acp{db} systems, a search for alternatives to design is essential.
+This chapter provides an overview of the \acp{dsl} used for transforming data models through systematic literature mapping.
+
+% Este processo de mapeamento abrangeu 1602 artigos com a intenção de investigar estudos primários que fizeram propostas que mostrassem mecanismos de transformação para modelagem de \acp{bd}. 
+% O protocolo do mapeamento sistemático foi detalhado, assim como sua condução e subsequente análise dos resultados obtidos.
+% Ao final, 12 estudos primários foram selecionados para serem analisados de forma quantitativa e qualitativa. 
+% Entre os resultados destaca-se, entre os trabalhos relacionados, o estudo de \citeonline{Dimitrieski:2015}, o qual apresenta uma ferramenta de modelagem bidirecional que aplica sua própria \ac{dsl} com base na abordagem EER e descreve de forma detalhada os mecanismos de tranformação entre os modelos.
+This mapping process covered 1602 articles to investigate primary studies that made proposals that showed transformation mechanisms for modeling \acp{db}.
+The systematic mapping protocol was detailed as well as its conduction and subsequent analysis of the results obtained.
+In the end, we selected 12 primary studies to be analyzed quantitatively and qualitatively.
+Among the results of the related works, the study of \citeonline{Dimitrieski:2015} stands out, which presents a bidirectional modeling tool that applies its \ac{dsl} based on the EER approach and describes it in detail the transformation mechanisms between the models.
+
+% Em geral estes trabalhos serviram como norteadores na forma com que estruturamos e posteriormente implementamos nossa proposta.
+% No geral acreditamos que conseguimos cobrir ao menos os elementos mais básicos esperados em uma \ac{dsl} para modelagem conceitual de \acp{db}. 
+% Contudo, os trabalhos que foram avaliados apresentam também uma gama de outras possibilidades de representação de objetos de \ac{db} ao qual não damos suporte.
+% Sendo assim, já podemos destacar que existe um planejamento prévio relativo a evolução da nossa proposta, inicialmente com possibilidade de mapeamento de entidades fracas e geração automática de procedimentos armazenados que cubram as operações CRUD (create, read, update, delete) de tabelas.
+In general, these works served as guidelines in the way we structured and subsequently implemented our proposal.
+Overall we believe that we have managed to cover at least the most basic elements expected in a \ac{dsl} for conceptual modeling of \acp{db}.
+However, the studies evaluated also present a range of other possibilities for representing \ac{db} objects that we do not support.
+Therefore, we can already highlight our previous planning regarding the evolution of our proposal, initially with the possibility of mapping weak entities and automatic generation of stored procedures that cover CRUD operations (create, read, update, delete).

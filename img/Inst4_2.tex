@@ -1,0 +1,124 @@
+\pgfplotsset{testbar/.style={
+            xbar stacked,
+            legend cell align=left,
+            legend style={
+                legend columns=6,
+                font=\scriptsize,
+                at={(xticklabel cs:1.0)},
+                anchor=north east,
+                draw=none
+                },
+            width=10cm,
+            axis y line*= none, 
+            axis x line*= bottom,
+            xmajorgrids = false,
+            xmin=0,xmax=25,
+            ytick = data,
+            yticklabels = {
+            {\scriptsize Entity}, 
+            {\scriptsize Referential Attribute},
+            {\scriptsize Descriptive Attribute},
+            {\scriptsize Binary Relationship},
+            {\scriptsize Ternary Relationship}, 
+            {\scriptsize Self-relationship},
+            {\scriptsize Cardinality},
+            {\scriptsize Generalization}
+            },
+            tick align = outside, 
+            xticklabel style = {font=\scriptsize},
+            xtick pos = left,
+             bar width=3.5mm, 
+             y=6.5mm,
+             enlarge y limits={abs=0.450},% 0.5 + 0.5*(y - bar width)/y [TeX.sx #47995] #47995]
+            nodes near coords,
+            nodes near coords align=center,%Move values in bar
+            every node near coord/.append style={
+                black,
+                font=\scriptsize,
+                text opacity=1,
+                fill=white,
+                fill opacity=0.5,
+                outer sep=\pgflinewidth
+            }
+        }}
+    \begin{tikzpicture}
+    \begin{axis}[testbar] 
+    \addplot[pattern color=red,pattern=north east lines] coordinates
+        {(0,8)(0,7)(0,6)(0,5)(0,4)(0,3)(0,2)(0,1)};
+    \addplot[pattern color=teal,pattern=vertical lines] coordinates
+        {(0,8)(0,7)(0,6)(1,5)(2,4)(1,3)(0,2)(0,1)};   
+    \addplot[pattern color=gray, pattern=grid] coordinates
+        {(0,8)(0,7)(2,6)(2,5)(5,4)(0,3)(0,2)(3,1)};   
+    \addplot[pattern color=magenta, pattern=north west lines] coordinates
+        {(3,8)(4,7)(2,6)(0,5)(6,4)(3,3)(0,2)(3,1)};   
+    \addplot[pattern color=blue, pattern=horizontal lines] coordinates
+        {(4,8)(4,7)(6,6)(11,5)(7,4)(5,3)(5,2)(6,1)}; 
+    \addplot[pattern color=green, pattern=crosshatch dots] coordinates
+        {(18,8)(17,7)(15,6)(11,5)(5,4)(16,3)(20,2)(13,1)};
+    \legend{1-Disagree, 2, 3, 4, 5, 6-Agree}
+    \end{axis}
+    \end{tikzpicture}
+
+% \begin{figure}[!ht]
+% \centering
+% \caption{Resultados do formulários de avaliação.}
+% \begin{tikzpicture}
+% \begin{axis}[
+%     xbar stacked,
+%     legend cell align=center,
+%     legend style={
+%     legend columns=5,
+%         at={(xticklabel cs:1.0)},
+%         anchor=north east,
+%         draw=none
+%     },
+%     ytick=data,
+%     axis y line*=none,
+%     axis x line*=bottom,
+%     tick label style={font=\small},
+%     legend style={font=\small},
+%     label style={font=\small},
+%     xtick={0,5,10},
+%     xticklabel= {},
+%     bar width=7mm,
+%     ylabel={Formulário/Grupo},
+%     yticklabels={F1-C, F1-E, F2-C, F2-E, F3-C, F3-E},
+%     xmin=0,
+%     xmax=10,
+%     area legend,
+%     y=9mm,
+%     enlarge y limits={abs=0.825},
+%     nodes near coords,
+%     nodes near coords align=center,
+%     every node near coord/.append style={
+%         black,
+%         font=\small,
+%         text opacity=.65,
+%         fill=white,
+%         fill opacity=0.6,
+%         outer sep=\pgflinewidth
+%     }
+% ]
+% %NOTA 1
+% \addplot[pattern color=red,pattern=horizontal lines] coordinates
+% {(0,6)(0,5)(0,4)(0,3)(0,2)(0,1)};
+% %NOTA 2
+% \addplot[pattern color=orange,pattern=grid] coordinates
+% {(1,6)(1,5)(1,4)(0,3)(1,2)(0,1)};   
+% \addplot[pattern color = green, pattern=crosshatch dots] coordinates
+% % NOTA 3
+% {(3,6)(3,5)(5,4)(2,3)(5,2)(1,1)};   
+% \addplot[pattern color=blue, pattern =vertical lines ] coordinates
+% %NOTA 4
+% {(2,6)(3,5)(1,4)(4,3)(3,2)(3,1)};   
+% \addplot[pattern color=gray, pattern = dots] coordinates
+% %NOTA 5
+% {(3,6)(3,5)(2,4)(4,3)(0,2)(6,1)};   
+% \legend{1-Disagree, 2, 3, 4, 5-Agree}
+
+% \end{axis}
+% \end{tikzpicture}
+% \footnotesize
+% \label{img:respostas1}
+% 	\fonte{O autor.}
+% \end{figure}

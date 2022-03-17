@@ -28,13 +28,13 @@
 %   \end{axis}
 % \end{tikzpicture}
 
-\begin{filecontents*}{data2.csv}
+\begin{filecontents*}{data3.csv}
 52.46, 55.17, 55.74, 56.14, 58.46, 61.02, 61.97, 62.07, 62.5, 63.64, 63.89, 64.52, 65.57, 65.63, 66.67, 68.75, 68.85, 70, 70.89, 71.05, 72.73, 72.97, 73.85, 74.36, 76.32, 76.32, 76.54, 77.14, 80, 80, 83.72, 84.51, 88
 45.45,54.55,55.56,55.88,60.87,61.29,61.97,62.34,63.01,64,64.86,69.33,70.33,70.77,72.73,74.07,74.63,77.11,78.48,79.45,80.56,80.9,81.08,82.19,82.86,82.86,84.34,84.51,84.51,85.33,87.67,89.32,91.36
 \end{filecontents*}
 
 \begin{tikzpicture}
-    \pgfplotstableread[col sep=comma]{data2.csv}\csvdata
+    \pgfplotstableread[col sep=comma]{data3.csv}\csvdata
     % Boxplot groups columns, but we want rows
     \pgfplotstabletranspose\datatransposed{\csvdata} 
     \begin{axis}[
@@ -53,7 +53,7 @@
         % xticklabel style = {align=center, font=\small},
         % xticklabels = {Graphical Treatment, Textual Treatment},
         % ylabel = {Percentage (\%)},
-        ytick = {40, 50, 60, 70, 80},
+        ytick = {40, 50, 60, 70, 80, 100},
         yticklabel style = {font=\scriptsize}
     ]
         \foreach \n in {1,...,2} {

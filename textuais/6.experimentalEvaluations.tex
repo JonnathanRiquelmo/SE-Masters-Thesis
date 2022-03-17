@@ -3,80 +3,88 @@
 % Avaliação preliminar para a qualificação
 %==============================================================================
 
-In this chapter we present the research questions and hypotheses investigated during the evaluation of our proposal, in addition to the experimental design adopted and its conduct.
-The preliminary evaluation is presented in Section \ref{sec_experiments:preliminaryEval} and the final evaluation in Section \ref{sec_experiments:finalEval}.
-The chapter's lessons are presented in Section \ref{sec_experiments:lessons}
+In this chapter, we present the research questions and hypotheses investigated during the evaluation of our proposal. 
+In addition to presenting the experimental design adopted and its conduction.
+Section \ref{sec_experiments:preliminaryEval} presents the preliminary evaluation of ERText, which is focused on the assessment of tool features. Section \ref{sec_experiments:finalEval} proposes increments for the next evaluation, to be carried out until December 2021, which also includes the evaluation of learning features.
+In the end, Section \ref{sec_experiments:lessons} draws the chapter's lessons.
 
 %------------------------------------------------------------------------------
-\section{Preliminary Evaluation} 
+\section{Tool Features - Experiment 1} 
 \label{sec_experiments:preliminaryEval}
 %------------------------------------------------------------------------------
 
-This Section presents all the planning, conduction, discussion of the results obtained, threats to the study and the conclusions regarding the preliminary evaluation carried out to evaluate a stable prototype of the developed tool.
+This section presents all the planning, conduction, discussion of the results obtained, threats to validity of the study, and the conclusions regarding the preliminary evaluation carried out to evaluate the first release of a stable prototype of the developed tool.
 
 %######################################################
 \subsection{Planning}
 \label{ssec_experiments:preliminary_planning}
 %######################################################
 
-This preliminary evaluation was carried out from the replication of the experimental protocol performed in a previous study \cite{Lopes:2019} and aims to obtain evidence from the comparison of two approaches for modeling relational databases, one graphical and the other textual.
+We carried out this preliminary evaluation from the replication of the experimental protocol performed in a previous study \cite{Lopes:2019}, which aimed to obtain evidence of the comparison from two approaches for modeling relational databases, one graphical and the other textual.
+% This preliminary evaluation was carried out from the replication of the experimental protocol performed in a previous study \cite{Lopes:2019} and aims to obtain evidence from the comparison of two approaches for modeling relational databases, one graphical and the other textual.
 
-The treatments identified were:
-\begin{enumerate} [label=\roman*]
-    \item. Control treatment: the brModelo tool (graphical approach), and;
-    \item. Experimental treatment: the ERtext tool (textual approach).
+We specified the following treatments:
+\begin{enumerate} [label=\roman*.]
+    \item Control treatment: the brModelo tool (graphical approach), and;
+    \item Experimental treatment: the ERtext tool (textual approach).
 \end{enumerate}
-The purpose of this replication is to evaluate the feasibility of using a textual approach to support the teaching-learning process of conceptual modeling of relational databases.
+The purpose of this replication is to evaluate the feasibility of using a textual approach to support the teaching-learning process of conceptual modeling relational databases.
 
 \textbf{Context:}
-The context of the experiment is characterized according to four dimensions:
-\begin{enumerate}[label=\roman*]
-    \item. Process: an \textit{in-vitro} approach was used, since the tasks were performed under controlled conditions.
+% The context of the experiment is characterized according to four dimensions:
+We characterized the context of the experiment according to four dimensions:
+\begin{enumerate}[label=\roman*.]
+    \item Process: Process: it used an \textit{in-vitro} approach since we performed the tasks under controlled conditions;
+    % Process: an \textit{in-vitro} approach was used, since the tasks were performed under controlled conditions.
     %In software engineering, most \textit{in-vitro} experiments are executed in universities or among selected groups of a software development organization \cite{Travassos:2003}.
-    \item. Subjects: undergrad students in Computer Science (CS) and SE programs.
-    \item. Reality: the experiment addressed a real problem, \textit{i.e.} the difference in the effort spent of subjects in the conceptual modeling of relational databases. 
+    \item Subjects: undergrad students in Computer Science (CS) and Software Engineering (SE) programs;
+    \item. Reality: the experiment addressed a real problem, \textit{i.e.} the difference in the effort spent of subjects in the conceptual modeling of relational databases; 
     %the artifacts quality produced and the subjects Perceived Usefulness (PU) using both approaches.
-    \item. Generality: this evaluation is inserted in a specific context, involving database modeling students.
-    However, the general ideas of this experiment can be replicated in another set of subjects, approaches or DSLs that support database designing.
+    \item Generality: we inserted this evaluation in a specific context, involving database modeling students.
+    However, we can replicate the general ideas of this experiment in another set of subjects, approaches, or DSLs that support database designing. 
+    % However, the general ideas of this experiment can be replicated in another set of subjects, approaches or DSLs that support database designing.
 \end{enumerate}
 
 \textbf{Research Questions (RQs):}
-For the discussion of the controlled experiment results, we decided to formulate four RQs that were related to the activities performed in the protocol execution.
+For the controlled experiment results discussion, we decided to formulate four RQs related to the activities performed in the execution of the protocol.
 \begin{itemize}
     \item \textbf{RQ1.} Which approach requires the most effort spent on average during the modeling activity?
     \item \textbf{RQ2.} What is the quality level of the models produced using the graphical and textual approaches?
-    \item \textbf{RQ3.} What is the subjects perception regarding the Perceived Ease of Use (PEoU) and Perceived Usefulness (PU) of the proposed DSL?
-    \item \textbf{RQ4.} What is the subjects assessment in relation to the representation of the ER modeling builders supported in the proposed DSL?
+    \item \textbf{RQ3.} What is the subject's perception regarding the Perceived Ease of Use (PEoU) and Perceived Usefulness (PU) of the proposed DSL?
+    \item \textbf{RQ4.} What is the subject's assessment concerning the representation of the ER modeling builders supported in the proposed DSL?
 \end{itemize}
 
 \textbf{Hypotheses Formulation:} 
-The first two RQs were taken into account. Regarding to \textbf{RQ1.} 
+% The first two RQs were taken into account. 
+We have taken into account the first two RQs. 
+Regarding \textbf{RQ1.} 
 %the average effort spent required using each approach, our scientific hypotheses are as follows:
 % we defined a two-sided hypotheses that measure the average effort spent between textual and graphical approaches during conceptual modeling. State the null (no difference) $H_0 : \mu Time_T = \mu Time_G$ and alternative (significant difference) $H_a : \mu Time_T \neq Time_G$ hypotheses.
 \begin{itemize}
     \item \textbf{Null hypothesis:} $H_0 : \mu Time_T = \mu Time_G$: There is no difference in average effort spent measure between textual and graphical approaches during conceptual modeling.
     \item \textbf{Alternative hypothesis:} $H_{1} : \mu Time_T \neq \mu Time_G$: There is a significant difference in average effort spent measure between textual and graphical approaches during conceptual modeling.
 \end{itemize}
-Regarding to \textbf{RQ2.} 
+Regarding \textbf{RQ2.} 
 %the modeling effectiveness using each approach, our hypotheses are as follows:
-in the same way we stated a two-sided hypotheses that measure the modeling effectiveness between textual and graphical approaches during conceptual modeling.
+in the same way, we stated two-sided hypotheses that measures the modeling effectiveness between textual and graphical approaches during conceptual modeling.
 % The null (no difference) and alternative (significant difference) hypotheses are, respectively: 
 % $H_0 : \mu Effectiveness_T = \mu Effectiveness_G$ and 
 % $H_a : \mu Effectiveness_T \neq \mu Effectiveness_G$.
 \begin{itemize}
-    \item \textbf{Null hypothesis:} $H_0 : \mu Effectiveness_T = \mu Effectiveness_G$: There is no difference in effectiveness measure between textual and graphical approaches during conceptual modeling.
-    \item \textbf{Alternative hypothesis:} $H_{1} : \mu Effectiveness_T \neq \mu Effectiveness_G$: There is a significant difference in effectiveness measure between textual and graphical approaches during conceptual modeling.
+    \item \textbf{Null hypothesis:} $H_0 : \mu Effectiveness_T = \mu Effectiveness_G$: There is no difference in effectiveness measures between textual and graphical approaches during conceptual modeling.
+    \item \textbf{Alternative hypothesis:} $H_{1} : \mu Effectiveness_T \neq \mu Effectiveness_G$: There is a significant difference in effectiveness measures between textual and graphical approaches during conceptual modeling.
 \end{itemize}
 
 \textbf{Statistical Methods:} Unlike the first experiment, this replication included a change in the statistical methods adopted.
-Previously, the Shapiro-Wilk normality test and the paired T-test for dependent samples were used.
+Previously, we have used the Shapiro-Wilk normality test and the paired T-test for dependent samples.
 This was because the sample was smaller (27) than 30 elements.
 However, for samples equal to or greater than this quantity, alternative tests are recommended~\cite{Triola:2018}.
 
-For the effort we chose the Kolmogorov-Smirnov test to verify normality, and the Wilcoxon Signed-Rank test for paired samples to investigate the hypotheses using the time spent metric.
-For the effectiveness tests, the same statistical methods were adopted, but instead of using the time spent metric, another measure was necessary.
-Thus, the F1 calculations were performed, which is derived from harmonic mean of \textit{Precision} and \textit{Recall} metrics, for each of the models produced in both approaches.
-The F1 calculation \cite{Derczynski:2016} takes into account variables known as \textit{True Positives}, \textit{False Positives} and \textit{False Negatives}.
+For the effort, we chose the Kolmogorov-Smirnov test to verify normality and the Wilcoxon Signed-Rank test for paired samples to investigate the hypotheses using the time spent metric.
+For the effectiveness tests, we have adopted the same statistical methods despite instead of using the time spent metric, another measure was necessary.
+Thus, we have performed the F1 calculations, deriving from the harmonic mean of precision and recall metrics, for each model produced in both approaches.
+% Thus, we have performed the F1 calculations, which is derived from the harmonic mean of \textit{Precision} and \textit{Recall} metrics, for each of the models produced in both approaches.
+The F1 calculation \cite{Derczynski:2016} takes into account variables known as \textit{True Positives}, \textit{False Positives}, and \textit{False Negatives}.
 \begin{description}
 % \begin{inparadesc}
     \item \textbf{\textit{True Positives (TP)}}: Amount of elements correctly modeled using the approach.
@@ -84,7 +92,8 @@ The F1 calculation \cite{Derczynski:2016} takes into account variables known as 
     \item \textbf{\textit{False Negatives (FN)}}: Amount of elements not modeled using the approach.
 % \end{inparadesc}
 \end{description}
-From the variables identification it is then possible to calculate the \textit{Precision}, \textit{Recall} and \textit{F1} of each model according to these formulas:
+From the identification of the variables it is then possible to calculate the \textit{Precision}, \textit{Recall}, and \textit{F1} of each model according to these formulas:
+% From the variables identification it is then possible to calculate the \textit{Precision}, \textit{Recall}, and \textit{F1} of each model according to these formulas:
 \begin{description}
     \item \textbf{\textit{Precision (PR)}}: $\frac{TP}{TP~+~FP}$ 
     \hfill 
@@ -93,15 +102,16 @@ From the variables identification it is then possible to calculate the \textit{P
     \textbf{\textit{F1-Score (F1)}}: $\frac{2~*~(PR~*~ RE)}{PR~+~RE}$
 \end{description}
 
-\textbf{Experiment Design:} Finally, the design of the controlled experiment performed is presented in Figure \ref{fig:designExp}. 
-We followed the design of one factor with two treatments, where we blocking, balancing and randomizing the subjects, which carried out both treatments, featuring a paired comparison design.
+\textbf{Experiment Design:} Finally, Figure \ref{fig:designExp} presents the design of the controlled experiment performed. 
+We followed the design of one factor with two treatments, where we blocked, balanced, and randomized the subjects, which carried out both treatments, featuring a paired comparison design.
 
 \begin{figure}[!htb]
     \centering
-    \include{img/DesignExperiment}
-    % \includegraphics[width=\columnwidth]{images/DesignExperimento.png}
     \caption{Experiment design.}
     \label{fig:designExp}
+    \include{img/DesignExperiment}
+    % \includegraphics[width=\columnwidth]{images/DesignExperimento.png}
+    \fonte{Author.}
 \end{figure}
 
 %###########################################################
@@ -109,63 +119,81 @@ We followed the design of one factor with two treatments, where we blocking, bal
 \label{ssec_experiments:preliminary_conduction}
 %###########################################################
 
-\textbf{Preparation:} Initially, remote meetings were held between the researchers involved to define the planning and the mode of operation that should be adopted, in response to the current scenario of exception due to the worldwide pandemic.
+\textbf{Preparation:} 
+Initially, remote meetings were held between the researchers involved to define the planning and the mode of operation that should be adopted, in response to the current scenario of exception due to the worldwide pandemic.
 As a result, activities were defined that should be adapted in relation to the first experiment, which was conducted in person.
 In order to capture a significant sample for the object of study, it was decided to contact the professors responsible for teaching two courses of different undergraduate courses: Database (SE) and Database I (CS) in the first half of 2021.
-With the initial objectives aligned, the collaborating teachers made the disclosure of profile questionnaires (Google Forms) to the subjects.
+% With the initial objectives aligned, the collaborating teachers made the disclosure of profile questionnaires (Google Forms) to the subjects.
+Once the initial objectives aligned, the collaborating teachers disclosed the profile questionnaires (Google Forms) to the subjects.
 
-The four (4) instruments from the original experiment were reused. 
-The first two were modeling problems with similar levels of complexity, while the last two were of qualitative assessment.
-It was decided that the activities would be carried out remotely, respecting the health security protocols required (social distancing). 
-For this purpose, a virtual machine was prepared with the tools installed, as well as the instruments and supporting materials. 
+We reused the four (4) instruments from the original experiment. 
+The first two were modeling problems with similar levels of complexity, while the last two were qualitative assessments.
+We decided that the activities would carry out remotely, respecting the health security protocols required (social distancing). 
+For this purpose, we prepared a virtual machine with the tools installed, even as the instruments and supporting materials. 
 This virtual machine should be accessed on the university's computers by the subjects using their institutional credentials.
+% The four (4) instruments from the original experiment were reused. 
+% The first two were modeling problems with similar levels of complexity, while the last two were of qualitative assessment.
+% It was decided that the activities would be carried out remotely, respecting the health security protocols required (social distancing). 
+% For this purpose, a virtual machine was prepared with the tools installed, as well as the instruments and supporting materials. 
+% This virtual machine should be accessed on the university's computers by the subjects using their institutional credentials.
 
-\textbf{Execution:} The profile form also served as a term of participation, since the presence in the experiment was voluntary.
-With this information, the subjects were then randomized to define the groups.
-We found that there were no major discrepancies between the levels of knowledge of the subjects, demonstrating that there was a homogeneous sample in general.
+\textbf{Execution:} 
+The profile form also served as a term of participation, since the presence in the experiment was voluntary.
+With this information, then we have randomized the subjects to define the groups.
+% With this information, the subjects were then randomized to define the groups.
+We did not find wide discrepancies among the subjects' knowledge levels, demonstrating a homogeneous sample in general.
+% We found that there were no major discrepancies between the levels of knowledge of the subjects, demonstrating that there was a homogeneous sample in general.
 On the experiment day, the first activity carried out was a brief initial presentation.
 Then, the training phase of the participants began.
-During this phase, the two database modeling tools that would be used were presented, providing an overview of the operation and answering possible questions that arose.
+During this phase, we have presented the two database modeling tools used in the experiment, providing an overview of the operation and answering possible questions that arose.
+% During this phase, the two database modeling tools that would be used were presented, providing an overview of the operation and answering possible questions that arose.
 The training included the display of videos demonstrating the tools, brModelo and our proposal, respectively.
 
 Then, we start the modeling phase of the proposed problems.
 All subjects accessed the virtual machines with the problems provided in PDF documents.
-When starting the Instrument 1, all participants were informed with which tool they should develop the solution, thus respecting the groups to which they were part.
+% When starting Instrument 1, all participants were informed with which tool they should develop the solution, thus respecting the groups to which they were part.
+When starting Instrument 1, we informed which tool each participant should develop the solution, thus respecting the group to which one was part.
 We asked the subjects to write down the start and end times of the tasks for each instrument they performed.
-We stipulated no time limit for completion and, according the subjects completed the modeling task, they were asked to comply with the guidelines included in the support material for saving the generated artifacts.
+We stipulated no time limit for completion according to the subjects who completed the modeling task. 
+We asked them to comply with the guidelines included in the support material for saving the generated artifacts.
+% We stipulated no time limit for completion and, according to the subjects completed the modeling task, they were asked to comply with the guidelines included in the support material for saving the generated artifacts.
 With the models saved, we informed the subjects that they should move on to the next task described in Instrument 2, although it was necessary to use the reverse approach to the one they had initially used.
 
 At the end of the instruments that contained the modeling problems, we delivered the qualitative assessment instruments.
 As the subjects had completed the tasks, then we had thanked and released them.
-With the conclusion of the experiment by 33 subjects, we close the evaluation and we performed the stage of result analysis.
-
+With the conclusion of the experiment by 33 subjects, we closed the evaluation and we performed the stage of result analysis.
 
 %###########################################################
 \subsection{Results Analysis}
 \label{ssec_experiments:preliminary_resultAnalysis}
 %###########################################################
 
-All Kolmogorov-Smirnov and Wilcoxon Signed-Rank calculations were performed with the support of the R language and the Gnumeric software, in parallel with the validation of a specialist in the field of statistics and the aid of literature \cite{Triola:2018}.
+We have performed all Kolmogorov-Smirnov and Wilcoxon Signed-Rank calculations with the support of the R language and the Gnumeric software. In parallel with the validation of a specialist in the statistics field and the aid of literature \cite{Triola:2018}.
+% All Kolmogorov-Smirnov and Wilcoxon Signed-Rank calculations were performed with the support of the R language and the Gnumeric software, in parallel with the validation of a specialist in the field of statistics and the aid of literature \cite{Triola:2018}.
 
-\textbf{Effort:} To answer \textbf{RQ1.} 
+\textbf{Effort:} 
+To answer \textbf{RQ1.} 
 %regarding the effort to use the approaches, 
-the execution times were extracted from the instruments.
-From the gross amount of the execution times, we calculated the difference in order to be able to perform the Kolmogorov-Smirnov normality test.
+% the execution times were extracted from the instruments.
+we have extracted the execution times from the instruments.
+From the gross amount of the execution times, we have calculated the difference to perform the Kolmogorov-Smirnov normality test.
 Because it is a statistical test, this technique has the product of measuring the $p$-value.
 For this test, we adopted a significance level of $\alpha$~=~5\%.
-This means that the $p$-value is less than 5\% ($p$ < 0.05), a hypothesis that the distribution is normal should be rejected.
+It means that the p-value is less than 5\%, then we rejected a hypothesis that the distribution is normal.
+% This means that the $p$-value is less than 5\% ($p$ < 0.05), a hypothesis that the distribution is normal should be rejected.
 
 After calculations with the set of time differences, we reached a $p$-value of 0.26218.
 As $p$-value > $\alpha$, we do not reject the null hypothesis, thus concluding that the data is normally distributed.
 %\textit{i.e.}, 
 In other words, the difference between the data sample and the normal distribution is not large enough to be statistically significant.
 It is important to note that the higher the $p$-value, the more it supports a null hypothesis.
-In the case of the result obtained, the chance of type 1 error (rejecting a null hypothesis that is correct) is very high, and can be translated into 26.21\% (0.26218).
-Once we performed the normality tests on the sample, we carried out the hypothesis test of the average effort regarding to \textbf{RQ1.}
+% In the case of the result obtained, the chance of type 1 error (rejecting a null hypothesis that is correct) is very high, and can be translated into 26.21\% (0.26218).
+In the case of the result obtained, the chance of type 1 error (rejecting a correct null hypothesis) is very high and translates into 26.21\% (0.26218).
+Once we performed the normality tests on the sample, we carried out the hypothesis test of the average effort regarding \textbf{RQ1.}
 In the Wilcoxon Signed-Rank test for dependent samples, we used a significance level of $\alpha$~=~5\%, with which we reached a measure of 0.77948 for the $p$-value.
-Because it is a two-tailed test, \textit{i.e.} it includes equality in its null hypothesis, this $p$-value shows no enough evidence to guarantee the rejection of the statement of $H_0: \mu Time_G = \mu Time_T$.
-Therefore, we do not reject null hypothesis that the approaches has no difference in average efforts, once according to the test this difference is not statistically significant. 
-Figure \ref{fig:boxplotTempo} displays a box-plot with the variation of data observed through these data.
+Because it is a two-tailed test, \textit{i.e.} it includes equality in its null hypothesis, this $p$-value shows not enough evidence to guarantee the rejection of the statement of $H_0: \mu Time_G = \mu Time_T$.
+Therefore, we do not reject the null hypothesis that the approaches have no difference in average efforts, once according to the test, this difference is not statistically significant. 
+Figure \ref{fig:boxplotTempo1} displays a box-plot with the variation of data observed through these data.
 
 % \begin{figure}[!htb]
 %     \centering
@@ -173,25 +201,30 @@ Figure \ref{fig:boxplotTempo} displays a box-plot with the variation of data obs
 %     \include{figures/BoxPlotEsforco}
 %     % \includesvg[width=.7\columnwidth]{figures/Effort}
 %     \caption{Box-plot - Effort per treatments.}
-%     \label{fig:boxplotTempo}
+%     \label{fig:boxplotTempo1}
 % \end{figure}
 
-\textbf{Effectiveness:} To answer \textbf{RQ2.} regarding the effectiveness of the use of approaches, we evaluated the artifacts produced by the subjects according to the established reference models\footnote{Available at: \url{https://doi.org/10.5281/zenodo.5454378}}. 
-In this evaluation, we used F1 from the area of pattern recognition and information retrieval. 
-F1 represents the combination of the observed accuracy and recallability of a result in relation to a reference.
+\textbf{Effectiveness:} 
+% To answer \textbf{RQ2.} regarding the effectiveness of the use of approaches
+To answer \textbf{RQ2.} regarding the approaches' use effectiveness, we evaluated the artifacts produced by the subjects according to the established reference models\footnote{Available at: \url{https://doi.org/10.5281/zenodo.5454378}}. 
+% In this evaluation, we used F1 from the area of pattern recognition and information retrieval. 
+In this evaluation, we used F1 from the pattern recognition and information retrieval areas. 
+F1 represents the combination of the observed accuracy and recallability of a result concerning a reference.
 By definition, this combination refers to Precision and Recall metrics, where Precision is the proportion of recovered instances that are relevant and Recall is the proportion of relevant instances that are recovered.
 
-In addiction, we performed the Kolmogorov-Smirnov normality test to F1 for each model. 
+In addition, we performed the Kolmogorov-Smirnov normality test to F1 for each model. 
 After calculations with the set of differences in F1 for each model, we reached a $p$-value of 0.45459.
-With this test result, the chance of type 1 error (rejecting a null hypothesis that is correct) can be very high, and can be translated into 45.45\% (0.45459).
+With this test result, the chance of type 1 error (rejecting a correct null hypothesis) can be very high, and can be translated into 45.45\% (0.45459).
 As the $p$-value > $\alpha$, we do not reject the null hypothesis, thus realizing that the data is normally distributed
 %, \textit{i.e.} the difference between the data sample and the normal distribution is not large enough to be statistically significant.
 After the sample was tested for normality, we tested the second hypothesis defined in this experiment.
 This time, in the Wilcoxon Signed-Rank test for dependent samples, we used again a significance level of $\alpha$~=~5\%, with which we reached a measure of 0.00197 for the $p$-value.
-By the original statement including an equality, also characterizing this test as two-tailed, it was concluded that the calculated $p$-value demonstrates that there is enough evidence to guarantee the rejection of the statement of the original null hypothesis, denoted as $H_0: \mu Effectiveness_G = \mu Effectiveness_T$.
-Therefore, we reject the null hypothesis that the approaches have equal effectiveness, because according to the statistical test, the average difference of F1 between treatments is statistically significant.
-Table \ref{tab:ResultsModelosGeral} shows average measures of the evaluated values, and also provides the possibility to carry out a dispersion analysis.
-Based on these data it was possible to verify that the textual approach has an advantage on average.
+% By the original statement including an equality, also characterizing this test as two-tailed, it was concluded that the calculated $p$-value demonstrates that there is enough evidence to guarantee the rejection of the statement of the original null hypothesis, denoted as $H_0: \mu Effectiveness_G = \mu Effectiveness_T$.
+By the original statement including equality, also characterizing this test as two-tailed, we concluded that the calculated $p$-value demonstrated enough evidence to guarantee the statement rejection of the original null hypothesis, denoted as $H_0: \mu Effectiveness_G = \mu Effectiveness_T$.
+% Therefore, we reject the null hypothesis that the approaches have equal effectiveness, because according to the statistical test, the average difference of F1 among treatments is statistically significant.
+Therefore, we rejected the null hypothesis that the approaches have equal effectiveness, once according to the statistical test, the average difference of F1 among treatments is statistically significant.
+Table \ref{tab:ResultsModelosGeral} shows average measures of the evaluated values and also provides the possibility to carry out a dispersion analysis.
+Based on these data, it was possible to verify that the textual approach has an advantage on average.
 
 \rowcolors{1}{gray!15}{white}
 \begin{table}[!htb]
@@ -214,10 +247,10 @@ Based on these data it was possible to verify that the textual approach has an a
     \\
     \hline
 Maximum	&	47.00	&	36.00	&	96.67	&	92.31	&	88.00	&	56.00	&	46.00	&	97.22	&	97.87	&	91.36	\\
-3º Quartile	&	31.00	&	28.00	&	92.31	&	63.04	&	76.32	&	34.00	&	31.00	&	94.74	&	75.00	&	82.86	\\
+3\textdegree Quartile	&	31.00	&	28.00	&	92.31	&	63.04	&	76.32	&	34.00	&	31.00	&	94.74	&	75.00	&	82.86	\\
 Median	&	26.00	&	24.00	&	88.89	&	56.41	&	68.85	&	30.00	&	29.00	&	90.63	&	65.96	&	74.63	\\
 Average	&	27.52	&	24.12	&	87.69	&	57.96	&	69.13	&	30.88	&	27.45	&	89.49	&	63.65	&	73.16	\\
-1º Quartile	&	23.00	&	20.00	&	84.21	&	50.00	&	62.50	&	26.00	&	23.00	&	87.88	&	51.06	&	63.01	\\
+1\textdegree Quartile	&	23.00	&	20.00	&	84.21	&	50.00	&	62.50	&	26.00	&	23.00	&	87.88	&	51.06	&	63.01	\\
 Minimum	&	18.00	&	16.00	&	72.73	&	41.03	&	52.46	&	19.00	&	15.00	&	72.73	&	31.91	&	45.45	\\
 Variance	&	35.58	&	28.65	&	42.87	&	143.35	&	78.93	&	63.32	&	39.76	&	42.59	&	259.85	&	133.58	\\
 SD &	5.97	&	5.35	&	6.55	&	11.97	&	8.88	&	7.96	&	6.31	&	6.53	&	16.12	&	11.56	\\
@@ -228,56 +261,63 @@ SD &	5.97	&	5.35	&	6.55	&	11.97	&	8.88	&	7.96	&	6.31	&	6.53	&	16.12	&	11.56	\\
     \centering
     \item \textit{Legend: MI = Modeled Items; RI = Relevant Items; P = Precision; R = Recall; F1 = F1-Score; SD = Standard Deviation.}
 \end{tablenotes}
+\fonte{Author.}
 \end{table}
 
-Figure \ref{fig:BoxPlotMedidaF} box-plot graph displays of the F1-Score for each treatment applied. 
+Figure \ref{fig:boxplotMedidaF1} box-plot graph displays the F1-Score for each treatment applied. 
 Based on this graph, it is possible to verify the result obtained in the hypothesis test because the data dispersion does present a significant difference between the approaches.
 
 
 \begin{figure}[!htb]
         \centering
-        \include{img/BoxPlotEsforco}
         \caption{Box-plot - Effort per treatments.}
-        \label{fig:boxplotTempo}
+        \label{fig:boxplotTempo1}
+        \include{img/BoxPlotEsforco1}
+        \fonte{Author.}
 \end{figure}
 
 
 \begin{figure}[!htb]
         \centering
-        \include{img/BoxPlotMedidaF}
         \caption{Box-plot - F1 per treatments.}
-        \label{fig:BoxPlotMedidaF}
+        \label{fig:boxplotMedidaF1}
+        \include{img/boxplotMedidaF1}
+        \fonte{Author.}
 \end{figure}
 
 % \begin{figure}[!htb]
 %     \centering
 %     % \includegraphics[width=.9\columnwidth]{experimentResults/EfetividadeBoxplot.pdf}
-%     \include{figures/BoxPlotMedidaF}
+%     \include{figures/boxplotMedidaF1}
 %     % \includesvg[width=.7\columnwidth]{figures/F-Score}
 %     \caption{Box-plot - F1 per treatments.}
-%     \label{fig:BoxPlotMedidaF}
+%     \label{fig:boxplotMedidaF1}
 % \end{figure}
 
-\textbf{Qualitative Evaluation:} We took place with the analysis of the two instruments applied after the modeling tasks.
-The first was used to respond to \textbf{RQ3.} regarding the PEoU and PU of treatments, according to the TAM model \cite{Davis:1989,Persico:2014}. 
-This occurred through the selection of quality attributes described in ISO/IEC 25010.
-For this, we established a Likert scale from one to six points to measure the level of agreement of the subjects in the face of the statements exposed in the form.
-This scale served to measure the level of agreement of the subjects in the face of the statements exposed in the form.
-We chosen an even number of alternatives to avoid possible neutral responses.
-Thus, the 7 quality attributes are grouped in 3 categories being defined as follows:
+\textbf{Qualitative Evaluation:} 
+We took place with the analysis of the two instruments applied after the modeling tasks.
+We have used the first instrument according to the TAM model \cite{Davis:1989,Persico:2014} to answer the \textbf{RQ3.} regarding the PEoU and PU.
+% The first was used to respond to \textbf{RQ3.} regarding the PEoU and PU of treatments, according to the TAM model \cite{Davis:1989,Persico:2014}. 
+It occurred through the selection of quality attributes described in ISO/IEC 25010.
+% For this, we established a Likert scale from one to six points to measure the level of agreement of the subjects in the face of the statements exposed in the form.
+For this, we established a Likert scale from one to six points to measure the subjects' agreement level in the face of the statements exposed in the form.
+% This scale served to measure the level of agreement of the subjects in the face of the statements exposed in the form.
+We have chosen an even number of alternatives to avoid possible neutral responses.
+% Thus, the 7 quality attributes are grouped into three (3) categories being defined as follows:
+Thus, we grouped the seven (7) quality attributes into three (3) defined categories as follows:
 
 \begin{itemize}
 % \begin{inparaenum}
     \item \textbf{Functionality} 
         \begin{itemize}
-            \item \textit{Conformity}: ability level to which the software to achieve specified goals with  functional completeness, correctness and appropriateness related to their functionalities.
+            \item \textit{Conformity}: ability level to which the software achieves specified goals with functional completeness, correctness, and appropriateness related to their functionalities.
         \end{itemize}
     \item \textbf{Usability}
         \begin{itemize}
             %Appropriateness recognisability
-            \item \textit{Understandability}: ability level to which users can recognize whether a software is appropriate for their needs; 
-            \item \textit{Learnability}: ability level to which the software enables the user to learn how to use it with effectiveness, efficiency in emergency situations;
-            \item \textit{Operability}: ability level to which the software is easy to operate, control and appropriate to use.
+            \item \textit{Understandability}: ability level to which users can recognize whether the software is appropriate for their needs; 
+            \item \textit{Learnability}: ability level to which the software enables the user to learn how to use it with effectiveness, efficiency in emergencies;
+            \item \textit{Operability}: ability level to which the software is easy to operate, control, and appropriate to use.
         \end{itemize}
     \item \textbf{Quality in Use}
         \begin{itemize}
@@ -290,32 +330,36 @@ Thus, the 7 quality attributes are grouped in 3 categories being defined as foll
 % \end{inparaenum}
 \end{itemize}
 
-After summarizing the results, we observed a good acceptance by the subjects for the ERtext tool, developed in this work.
-Figure \ref{fig:inst3GERALExp} synthesizes the responses received for each quality attributes, showing a certain degree of similarity in the subjects perception during the treatments application.
-A point that can be emphasized is the set of positive responses in relation to the \textit{Productivity} and \textit{Operability}, since in the hypothesis test related to the effort, the treatments demonstrated a similar need for execution time.
-According to the evaluations received, the disadvantages of ERtext that are most evident are manifested mainly with regard to \textit{Understandability} and \textit{Learnability} quality attributes.
+After summarizing the results, we observed a good acceptance by the subjects for the ERtext tool developed in this work.
+Figure \ref{fig:inst3GERALExp} synthesizes the responses received for each quality attribute, showing a certain degree of similarity in the subjects' perception during the application of the treatments.
+% A point that can be emphasized is the set of positive responses concerning the \textit{Productivity} and \textit{Operability} since in the hypothesis test related to the effort, the treatments demonstrated a similar need for execution time.
+It is worth emphasizing a point that is the positive responses set concerning the \textit{Productivity} and \textit{Operability} since the hypothesis test related to the effort the treatments demonstrated a similar need for execution time.
+According to the evaluations received, the most evident disadvantages of ERtext are manifested mainly concerning \textit{Understandability} and \textit{Learnability} quality attributes.
 
 \begin{figure}[!htb]
     \centering
-    % \includegraphics[width=.9\columnwidth]{experimentResults/Inst3.png}
-    \include{img/Inst3}
     \caption{Quality attributes per treatments.}
     \label{fig:inst3GERALExp}
+    % \includegraphics[width=.9\columnwidth]{experimentResults/Inst3.png}
+    \include{img/Inst3}
+    \fonte{Author.}
 \end{figure}
 
-With regard to \textbf{RQ4.} on the assessment of DSL designers, we analyzed the artifacts of the 2nd qualitative assessment instrument.
+Concerning \textbf{RQ4.} on the assessment of DSL designers, we analyzed the artifacts of the 2nd qualitative assessment instrument.
 This instrument listed the 8 ER modeling builders covered by DSL, arranged with a Likert scale from one to six points.
-Again, an even number was chosen on the scale to avoid neutral responses that could lead to a more subjective bias.
+% Again, an even number was chosen on the scale to avoid neutral responses that could lead to a more subjective bias.
+Again, we have chosen an even number on the scale to avoid neutral responses that could lead to a more subjective bias.
 Figure \ref{fig:inst4GERALExp} compiles all the responses received. 
-The builders related to Entities, Referential Attributes, Descriptive Attributes and Cardinality were the best evaluated.
+The builders related to Entities, Referential Attributes, Descriptive Attributes, and Cardinality were the best evaluated.
 In contrast, all builders obtained at least one disagreement, highlighting the most disagreeing evaluations related with the current representations of Ternary Relationship and Self-relationship, unfortunately.
 
 \begin{figure}[!htb]
     \centering
-    % \includegraphics[width=0.9\columnwidth]{experimentResults/Inst4.png}
-    \include{img/Inst4}
     \caption{Evaluation of DSL designers.}
     \label{fig:inst4GERALExp}
+    % \includegraphics[width=0.9\columnwidth]{experimentResults/Inst4.png}
+    \include{img/Inst4}
+    \fonte{Author.}
 \end{figure}
 
 All data collected and used for statistical tests can be accessed in a public repository available at Zenodo\footnote{Available at: \url{https://doi.org/10.5281/zenodo.5454378}}.
@@ -327,137 +371,395 @@ All data collected and used for statistical tests can be accessed in a public re
 %#######################################################
 %#######################################################
 
-In empirical studies it is necessary to analyze and discuss the threats to validity, as well as the strategies used to mitigate them.
+In empirical studies, it is necessary to analyze and discuss the threats to validity even as the strategies used to mitigate them.
 For the list of possible threats, we adopted the classification scheme published by Cook and Campbell \cite{Cook:1979}. 
-%, which is divided in four types of threats.
-These threats followed the proposed pattern and were divided into four (4) categories, namely: construct validity, internal validity, external validity and conclusion validity.
+% These threats followed the proposed pattern and were divided into four (4) categories, namely: construct validity, internal validity, external validity and conclusion validity.
+These threats followed the proposed pattern, and we divided them into four (4) categories: construct validity, internal validity, external validity, and conclusion validity.
 
-\textbf{Construct Validity}
+\textbf{Construct Validity}: 
 Threats to construct validity concerns the experiment design and social factors.
-\begin{enumerate}[label=\roman*]
-    \item \textit{Inappropriate Pre-operational Explanation}:  is related to the fact that the experiment did not have the objective of the artifacts sufficiently defined before translation into measures or treatments. To mitigate this threat, the effort of each approach was compared, as well as their effectiveness carried out according to the Precision and Recall metrics. 
-    \item The fact that the experiment did not have the objective of the artifacts sufficiently defined before translation into measures or treatments. To mitigate this threat the effort of each approach was compared, as well as their effectiveness carried out according to the Precision and Recall metrics. 
+\begin{enumerate}[label=\roman*.]
+    \item \textit{Inappropriate Pre-operational Explanation}: is related to the fact that the experiment did not have the objective of the artifacts sufficiently defined before translation into measures or treatments. To mitigate this threat, the effort of each approach was compared, as well as their effectiveness carried out according to the Precision and Recall metrics; 
+    
+    \item The fact that the experiment did not have the objective of the artifacts sufficiently defined before translation into measures or treatments. To mitigate this threat the effort of each approach was compared, as well as their effectiveness carried out according to the Precision and Recall metrics; 
+   
     \item \textit{Interaction of Different Treatments}: 
-    if the subjects involved in one more study, the controls of the different studies, can change and reverberate in the final results.
-    We followed a paired design and, therefore, all subjects performed both treatments.
-    However, learning issues among the execution of activities were not observed.
-    This can be verified through the analyzed distributions normality of the both samples: effort and effectiveness, demonstrating that the results remained similar as a whole with a low variation, \textit{i.e.} low standard deviation indicates that the data points tend to be very close to the mean. 
-    \item If the subjects involved in one more study, the controls of the different studies, can change and reverberate in the final results. To avoid this, we followed a paired design and, therefore, all subjects performed both treatments. However, learning issues among the execution of activities were not observed. This can be verified through the analyzed distributions normality of the both samples: effort and effectiveness, demonstrating that the results remained similar as a whole with a low variation.
+    if the subjects are involved in one more study, the controls of the different studies, can change and reverberate in the final results.
+    To avoid this, we followed a paired design and, therefore, all subjects performed both treatments.
+    However, learning issues during the execution of activities were not observed.
+    We can verify this through the normality of the analyzed distributions of both samples: effort and effectiveness, demonstrating that the results remained similar as a whole with a low variation; 
+    %\textit{i.e.} low standard deviation indicates that the data points tend to be very close to the mean. 
+    
+    % \item If the subjects are involved in one more study, the controls of the different studies, can change and reverberate in the final results. 
+    % To avoid this, we followed a paired design, and therefore, all subjects performed both treatments. 
+    % However, we do not observe learning issues among the execution of activities. 
+    % This can be verified through the normality of the analyzed distributions of both samples: effort and effectiveness, demonstrating that the results remained similar as a whole with a low variation.
+    
     \item \textit{Hypothesis Prediction}: 
-    when subjects participate in an experiment it is possible that they try to find out what the objective or intended experiment result is. 
+    when subjects participate in an experiment they may try to find out what the objective or intended experiment result is. 
     This threat can bias the behavior, positively or negatively, depending on the anticipated hypothesis.
-    To mitigate this threat, we not informed the subjects about further details of the experiment.
-    \item We not informed the subjects about further details of the experiment to mitigate the bias the behavior, that can affected positively or negatively, depending on the anticipated hypothesis.
+    To mitigate this threat, we do not inform the subjects about further details of the experiment; 
+    
+    \item We do not inform the subjects about further details of the experiment to mitigate the bias of the behavior, which can affect positively or negatively, depending on the anticipated hypothesis.
 \end{enumerate}
 
-\textbf{Internal Validity}
-Threats to internal validity are influences that can affect independent variables in correlation to causality, without the researcher's knowledge.
-\begin{enumerate} [label=\roman*]
-    \item \textit{History}: there is a risk when a specific time period influences the experiment performance. Due to the coronavirus pandemic we conducted the entire experiment in a controlled environment providing remote access for the subjects. 
-    In addition, to soothe this threat we carried out the entire process in March, when in general students are not necessarily overwhelmed with academic activities.
-    \item There is a risk when a specific time period influences the experiment performance. Due to the coronavirus pandemic we conducted the entire experiment in a controlled environment providing remote access for the subjects.
-    \item \textit{Maturation}: occurs in relation to the subjects reacting in different ways over time. 
+\textbf{Internal Validity}: 
+Threats to internal validity are the influences that can affect independent variables in correlation to causality without the researcher's knowledge.
+\begin{enumerate} [label=\roman*.]
+    \item \textit{History}: there is a risk when a specific period influences the experiment's performance. Due to the coronavirus pandemic, we conducted the entire evaluation in a controlled environment providing remote access for the subjects. 
+    In addition, to soothe this threat, we carried out the entire process in March when, in general, students are not necessarily overwhelmed with academic activities;
+    %\item There is a risk when a specific period influences the experiment's performance. Due to the coronavirus pandemic, we conducted the entire evaluation in a controlled environment providing remote access for the subjects.
+    
+    \item \textit{Maturation}: occurs concerning the subjects reacting in different ways over time. 
     Examples are when subjects are affected negatively (tiredness or boredom) or positively (learning) during the experiment execution.
-    In order to alleviate this threat, we informed subjects from the beginning that they could terminate their participation at any time, without any penalty.
-    \item Sometimes the subjects could be affected negatively (tiredness or boredom) or positively (learning) during the experiment execution.
-    In order to alleviate this threat, we informed subjects from the beginning that they could terminate their participation at any time, without any penalty.
-    \item \textit{Tests}: if the tests are repeated, the subjects may respond differently at different times, as they know how the test is performed. 
-    If there is a need to familiarize yourself with the tests, it is important that the test results are not returned to the subject, so as not to support unintentional learning. 
-    There was no need for repetition of activities, since they were performed once per participant in each treatment.
-    \item \textit{Instrumentation}: is related to the artifacts used to perform the experiment, such as data collection forms, etc. 
-    If these are poorly designed, the experience is negatively affected.
-    To combat this threat, all artifacts were minimally adapted due to the design of the experiment (remote), and previously verified and validated in meetings between the researchers involved in this work.
-    In addition, we already had a first study with results counting 27 participants to validate the planned protocol for this experiment replication.
-    \item All artifacts were minimally adapted due to the design of the experiment (remote), and previously verified and validated in meetings between the researchers involved in this work to avoid that the instrumentation of artifacts can be affect the execution.
-    In addition, we already had a first study with results counting 27 participants to validate the planned protocol for this experiment replication.
+    To alleviate this threat, we informed subjects from the beginning that they could terminate their participation at any time, without any penalty;
+    %\item Sometimes the subjects could be affected negatively (tiredness or boredom) or positively (learning) during the experiment execution.
+    %To alleviate this threat, we informed subjects from the beginning that they could terminate their participation at any time, without any penalty;
+    
+    \item \textit{Tests}: 
+    if we have repeated the tests, the subjects can respond differently at other times, \textit{i.e.} they know how to perform the test. 
+    %if the tests are repeated, the subjects may respond differently at different times, as they know how the test is performed. 
+    If there is a need to become familiar with the tests, then we do not return the test results to the participant not to subsidize unintentional learning.  
+    %If there is a need to familiarize yourself with the tests, the test results must not be returned to the subject, so as not to support unintentional learning. 
+    There was no need for repetition of activities since they were performed once per participant in each treatment;
+    
+    \item \textit{Instrumentation}: is related to the artifacts used to perform experiment, such as data collection forms. 
+    %If these are poorly designed, the experience is negatively affected.
+    If the design of instruments is poor, then it negatively affects the experience.
+    %To combat this threat, all artifacts were minimally adapted due to the design of the experiment (remote), and previously verified and validated in meetings between the researchers involved in this work.
+    To combat this threat, we minimally adapted all artifacts due to the design of the experiment (remote) and previously verified and validated in meetings between the researchers involved in this work.
+    In addition, we already had the first study with results counting 27 participants to validate the planned protocol for this experiment replication;
+    
+    \item We adapted all artifacts due to the design of the experiment (remote), which we verified and validated previously in meetings among the researchers involved in this work to avoid that the instrumentation of artifacts that can affect the execution.
+    %All artifacts were minimally adapted due to the design of the experiment (remote), and previously verified and validated in meetings between the researchers involved in this work to avoid that the instrumentation of artifacts can be affect the execution.
+    In addition, we already had the first study with results counting 27 participants to validate the planned protocol for this experiment replication.
 \end{enumerate}
 
-\textbf{External Validity}
+\textbf{External Validity}: 
 % Threats to external validity are conditions related to experiment replication.
-\begin{enumerate}[label=\roman*]
+\begin{enumerate}[label=\roman*.]
     % \item \textit{Experiment Subjects}: the subjects selected for the experiment may not include a significant group for an study area.
     % Seeking to mitigate this threat, the experiment was carried out with undergrad students of SE and CS programs, and soon, inserted in the context of using the conceptual modeling of relational databases. 
     % In addition, the fact that the sample has more than 30 subjects is also a way of mitigating greater statistical threats in the analyzed area.
-    \item The experiment was carried out with undergrad students of SE and CS programs, and soon, inserted in the context of using the conceptual database modeling seeking to mitigate the selection subjects from a significant group for an study area. 
+    \item The experiment was carried out with undergrad students of SE and CS programs, and soon, inserted in the context of using the conceptual database modeling seeking to mitigate the selection subjects from a significant group for an study area; 
     %In addition, the fact that the sample has more than 30 subjects is also a way of mitigating greater statistical threats in the analyzed area.
     %\item \textit{Subjects Interaction with the Evaluation Artifacts}: is related to the application of the evaluation artifacts of the experiment with the subjects.
     %Depending on the moment, this can affect the experimental results.
     %For example, if a questionnaire is answered a few days after the execution experiment, people tend to respond differently than they would do moments after the activities.
     %To mitigate this threat, participants were asked to answer the questionnaires and, before thanking them, we checked the submission of the instruments.
-    \item The participants were asked to answer the questionnaires post-experiment and, before thanking them, we checked the submission of the instruments to avoid that the subjects interaction with the evaluation artifacts can be affected the preliminary experimental results.
-    % \item \textit{Configuration and Treatment Interaction}: is  related to the use of an unrepresentative configuration or material. 
+    \item We asked the participants to answer the questionnaires post-experiment and, before thanking them, we checked the submission of the instruments to avoid that the subjects' interaction with the evaluation artifacts can be affected the preliminary experimental results; 
+    % \item \textit{Configuration and Treatment Interaction}: is related to the use of an unrepresentative configuration or material. 
     % To soften this threat, documentation was used based on templates and traditional models found in database teaching material. 
     % In addition, the artifacts were validated with two specialists in the field of SE.
     \item We used the documentation based on templates and traditional models found in database teaching material to soften an unrepresentative configuration and material.
 \end{enumerate}
 
-\textbf{Conclusion Validity}
+\textbf{Conclusion Validity}: 
 % Threats to the validity of the conclusion are related to questions that affect the ability to infer a correct conclusion about the relationship between treatments and the result of an experiment.
-\begin{enumerate} [label=\roman*]
+\begin{enumerate} [label=\roman*.]
     % \item \textit{Low Statistical Power}:
     % To try mitigating this threat, some statistical methods were adopted, such as the Kolmogorov-Smirnov normality test, the Wilcoxon Signed-Rank Test as a hypothesis test for dependent samples. 
     % In addition, the tests were reviewed by an expert in the statistics field.
-    \item Some statistical methods were adopted, such as the Kolmogorov-Smirnov normality test, the Wilcoxon Signed-Rank Test as a hypothesis test for dependent samples to try mitigating the low statistical power of our preliminary experimental results.
+    \item We adopted some statistical methods such as the Kolmogorov-Smirnov normality test and the Wilcoxon Signed-Rank Test as a hypothesis test for dependent samples. We use them to try mitigating the low statistical power of our preliminary experimental results;
     % \item \textit{Reliability of Measurements}:
     % The reliability of the measurements used has a direct impact on the validity of the experiment as a whole. 
     % To mitigate this threat, it was adopted objective measurements that did not depend on subjective judgment (effort spent, measured in time, and F1).
     % On the other hand, the metrics used for the qualitative evaluation still served as a complementary input in the discussion of the results obtained, alongside with the indication of possible points of improvement in our proposal.
-    \item We adopted objective measurements that did not depend on subjective judgment (effort spent, measured in time, and F1) to mitigate the measurements reliability threat.
-    On the other hand, the metrics used for the qualitative evaluation still served as a complementary input in the discussion of the results obtained, alongside with the indication of possible points of improvement in our proposal.
+    \item We adopted objective measurements that did not depend on subjective judgment (effort spent, measured in time, and F1) to mitigate the measurement reliability threat.
+    On the other hand, the metrics used for the qualitative evaluation still served as a complementary input in the results obtained discussion, alongside the indication of possible points of improvement in our proposal;
     % \textit{Experimental Environment}:
     % The experiment must be carried out in a controlled environment.
     % In order to mitigate this possible threat, we created copies of a virtual machine that were accessed by all subjects. 
     % We also instructed subjects that conversations could not take place during the entire execution of activities, in addition to not leaving the remote environment or access other electronic devices before the end of the tasks.
-    \item We created copies of a virtual machine that were accessed by all subjects to guarantee that the experiment was carried out in a controlled environment.
+    \item We created copies of a virtual machine that all subjects accessed to guarantee that we experimented in a controlled environment.
+    %We created copies of a virtual machine that were accessed by all subjects to guarantee that the experiment was carried out in a controlled environment.
     %Also, we instructed subjects that conversations could not take place during the entire execution of activities, in addition to not leaving the remote environment or access other electronic devices before the end of the tasks.
 \end{enumerate}
 
 %------------------------------------------------------------------------------
-\section{Final Evaluation} 
+\section{Learning and Tool Features - Experiment 2}
 \label{sec_experiments:finalEval}
 %------------------------------------------------------------------------------
 
-% A meta da avaliação experimental final é realizar uma dinâmica até certo ponto similar com descrita na Seção \ref{sec_experiments:preliminaryEval}. 
+% A meta da avaliação experimental final é realizar uma dinâmica similar com descrita na Seção \ref{sec_experiments:preliminaryEval}. 
 % Contudo, desta vez o objetivo é avaliar, além da linguagem, também a qualidade dos artefatos produzidos e a usabilidade dos diversos novos recursos implementados.
-% Não temos pretensão de comparar abordagens (textual vs gráfica), mas apenas avaliar a ferramenta desenvolvida de uma forma mais profunda.
-% Existe um planejamento prévio onde desejamos utilizar um grupo de sujeitos que sejam acadêmicos em ínicio de cursos de tecnologia cursando projeto e modelagem de BDs.
+% Sendo assim, a pretensão é comparar abordagens (textual vs gráfica) e avaliar as novas funcionalidades desenvolvidas da nossa ferramenta de uma forma mais profunda.
+% Isso implica na criação e inclusão de novos instrumentos para a verificação dos artefatos que podem ser gerados.
+The goal of the final experimental evaluation (Experiment 2) is to perform similar tasks as described in Section \ref{sec_experiments:preliminaryEval}.
+Unlike Experiment 1, which focused on the first release of the ERText language, the objective is to evaluate the quality of the produced artifacts and the usability of the new features from the second release.
+Therefore, the intention is to compare approaches (textual vs graphical) and evaluate deeply the new features from release 2.
+It implies the creation and inclusion of new instruments to verify the generation of the artifacts.
+
+% Existe um planejamento prévio onde será utilizado um grupo composto por acadêmicos de uma classe de projeto e modelagem de banco de dados na UNIPAMPA.
+% Esta turma iniciou as aulas em novembro de 2021 e tem previsão de término em março de 2022, possuindo cinquenta (50) alunos matriculados.
 % Esta Seção descreverá na versão final do volume da tese o planejamento completo, sua execução, os resultados obtidos, sua discussão e as ameaças identificadas.
-The goal of the final experimental evaluation is to perform a dynamic somewhat similar to that described in Section \ref{sec_experiments:preliminaryEval}.
-However, this time the objective is to evaluate, in addition to the language, the quality of the produced artifacts and the usability of the various new features implemented.
-We do not intend to compare approaches (textual vs graphical), but only evaluate the developed tool in a deeper way.
-There is a previous planning where we want to use a group of subjects who are academics at the beginning of technology courses studying design and modeling of BDs.
-This Section will describe in the final version of the thesis volume the complete planning, its execution, the results obtained, its discussion and the identified threats.
+For instance, the planning of the second controlled experiment (Experiment 2) is still ongoing work, the reason why we only briefly described it in this section. 
+The experimental group is composed of academics from a \ac{db} design and modeling class at Unipampa. 
+This class started in November 2021, and the schedule will end at the end of March 2022, with around fifty (50) students enrolled. 
+For this reason, we planned the experiment for execution on December 16. 
+
+In the final version of this document, we will add more details in a new chapter. 
+Hence, it will include the complete planning, its execution, the results obtained, its discussion, and the identified threats.
+
+\cleardoublepage
+
+\textcolor{red}{\textbf{\huge SEGUNDO EXPERIMENTO}}\\
+
+\textcolor{red}{\textbf{Todos os testes usam a linguagem R, dentro da IDE RStudio.}}
+
+Todos os scripts estão em:
+\url{https://github.com/JonnathanRiquelmo/misc/blob/main/some-scripts.r}
+Vou formatar e jogar em um repositório do Zenodo depois, assim qualquer pode além de consultar os dados brutos também rodar os testes por si mesmo. Falhei ao não deixar os scripts dos outros experimentos disponíveis antes, mas isso não impede de copiar e colar os DIFs presentes nas tabelas que estão nos repositórios e então jogar nas funções para ver os resultados obtidos que já relatamos. 
+
+\\~\\ 
+
+\textbf{NORMALIDADE DAS AMOSTRAS}\\
+Método: \textbf{Shapiro-Wilk} (amostra com menos de 30 elementos)\\~\\
+\textbf{MEDIDA-F}\\
+\textbf{P-value = 0.5166} com $\alpha$~=~5\% (Significance level)\\
+Sample size (n)	25\\
+Os testes de Shapiro-Wilk não mostraram um desvio significativo da normalidade, W(25) = 0,965, p = 0,5166\\
+Ou seja, o conjunto da diferença entre os valores das medidas-F de cada tratamento (textual X gráfico) pode ser cosiderado uma \textbf{distribuição normal}.
+\\~\\ 
+\textbf{TEMPO}\\
+\textbf{P-value	= 0.5991} com com $\alpha$~=~5\%  (Significance level)\\
+Sample size (n)	25\\
+Os testes de Shapiro-Wilk não mostraram um desvio significativo da normalidade, W(25) = 0,968, p = 0,5991\\
+Ou seja, o conjunto da diferença entre os valores dos tempos de execução de cada tratamento (textual X gráfico) pode ser cosiderado uma \textbf{distribuição normal}.
+
+\\~\\
+
+\textbf{TESTE DE HIPÓTESE}\\
+Método: \textbf{Teste T pareado (amostras dependentes, com menos de 30 elementos)}\\~\\
+\textbf{MEDIDA-F}\\
+P-value	= 0.2147 com $\alpha$~=~5\% (Significance level)\\ 
+Sample size (n)	25\\
+Como o valor de P \textgreater $\alpha$, \textbf{H0 não pode ser rejeitada}.
+A média dos valores da brModelo é considerada igual à média da população da ERtext.
+Em outras palavras, a \textbf{diferença} entre as médias d brModelo e da ERtext \textbf{não é grande o suficiente para ser estatisticamente significativa}.\\
+\textbf{Lembrete: Um resultado de não significância não pode provar que H0 está correta, apenas que a suposição nula não pode ser rejeitada, ou seja, não se aceita H0 mas sim deixa-se de rejeitar H0.}
+\\~\\ 
+\textbf{TEMPO}\\
+P-value = 0.3492 com $\alpha$~=~5\% (Significance level)\\
+Sample size (n)	25\\
+Como o valor de P \textgreater $\alpha$, \textbf{H0 não pode ser rejeitada}.
+A média dos valores da brModelo é considerada igual à média da população da ERtext.
+Em outras palavras, a \textbf{diferença} entre as médias d brModelo e da ERtext \textbf{não é grande o suficiente para ser estatisticamente significativa}.
+
+\begin{figure}[!htb]
+        \centering
+        \caption{Esforço (tempo) dos tratamentos no segundo experimento.}
+        \label{fig:boxplotTempo2}
+        \include{img/BoxPlotEsforco2}
+        \fonte{Author.}
+\end{figure}
+
+\rowcolors{1}{gray!15}{white}
+\begin{table}[!htb]
+    \caption{Measures of the conceptual data models produced in the second experiment.}
+    \label{tab:ResultsModelosGeral2}
+    \centering
+    % \scriptsize
+    \tiny
+    \begin{tabular}{l|ccccc|ccccc}%{l|ccccc|ccccc}
+    \bottomrule
+    \rowcolor[HTML]{C0C0C0}
+    \multicolumn{1}{l}{} &
+    \multicolumn{5}{c|}{\textbf{Graphical Treatment}} &
+    \multicolumn{5}{c}{\textbf{Textual Treatment}}
+    \\ 
+    \hline
+    \rowcolor[HTML]{C0C0C0}
+    \textbf{Measure} & \textbf{MI} & \textbf{RI} & \textbf{P(\%)} & \textbf{R(\%)} & \textbf{F1(\%)} &
+    \textbf{MI} & \textbf{RI} & \textbf{P(\%)} & \textbf{R(\%)} & \textbf{F1(\%)}
+    \\
+    \hline
+Maximum	&	49.00	&	44.00	&	93.75	&	92.50	&	91.67	&	65.00	&	45.00	&	94.74	&	92.68	&	91.14	\\
+3\textdegree Quartile	&	46.00	&	39.00	&	88.89	&	85.42	&	86.02	&	47.00	&	38.00	&	89.19	&	87.80	&	87.06	\\
+Average	&	41.08	&	35.20	&	85.88	&	78.57	&	81.74	&	44.64	&	36.48	&	83.24	&	83.35	&	82.81	\\
+Median	&	43.00	&	36.00	&	86.05	&	77.50	&	81.32	&	44.00	&	36.00	&	85.37	&	83.67	&	84.71	\\
+1\textdegree Quartile	&	36.00	&	31.00	&	84.78	&	75.00	&	79.12	&	40.00	&	34.00	&	81.82	&	79.59	&	78.72	\\
+Minimum	&	27.00	&	23.00	&	71.43	&	57.50	&	68.66	&	34.00	&	32.00	&	58.46	&	69.39	&	69.47	\\
+Variance	&	34.63	&	23.84	&	20.21	&	72.57	&	26.91	&	59.59	&	10.25	&	102.43	&	34.72	&	37.18	\\
+SD	&	5.89	&	4.88	&	4.50	&	8.52	&	5.19	&	7.72	&	3.20	&	10.12	&	5.89	&	6.10	\\
+    \toprule
+\end{tabular}
+\begin{tablenotes}
+    \scriptsize
+    \centering
+    \item \textit{Legend: MI = Modeled Items; RI = Relevant Items; P = Precision; R = Recall; F1 = F1-Score; SD = Standard Deviation.}
+\end{tablenotes}
+\fonte{Author.}
+\end{table}
+
+\begin{figure}[!htb]
+        \centering
+        \caption{Medida-F (qualidade) dos tratamentos no segundo experimento.}
+        \label{fig:boxplotMedidaF2}
+        \include{img/boxplotMedidaF2}
+        \fonte{Author.}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Avaliação dos atributos de qualidadade no segundo experimento.}
+    \label{fig:inst3GERALExp2}
+    \include{img/Inst3_2}
+    \fonte{Author.}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Avaliação dos contrutores da DSL no segundo experimento.}
+    \label{fig:inst4GERALExp2}
+    \include{img/Inst4_2}
+    \fonte{Author.}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Emocards segundo experimento - ERtext}
+    \label{fig:Emocards1_alt}
+    \include{img/Emocards1_alt}
+    \fonte{Author.}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Emocards segundo experimento - brModelo}
+    \label{fig:Emocards2_alt}
+    \include{img/Emocards2_alt}
+    \fonte{Author.}
+\end{figure}
+
+\cleardoublepage
+
+\textcolor{red}{\textbf{\huge TERCEIRO EXPERIMENTO}}
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Emocards terceiro experimento - ERtext}
+    \label{fig:Emocards4_alt}
+    \include{img/Emocards4_alt}
+    \fonte{Author.}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Emocards terceiro experimento - brModelo}
+    \label{fig:Emocards3_alt}
+    \include{img/Emocards3_alt}
+    \fonte{Author.}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Avaliação dos Modelos produzidos - Ambas as tools}
+    \label{fig:ToolModelsEval}
+    \include{img/Eval_ToolModels}
+    \fonte{Author.}
+\end{figure}
+
+% \begin{figure}[!htb]
+%     \centering
+%     \caption{SUS terceiro experimento - ERtext}
+%     \label{fig:SUSERtext}
+%     \include{img/SUS_ERtext}
+%     \fonte{Author.}
+% \end{figure}
+
+% \begin{figure}[!htb]
+%     \centering
+%     \caption{SUS terceiro experimento - brModelo}
+%     \label{fig:SUSbrModelo}
+%     \include{img/SUS_brModelo}
+%     \fonte{Author.}
+% \end{figure}
+
+% \begin{figure}[!htb]
+%     \centering
+%     \caption{SUS terceiro experimento - Ambas as tools}
+%     \label{fig:SUS_tools}
+%     \include{img/SUS_tools}
+%     \fonte{Author.}
+% \end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \caption{BoxPlot SUS terceiro experimento - Ambas as tools}
+    \label{fig:BoxPlotSUS_tools}
+    \include{img/BoxPlotSUS}
+    \fonte{Author.}
+\end{figure}
+
+\rowcolors{1}{gray!15}{white}
+\begin{table}[!htb]
+    \caption{Measures of the SUS (System Usability Scale) in the third experiment.}
+    \label{tab:ResultsSUS}
+    \centering
+    \scriptsize
+    % \tiny
+    \begin{tabular}{l|ccccc|ccccc}%{l|ccccc|ccccc}
+    \bottomrule
+    \rowcolor[HTML]{C0C0C0}
+    \multicolumn{1}{l}{} &
+    \multicolumn{1}{c|}{\textbf{Graphical Treatment}} &
+    \multicolumn{1}{c}{\textbf{Textual Treatment}}
+    \\ 
+    \hline
+    \rowcolor[HTML]{C0C0C0}
+    \textbf{Measure} & \textbf{SUS Final Score} & \textbf{SUS Final Score}
+    \\
+    \hline
+Maximum	&	100.00	&	100.00		\\
+3\textdegree Quartile	&	85.00	&	92.50	\\
+Average	&	76.83	&	78.50	\\
+Median	&	80.00	&	75.00	\\
+1\textdegree Quartile	&	73.75	&	67.50	\\
+Minimum	&	37.50	&	50.00	\\
+Variance	&	248.63	&	241.79	\\
+SD	&	15.77	&	15.55	\\
+    \toprule
+\end{tabular}
+\begin{tablenotes}
+    \scriptsize
+    \centering
+    \item \textit{Legend: SD = Standard Deviation.}
+\end{tablenotes}
+\fonte{Author.}
+\end{table}
+
+
+\cleardoublepage
 
 %------------------------------------------------------------------------------
 \section{Chapter Lessons}
 \label{sec_experiments:lessons}
 %------------------------------------------------------------------------------
 
-This chapter presented a preliminary controlled experiment replication with a sample of 33 subjects evaluating ERtext, a proposed textual DSL tool for database conceptual modeling. 
-ERtext is compared with the brModelo, a graphical DSL well-known in Software Engineering ER lectures. 
-With the results obtained it was possible to answer the four RQs of the experiment, as well as the two associated hypotheses.
-In this sense, we can say that three main aspects of our DSL are investigated: effort, effectiveness and quality in use. 
+This chapter presented a preliminary controlled experiment (Experiment 1) replication with a sample of 33 subjects evaluating ERtext, a proposed textual \ac{dsl} tool for \acp{db} conceptual modeling. 
+We compared the ERtext with the brModelo, a graphical \ac{dsl} well-known in Software Engineering ER lectures. 
+With the results obtained, it was possible to answer the experiment's four RQs, as well as the two associated hypotheses.
+In this sense, we can say that we investigated three main aspects of our \ac{dsl}: effort, effectiveness, and quality in use.
 
-From the analysis it is possible to highlight the following aspects:
+From the analysis, it is possible to highlight the following aspects:
 
-\item \textbf{Effort:} the computed average difference states that there is no differences between the approaches, \textit{i.e.}, one approach is not better than the other. 
-\item \textbf{Effectiveness:} through the statistical test we reject the null hypothesis that the approaches are equally effective. 
-When comparing the boxplot graphs produced, it is possible to observe a slight advantage for the textual approach. 
-In the first experiment, the result was different, since the tests indicated that there was no significant difference. 
-We believe that the biggest reason for this event is the fact that all participants in this replication are undergraduate students at the very beginning in the academy program, basically without anymore previous experience with graphic modeling tools. 
-In the first experiment, there were, in addition to these, master's and doctoral students. 
+\item \textbf{Effort:} The computed average difference states that there are no differences between the approaches, \textit{i.e.}, one approach is not better than the other. 
+
+\item \textbf{Effectiveness:} Through the statistical test we reject the null hypothesis that the approaches are equally effective. 
+When comparing the box-plot graphs produced, it is possible to observe a slight advantage for the textual approach. 
+In the first experiment (Experiment 1), the result was different since the tests indicated that there was no significant difference. 
+We believe that the biggest reason for this event is that all participants in this replication are undergraduate students at the very beginning of the academy program, basically without any more previous experience with graphic modeling tools. 
+In the first experiment, there were, in addition to these, master and doctoral students. 
 We also do not discard possible influences caused by the fact that the experiment was conducted remotely in the pandemic context.
-\item \textbf{Qualitative comparison between treatments:} we observed a certain balance between treatments, but with a positive evaluation for ERtext regarding the ``Productivity'' and ``Operability'' attribute.
-Because it was the first time that the subjects had contact with our grammar, and also considering a first release of our DSL and the negative feedback also collected, we conclude that ERtext is on the rails for achieving better productivity indexes.
 
+\item \textbf{Qualitative comparison between treatments:} We observed a certain balance between treatments, but with a positive evaluation for ERtext regarding the ``Productivity'' and ``Operability'' attributes.
+Because it was the first time that the subjects had contact with our grammar, and also considering the first release of our DSL and the negative feedback also collected, we conclude that ERtext is on the rails for achieving better productivity indexes.
 
 We also collected qualitative feedback from subjects. 
 As a result, there are some improvements regarding the DSL design that need to be revised, in particular to the ternary relationships and self-relationships.
 Since the continuity of DSL development is foreseen, the execution of a possible refactoring, and also the implementation of new ER builders, is a natural step for its software evolution.
-From the preliminary experimental results we conclude that there is feasibility and good perspectives for the motivated context, \textit{i.e.}, as a tool for teaching ER modeling with the differential of adopting a textual approach for conceptual database modeling in classrooms instead of a graphical notation.
+From the preliminary experimental results, we conclude that there is feasibility and good perspectives for the motivating context, \textit{i.e.}, as a tool for teaching ER modeling with the differential of adopting a textual approach for conceptual \ac{db} modeling in classrooms instead of a graphical notation.
 
 % Finalmente, nós esperamos complementar as lições deste capítulo em breve com a avaliação experimental que ainda será realizada.
-Finally, we hope to supplement the lessons in this chapter shortly with the experimental evaluation yet to be carried out.
-
-
-
+Finally, we hope to supplement the lessons in this chapter shortly by carrying out the experimental evaluation yet.

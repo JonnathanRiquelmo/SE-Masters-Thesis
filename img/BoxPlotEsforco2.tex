@@ -1,0 +1,42 @@
+\begin{filecontents*}{data2.csv}
+24,24,28,28,29,30,30,30,31,33,35,38,38,44,45,46,46,46,53,58,61,70,74,90,102
+21,23,25,29,30,30,31,32,35,36,40,40,43,44,47,50,50,55,55,55,67,74,93,93,171
+\end{filecontents*}
+
+\makeatletter
+\pgfplotsset{
+    boxplot/hide outliers/.code={
+        \def\pgfplotsplothandlerboxplot@outlier{}%
+    }
+}
+\makeatother
+
+\begin{tikzpicture}
+    \pgfplotstableread[col sep=comma]{data2.csv}\csvdata
+    % Boxplot groups columns, but we want rows
+    \pgfplotstabletranspose\datatransposed{\csvdata} 
+    \begin{axis}[
+        boxplot/draw direction=y,
+        xtick={1, 2},
+        ylabel={\scriptsize Time (minutes)},
+        xticklabels={{\scriptsize Graphical Treatment}, {\scriptsize Textual Treatment}},
+        height=7cm,
+        width=10cm,
+        % boxplot/draw direction = y,
+        % axis x line* = bottom,
+        % axis y line = left,
+        % enlarge y limits,
+        ymajorgrids,
+        % xtick = {1, 2},
+        % xticklabel style = {align=center, font=\small},
+        % xticklabels = {Graphical Treatment, Textual Treatment},
+        % ylabel = {Time (minutes)},
+        ytick = {15, 30, 45, 60, 75, 90,  105, 120, 135, 150, 165, 180},
+        yticklabel style = {font=\scriptsize}
+    ]
+        \foreach \n in {1,...,2} {
+            \addplot+[boxplot, /pgfplots/boxplot/hide outliers, fill, fill opacity=0.4, draw=black] table[y index=\n] {\datatransposed};
+        }
+    \end{axis}
+\end{tikzpicture}
+

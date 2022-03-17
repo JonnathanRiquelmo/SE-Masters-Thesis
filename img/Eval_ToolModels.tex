@@ -1,0 +1,59 @@
+\pgfplotsset{testbar/.style={
+        xbar stacked,
+        legend cell align=left,
+        legend style={
+            legend columns=8,
+            font=\scriptsize,
+            at={(xticklabel cs:1.0)},
+            anchor=north east,
+            draw=none,
+            nodes={scale=1}
+            },
+        width=10cm,
+        axis y line*= none, 
+        axis x line*= bottom,
+        xmajorgrids = false,
+        xmin=0,xmax=15,
+        ytick = data,
+        yticklabels = {
+            {\scriptsize Conceptual Model-ERtext},
+            {\scriptsize Conceptual Model-brModelo},
+            {\scriptsize Logical Model-ERtext},
+            {\scriptsize Logical Model-brModelo},
+            {\scriptsize Physical Model-ERtext},
+            {\scriptsize Physical Model-brModelo}
+        },
+        tick align = outside, 
+        xtick pos = left,
+        xticklabel style = {font=\scriptsize},
+        bar width=3.5mm, 
+        y=6.5mm,
+        enlarge y limits={abs=0.450},% 0.5 + 0.5*(y - bar width)/y [TeX.sx #47995]
+        nodes near coords,
+        nodes near coords align=center,%Move values in bar
+        every node near coord/.append style={
+            black,
+            font=\scriptsize,
+            text opacity=1,
+            fill=white,
+            fill opacity=0.5,
+            outer sep=\pgflinewidth
+        }
+    }}
+    \begin{tikzpicture}
+    \begin{axis}[testbar] 
+    \addplot[pattern color=red,pattern=north east lines] coordinates
+        {(0,6)(0,5)(0,4)(0,3)(0,2)(0,1)};
+    \addplot[pattern color=teal,pattern=vertical lines] coordinates
+        {(0,6)(0,5)(0,4)(0,3)(0,2)(0,1)};
+    \addplot[pattern color=gray, pattern=grid] coordinates
+        {(2,6)(0,5)(2,4)(2,3)(0,2)(3,1)};
+    \addplot[pattern color=magenta, pattern=north west lines] coordinates
+        {(1,6)(0,5)(2,4)(1,3)(3,2)(3,1)};
+    \addplot[pattern color=blue, pattern=horizontal lines] coordinates
+        {(5,6)(4,5)(4,4)(7,3)(3,2)(4,1)};
+    \addplot[pattern color=green, pattern=crosshatch dots] coordinates
+        {(7,6)(11,5)(7,4)(5,3)(9,2)(5,1)};
+    \legend{1-Strongly Bad, 2, 3, 4, 5, 6-Strongly Good}
+    \end{axis}
+    \end{tikzpicture}

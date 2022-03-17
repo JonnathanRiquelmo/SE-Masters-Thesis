@@ -1,0 +1,41 @@
+\begin{filecontents*}{data4.csv}
+68.66,73.17,73.81,76.92,78.65,78.65,79.12,79.49,80.41,80.43,80.46,81.08,81.32,81.58,82.98,83.33,83.78,83.87,86.02,86.60,87.23,87.23,87.80,89.16,91.67
+69.47,71.29,71.70,73.12,77.11,77.78,78.72,81.25,82.47,82.57,83.87,84.62,84.71,85.33,85.37,86.08,86.32,86.42,87.06,87.76,88.31,88.89,89.16,89.74,91.14
+\end{filecontents*}
+
+\makeatletter
+\pgfplotsset{
+    boxplot/hide outliers/.code={
+        \def\pgfplotsplothandlerboxplot@outlier{}%
+    }
+}
+\makeatother
+
+\begin{tikzpicture}
+    \pgfplotstableread[col sep=comma]{data4.csv}\csvdata
+    % Boxplot groups columns, but we want rows
+    \pgfplotstabletranspose\datatransposed{\csvdata} 
+    \begin{axis}[
+         boxplot/draw direction=y,
+        xtick={1, 2},
+        ylabel={\scriptsize Percentage (\%)},
+        xticklabels={{\scriptsize Graphical Treatment}, {\scriptsize Textual Treatment}},
+        height=7cm,
+        width=10cm,
+        % boxplot/draw direction = y,
+        % axis x line* = bottom,
+        % axis y line = left,
+        % enlarge y limits,
+        ymajorgrids,
+        % xtick = {1, 2},
+        % xticklabel style = {align=center, font=\small},
+        % xticklabels = {Graphical Treatment, Textual Treatment},
+        % ylabel = {Percentage (\%)},
+        ytick = { 60, 65, 70, 75, 80, 85, 90, 100},
+        yticklabel style = {font=\scriptsize}
+    ]
+        \foreach \n in {1,...,2} {
+            \addplot+[boxplot, /pgfplots/boxplot/hide outliers, fill, fill opacity=0.4, draw=black] table[y index=\n] {\datatransposed};
+        }
+    \end{axis}
+\end{tikzpicture}
