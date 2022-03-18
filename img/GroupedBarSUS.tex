@@ -1,0 +1,39 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        width  = 0.90\textwidth,
+        height = 8cm,
+        major x tick style = transparent,
+        ybar=2.5*\pgflinewidth,
+        bar width=7.5pt,
+        ymajorgrids = true,
+        ylabel = {Final Score (points)},
+        symbolic x coords={
+        S01, S02, S03, S04, S05, S06, S07, S08, S09, S10, S11, S12, S13, S14, S15
+        },
+        xtick = data,
+        scaled y ticks = false,
+        % enlarge x limits=0.20,
+        ymin=0,
+        label style={font=\scriptsize},
+        tick label style={font=\scriptsize},
+        legend cell align=left,
+        legend style={
+                at={(0.99,0.82)},
+                anchor=south east,
+                column sep=1ex,
+                font = \scriptsize
+        }
+    ]
+        \addplot[style={blue,fill=blue!50}]
+            coordinates {
+            (S01,72.5) (S02,100) (S03,72.5) (S04,75) (S05,80) (S06,85) (S07,87.5) (S08,50) (S09,85) (S10,82.5) (S11,75) (S12,95) (S13,80) (S14,75) (S15,37.5)
+            };
+
+        \addplot[style={red,fill=red!50}]
+            coordinates {
+            (S01,92.5) (S02,97.5) (S03,97.5) (S04,70) (S05,80) (S06,92.5) (S07,50) (S08,75) (S09,90) (S10,100) (S11,67.5) (S12,67.5) (S13,70) (S14,60) (S15,67.5)
+            };
+            
+        \legend{Graphical,Textual}
+    \end{axis}
+\end{tikzpicture}
