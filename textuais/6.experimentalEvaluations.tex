@@ -5,7 +5,7 @@
 
 In this chapter, we present the research questions and hypotheses investigated during the evaluation of our proposal. 
 In addition to presenting the experimental design adopted and its conduction.
-Section \ref{sec_experiments:preliminaryEval} presents the preliminary evaluation of ERText, which is focused on the assessment of tool features. Section \ref{sec_experiments:finalEval} proposes increments for the next evaluation, to be carried out until December 2021, which also includes the evaluation of learning features.
+Section \ref{sec_experiments:preliminaryEval} presents the preliminary evaluation of ERText, which is focused on the assessment of tool features. Section \ref{sec_experiments:finalEval} describe the increments for the next evaluations, carried out until February 2022, which also includes the evaluation of learning features.
 In the end, Section \ref{sec_experiments:lessons} draws the chapter's lessons.
 
 %------------------------------------------------------------------------------
@@ -477,7 +477,7 @@ Threats to internal validity are the influences that can affect independent vari
 \end{enumerate}
 
 %------------------------------------------------------------------------------
-\section{Learning and Tool Features - Experiment 2}
+\section{Learning and Tool Features - Experiment 2 and Experiment 3}
 \label{sec_experiments:finalEval}
 %------------------------------------------------------------------------------
 
@@ -485,66 +485,151 @@ Threats to internal validity are the influences that can affect independent vari
 % Contudo, desta vez o objetivo é avaliar, além da linguagem, também a qualidade dos artefatos produzidos e a usabilidade dos diversos novos recursos implementados.
 % Sendo assim, a pretensão é comparar abordagens (textual vs gráfica) e avaliar as novas funcionalidades desenvolvidas da nossa ferramenta de uma forma mais profunda.
 % Isso implica na criação e inclusão de novos instrumentos para a verificação dos artefatos que podem ser gerados.
-The goal of the final experimental evaluation (Experiment 2) is to perform similar tasks as described in Section \ref{sec_experiments:preliminaryEval}.
-Unlike Experiment 1, which focused on the first release of the ERText language, the objective is to evaluate the quality of the produced artifacts and the usability of the new features from the second release.
-Therefore, the intention is to compare approaches (textual vs graphical) and evaluate deeply the new features from release 2.
-It implies the creation and inclusion of new instruments to verify the generation of the artifacts.
+
+% The goal of the final experimental evaluation (Experiment 2) is to perform similar tasks as described in Section \ref{sec_experiments:preliminaryEval}.
+% Unlike Experiment 1, which focused on the first release of the ERText language, the objective is to evaluate the quality of the produced artifacts and the usability of the new features from the second release.
+% Therefore, the intention is to compare approaches (textual vs graphical) and evaluate deeply the new features from release 2.
+% It implies the creation and inclusion of new instruments to verify the generation of the artifacts.
 
 % Existe um planejamento prévio onde será utilizado um grupo composto por acadêmicos de uma classe de projeto e modelagem de banco de dados na UNIPAMPA.
 % Esta turma iniciou as aulas em novembro de 2021 e tem previsão de término em março de 2022, possuindo cinquenta (50) alunos matriculados.
 % Esta Seção descreverá na versão final do volume da tese o planejamento completo, sua execução, os resultados obtidos, sua discussão e as ameaças identificadas.
-For instance, the planning of the second controlled experiment (Experiment 2) is still ongoing work, the reason why we only briefly described it in this section. 
-The experimental group is composed of academics from a \ac{db} design and modeling class at Unipampa. 
-This class started in November 2021, and the schedule will end at the end of March 2022, with around fifty (50) students enrolled. 
-For this reason, we planned the experiment for execution on December 16. 
 
-In the final version of this document, we will add more details in a new chapter. 
-Hence, it will include the complete planning, its execution, the results obtained, its discussion, and the identified threats.
+% For instance, the planning of the second controlled experiment (Experiment 2) is still ongoing work, the reason why we only briefly described it in this section. 
+% The experimental group is composed of academics from a \ac{db} design and modeling class at Unipampa. 
+% This class started in November 2021, and the schedule will end at the end of March 2022, with around fifty (50) students enrolled. 
+% For this reason, we planned the experiment for execution on December 16. 
 
-\cleardoublepage
+% In the final version of this document, we will add more details in a new chapter. 
+% Hence, it will include the complete planning, its execution, the results obtained, its discussion, and the identified threats.
 
-\textcolor{red}{\textbf{\huge SEGUNDO EXPERIMENTO}}\\
 
-\textcolor{red}{\textbf{Todos os testes usam a linguagem R, dentro da IDE RStudio.}}
 
-Todos os scripts estão em:
-\url{https://github.com/JonnathanRiquelmo/misc/blob/main/some-scripts.r}
-Vou formatar e jogar em um repositório do Zenodo depois, assim qualquer pode além de consultar os dados brutos também rodar os testes por si mesmo. Falhei ao não deixar os scripts dos outros experimentos disponíveis antes, mas isso não impede de copiar e colar os DIFs presentes nas tabelas que estão nos repositórios e então jogar nas funções para ver os resultados obtidos que já relatamos. 
+%######################################################
+\subsection{Experiment 2}
+\label{ssec_experiments:Experiment2}
+%######################################################
 
-\\~\\ 
+Em geral o \ac{ex2} realizado replicou novamente o protocolo descrito na Seção \ref{ssec_experiments:preliminary_planning}.
+Utilizamos os mesmos tratamentos, as mesmas perguntas de pesquisa e hipóteses.
+Contudo, foi necessário que adotássemos métodos estatísticos diferentes em razão do tamanho das amostras.
 
-\textbf{NORMALIDADE DAS AMOSTRAS}\\
-Método: \textbf{Shapiro-Wilk} (amostra com menos de 30 elementos)\\~\\
-\textbf{MEDIDA-F}\\
-\textbf{P-value = 0.5166} com $\alpha$~=~5\% (Significance level)\\
-Sample size (n)	25\\
-Os testes de Shapiro-Wilk não mostraram um desvio significativo da normalidade, W(25) = 0,965, p = 0,5166\\
-Ou seja, o conjunto da diferença entre os valores das medidas-F de cada tratamento (textual X gráfico) pode ser cosiderado uma \textbf{distribuição normal}.
-\\~\\ 
-\textbf{TEMPO}\\
-\textbf{P-value	= 0.5991} com com $\alpha$~=~5\%  (Significance level)\\
-Sample size (n)	25\\
-Os testes de Shapiro-Wilk não mostraram um desvio significativo da normalidade, W(25) = 0,968, p = 0,5991\\
-Ou seja, o conjunto da diferença entre os valores dos tempos de execução de cada tratamento (textual X gráfico) pode ser cosiderado uma \textbf{distribuição normal}.
+A condução passou por uma preparação quase \textit{ipsis litteris} ao descrito na Seção \ref{ssec_experiments:preliminary_conduction}. 
+Os convites foram feitos para uma turma de Engenharia de software e outra de Ciência da Computação, com cinquenta e quatro (54) respondentes.
+Exposto isto, nesta nova execução obtivemos um total de vinte e cinco (25) sujeitos que aceitaram participar, ou seja, menos da metade dos respondentes.
+Estes sujeitos realizaram as tarefas de forma remota em um ambiente previamente preparado pelos pesquisadores envolvidos.
 
-\\~\\
+Além de reusarmos os quatro (4) instrumentos de avaliação anteriores, ainda adicionamos um novo instrumento contendo um método não verbal para que os participantes relatassem suas emoções. 
+Este método, chamado de Emocards, tem como base o conceito de Circumplexo de Afeto de Russell \cite{desmet:2001}.
+Enquanto o Circumplexo de Russel divide as emoções humanas em quadrantes diferentes, o método Emocards o extende adicionando dezesseis (16) representações gráficas de faces humanas.
+Estas representações são pares masculino/feminino, que são então associados a cada um dos octantes contidos nos quadrantes do circumplexo. 
+A Figura \ref{fig:EmocardsMethod} apresenta o método Emocards inserido no Circumplexo de Afeto de Russel. 
 
-\textbf{TESTE DE HIPÓTESE}\\
-Método: \textbf{Teste T pareado (amostras dependentes, com menos de 30 elementos)}\\~\\
-\textbf{MEDIDA-F}\\
-P-value	= 0.2147 com $\alpha$~=~5\% (Significance level)\\ 
-Sample size (n)	25\\
-Como o valor de P \textgreater $\alpha$, \textbf{H0 não pode ser rejeitada}.
-A média dos valores da brModelo é considerada igual à média da população da ERtext.
-Em outras palavras, a \textbf{diferença} entre as médias d brModelo e da ERtext \textbf{não é grande o suficiente para ser estatisticamente significativa}.\\
-\textbf{Lembrete: Um resultado de não significância não pode provar que H0 está correta, apenas que a suposição nula não pode ser rejeitada, ou seja, não se aceita H0 mas sim deixa-se de rejeitar H0.}
-\\~\\ 
-\textbf{TEMPO}\\
-P-value = 0.3492 com $\alpha$~=~5\% (Significance level)\\
-Sample size (n)	25\\
-Como o valor de P \textgreater $\alpha$, \textbf{H0 não pode ser rejeitada}.
-A média dos valores da brModelo é considerada igual à média da população da ERtext.
-Em outras palavras, a \textbf{diferença} entre as médias d brModelo e da ERtext \textbf{não é grande o suficiente para ser estatisticamente significativa}.
+\begin{figure}[!htb]
+        \centering
+        \caption{Emocards method and its eight emotional categories.}
+        \label{fig:EmocardsMethod}
+        \includegraphics[width=0.5\textwidth]{img/Emocards.png}
+        \fonte{Author.}
+\end{figure}
+
+\subsubsection{Results Analysis}
+
+Esta seção apresenta os resultados obtidos da execução do \ac{ex2}.
+Todos os testes estatísticos foram feitos utilizando a linguagem R com a IDE RStudio. 
+Os scripts para este experimento estão disponíveis de forma pública em um repositório\footnote{\url{https://github.com/JonnathanRiquelmo/misc/blob/main/some-scripts.r}}, portanto desta forma qualquer pessoa pode, além de consultar todos os dados brutos, executá-los localmente e verificar os resultados.
+
+Levamos em consideração as mesmas hipóteses anteriores, relacionadas ao esforço (tempo) necessário e efetividade (qualidade) alcançada pelos modelos feitos.
+Para a avaliação referente ao esforço foram utilizados o teste de normalidade Shapiro-Wilk, em razão da amostra ter menos de trinta (30) elementos, e o Teste T pareado para amostras dependentes, em que foi levado em consideração os tempos coletados durante a execução das atividades de modelagem do experimento. 
+
+O método Shapiro-Wilk testa a hipótese nula de que uma distribuição é normal, mediante o cálculo do valor $W$, onde após é então verificado na tabela do teste\footnote{\url{http://www.uel.br/projetos/experimental/pages/arquivos/Probabilidades\_Shapiro.pdf}} se ocorre a rejeição ou aceitação da hipótese. 
+O cálculo do método Shapiro-Wilk é dado conforme a fórmula da Equação \ref{eq:Shapiro}: 
+
+\begin{equation}
+\label{eq:Shapiro}
+%\[ 
+W = \frac{\left(\sum_{i=1}^{n} a_ix_{(i)}\right)^2}{\sum_{i=1}^{n}\left(x_i -\overline{x}\right)} 
+%\]
+\end{equation}
+
+Uma forma simplificada do Teste T pareado para amostras dependentes
+se dá conforme a fórmula da Equação \ref{eq:TestT}:
+
+\begin{equation}
+\label{eq:TestT}
+%\[ 
+t = \frac{m}{s/\sqrt{n}} 
+%\]
+\end{equation}
+
+Nesta fórmula o \textit{\textbf{m}} e o \textit{\textbf{s}} são a média e o desvio padrão da diferença (\textbf{\textit{d}}), respectivamente. 
+O \textit{\textbf{n}} corresponde ao tamanho de \textbf{\textbf{d}}, ou seja, o tamanho da amostra.
+Este teste de hipótese é usado para comparar as médias de duas amostras relacionadas, ou seja, quando se possui dois valores (par de valores) para uma mesma amostra. 
+Contudo, para comparar as médias dos dois conjuntos de dados emparelhados, as diferenças entre todos os pares devem ser calculadas primeiro.
+O nível de significância alfa ($\alpha$) utilizado foi de cinco por cento (5\%).
+
+Para os testes da efetividade foram adotados os mesmos métodos estatísticos, porém ao invés do uso da métrica de tempo gasto nas atividades, foi necessário outra grandeza.
+Sendo assim, foram realizados novamente cálculos para uma medida F1, conforme descrito anteriormente na Seção \ref{ssec_experiments:preliminary_planning}.
+
+
+A partir dos valores brutos dos tempos foi calculada a diferença para ser possível realizar o teste de normalidade Shapiro-Wilk.
+Por ser um teste estatístico, esta técnica tem como produto a medida do valor-$p$.
+Para este teste foi adotado um nível de significância $\alpha$~=~5\%. 
+Isso significa que se o valor-$p$ for menor que 5\% ($p$ < 0.05), a hipótese nula de que a distribuição é normal deve ser rejeitada.
+
+Após os cálculos com o conjunto das diferenças dos tempos chegou-se a um valor-$p$ de 0.5991.
+Como valor-$p$ \textgreater $\alpha$, a hipótese nula foi aceita, concluindo assim que os dados são normalmente distribuídos.
+Em outras palavras, a diferença entre a amostra de dados e a distribuição normal não é grande o suficiente para ser estatisticamente significativa.
+
+É importante ressaltar que quanto maior o valor-$p$, mais ele suporta uma hipótese nula. 
+No caso do resultado obtido a chance de erro do tipo 1 (rejeitar uma hipótese nula que é correta) é muito alta, podendo ser traduzida em 59,91\% (0.5991).
+Ainda em relação ao teste de normalidade, o valor de \textit{W} calculado foi de 0.968, estando dentro do intervalo aceito do valor crítico de 95\%. 
+Isto significa que existe 95\% de chances da amostra ter origem em uma população normal.
+
+Tendo sido a amostra testada quanto à sua normalidade, foi possível realizar o teste da primeira hipótese estabelecida neste experimento. 
+No teste T pareado para amostras dependentes foi utilizado um nível de significância $\alpha$~=~5\%, com o qual se chegou a uma medida de 0.3492 para o valor-$p$. 
+
+Por ser um teste bicaudal, ou seja, que inclui uma igualdade na sua hipótese nula, esse valor-$p$ não mostra evidências suficientes para garantir a rejeição da afirmativa de $H_0 : \mu Tempo_G = \mu Tempo_T$.
+Em resumo, a média dos valores da abordagem gráfica (brModelo) é considerada similar à média da população da abordagem textual (ERtext).
+Em outras palavras, a diferença entre as médias d brModelo e da ERtext não é grande o suficiente para ser estatisticamente significativa.
+A Figura \ref{fig:boxplotTempo2} exibe um gráfico boxplot com a variação observada dos dados obtidos. 
+% A \ref{tab:ResultsModelosGeral2} mostra os valores que possibilitam uma análise de dispersão. 
+
+
+% \textbf{NORMALIDADE DAS AMOSTRAS}\\
+% Método: \textbf{Shapiro-Wilk} (amostra com menos de 30 elementos)\\~\\
+
+% \textbf{TEMPO}\\
+% \textbf{P-value	= 0.5991} com com $\alpha$~=~5\%  (Significance level)\\
+% Sample size (n)	25\\
+% Os testes de Shapiro-Wilk não mostraram um desvio significativo da normalidade, W(25) = 0,968, p = 0,5991\\
+% Ou seja, o conjunto da diferença entre os valores dos tempos de execução de cada tratamento (textual X gráfico) pode ser cosiderado uma \textbf{distribuição normal}.
+% \\~\\ 
+% \textbf{MEDIDA-F}\\
+% \textbf{P-value = 0.5166} com $\alpha$~=~5\% (Significance level)\\
+% Sample size (n)	25\\
+% Os testes de Shapiro-Wilk não mostraram um desvio significativo da normalidade, W(25) = 0,965, p = 0,5166\\
+% Ou seja, o conjunto da diferença entre os valores das medidas-F de cada tratamento (textual X gráfico) pode ser cosiderado uma \textbf{distribuição normal}.
+
+
+% \\~\\
+
+% \textbf{TESTE DE HIPÓTESE}\\
+% Método: \textbf{Teste T pareado (amostras dependentes, com menos de 30 elementos)}\\~\\
+% \textbf{MEDIDA-F}\\
+% P-value	= 0.2147 com $\alpha$~=~5\% (Significance level)\\ 
+% Sample size (n)	25\\
+% Como o valor de P \textgreater $\alpha$, \textbf{H0 não pode ser rejeitada}.
+% A média dos valores da brModelo é considerada igual à média da população da ERtext.
+% Em outras palavras, a \textbf{diferença} entre as médias d brModelo e da ERtext \textbf{não é grande o suficiente para ser estatisticamente significativa}.\\
+% \textbf{Lembrete: Um resultado de não significância não pode provar que H0 está correta, apenas que a suposição nula não pode ser rejeitada, ou seja, não se aceita H0 mas sim deixa-se de rejeitar H0.}
+% \\~\\ 
+% \textbf{TEMPO}\\
+% P-value = 0.3492 com $\alpha$~=~5\% (Significance level)\\
+% Sample size (n)	25\\
+% Como o valor de P \textgreater $\alpha$, \textbf{H0 não pode ser rejeitada}.
+% A média dos valores da brModelo é considerada igual à média da população da ERtext.
+% Em outras palavras, a \textbf{diferença} entre as médias d brModelo e da ERtext \textbf{não é grande o suficiente para ser estatisticamente significativa}.
 
 \begin{figure}[!htb]
         \centering
@@ -553,6 +638,26 @@ Em outras palavras, a \textbf{diferença} entre as médias d brModelo e da ERtex
         \include{img/BoxPlotEsforco2}
         \fonte{Author.}
 \end{figure}
+
+
+
+Para avaliar a hipotése referente a efetividade do uso das abordagens, os artefatos produzidos pelos sujeitos foram avaliados conforme os modelos de referência previamente estabelecidos.
+
+Como dito, nesta avaliação foi utilizada a medida F1, uma medida proveniente da área de reconhecimento de padrões e recuperação de informação. 
+Essa medida representa a combinação da precisão e revocabilidade observada de um resultado em relação à uma referência.
+
+Após a obtenção dos valores F1 de cada modelo, foi realizado o teste de normalidade Shapiro-Wilk.
+Após os cálculos com o conjunto das diferenças da medida F1 de cada modelo, chegou-se a um valor-$p$ de 0.5166.
+Com este resultado obtido a chance de erro do tipo 1 (rejeitar uma hipótese nula que é correta) pode ser muito alta, podendo ser traduzida em 51,66\% (0.5166).
+
+Como o valor-$p$ \textgreater $\alpha$, a hipótese nula foi aceita, constatando assim que os dados são normalmente distribuídos, isto é, a diferença entre a amostra de dados e uma distribuição normal não é grande o suficiente para ser estatisticamente significativa.
+
+Após a amostra ser testada quanto à sua normalidade, foi realizado o teste da segunda hipótese definida, relativa a efetividade (qualidade) das abordagens. 
+Desta vez, no teste T pareado para amostra dependentes, novamente foi utilizado um nível de significância $\alpha$~=~5\%, com o qual se chegou a uma medida de 0.2147 para o valor-$p$. 
+
+Pela afirmativa original incluir uma igualdade, caracterizando também este teste como bicaudal, chegou-se a conclusão que o valor-$p$ calculado demonstra que não há evidências suficientes para garantir a rejeição da afirmativa da hipótese nula original, denotada como $H_0 : \mu Efetividade_G = \mu Efetividade_T$.
+Logo, a hipótese nula de que as abordagens possuem efetividades iguais é aceita, pois segundo o teste a diferença média da medida F1 entre os tratamentos não é estatisticamente significativa.
+A Figura \ref{tab:ResultsModelosGeral2} apresenta as medidas médias dos valores avaliados, e também fornecem a possibilidade para a realização de uma análise de dispersão.
 
 \rowcolors{1}{gray!15}{white}
 \begin{table}[!htb]
@@ -592,6 +697,9 @@ SD	&	5.89	&	4.88	&	4.50	&	8.52	&	5.19	&	7.72	&	3.20	&	10.12	&	5.89	&	6.10	\\
 \fonte{Author.}
 \end{table}
 
+O gráfico boxplot da Figura \ref{fig:boxplotMedidaF2} exibe uma representação visual da medida F1 dos tratamentos aplicados.
+Com base neste gráfico é possível verificar o resultado obtido no teste de hipótese pois a dispersão dos dados não apresenta grande diferença entre as abordagens. 
+
 \begin{figure}[!htb]
         \centering
         \caption{Medida-F (qualidade) dos tratamentos no segundo experimento.}
@@ -599,6 +707,11 @@ SD	&	5.89	&	4.88	&	4.50	&	8.52	&	5.19	&	7.72	&	3.20	&	10.12	&	5.89	&	6.10	\\
         \include{img/boxplotMedidaF2}
         \fonte{Author.}
 \end{figure}
+
+A avaliação referente aos atributos de qualidade para as ferramentas é apresentado na Figura \ref{fig:inst3GERALExp2}.
+No geral os participantes a avaliação dos participantes foi proporcionalmente similar a obtida no experimento anterior. 
+% Os destaques desta vez ficaram por conta do atributo de satisfação para a abordagem textual, enquanto os atributos de conformidade e compreensão se sairam melhores na abordagem gráfica. 
+% Outro ponto a ser ressaltado é a diferença levemente menor no atributo de produtividade, mas ainda em favor da abordagem textual.
 
 \begin{figure}[!htb]
     \centering
@@ -608,6 +721,9 @@ SD	&	5.89	&	4.88	&	4.50	&	8.52	&	5.19	&	7.72	&	3.20	&	10.12	&	5.89	&	6.10	\\
     \fonte{Author.}
 \end{figure}
 
+A avaliação referente aos construtores da DSL da abordagem textual, os resultados também seguiram a mesma proporção observada no primeiro experimento.
+Isso nos leva a concluir que de fato é necessário uma reavaliação da representação dos relacionamentos ternários para torná-los mais fáceis de aprender, interpretar e utilizar.
+
 \begin{figure}[!htb]
     \centering
     \caption{Avaliação dos contrutores da DSL no segundo experimento.}
@@ -615,6 +731,10 @@ SD	&	5.89	&	4.88	&	4.50	&	8.52	&	5.19	&	7.72	&	3.20	&	10.12	&	5.89	&	6.10	\\
     \include{img/Inst4_2}
     \fonte{Author.}
 \end{figure}
+
+\clearpage
+
+A avaliação dos EMOCARDS...
 
 \begin{figure}[!htb]
     \centering
@@ -632,9 +752,14 @@ SD	&	5.89	&	4.88	&	4.50	&	8.52	&	5.19	&	7.72	&	3.20	&	10.12	&	5.89	&	6.10	\\
     \fonte{Author.}
 \end{figure}
 
+
 \cleardoublepage
 
-\textcolor{red}{\textbf{\huge TERCEIRO EXPERIMENTO}}
+%######################################################
+\subsection{Experiment 3}
+\label{ssec_experiments:Experiment3}
+%######################################################
+Aqui o terceiro experimento...
 
 \begin{figure}[!htb]
     \centering
@@ -737,9 +862,13 @@ SD	&	15.77	&	15.55	\\
 \fonte{Author.}
 \end{table}
 
+FAZER MAPEAMENTO ENTRE AVALIAÇÃO QUALITATIVA (SUJEITOS X RESPOSTAS) E EMOCARDS
+
+Um paragrafo para cada code e tentar contrapor 
+
+Trabalho futuro: Definir esquema de cores personalizada para os modelos criados
 
 \cleardoublepage
-
 %------------------------------------------------------------------------------
 \section{Chapter Lessons}
 \label{sec_experiments:lessons}
