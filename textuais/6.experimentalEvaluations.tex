@@ -481,28 +481,14 @@ Threats to internal validity are the influences that can affect independent vari
 \label{sec_experiments:finalEval}
 %------------------------------------------------------------------------------
 
-% A meta da avaliação experimental final é realizar uma dinâmica similar com descrita na Seção \ref{sec_experiments:preliminaryEval}. 
-% Contudo, desta vez o objetivo é avaliar, além da linguagem, também a qualidade dos artefatos produzidos e a usabilidade dos diversos novos recursos implementados.
-% Sendo assim, a pretensão é comparar abordagens (textual vs gráfica) e avaliar as novas funcionalidades desenvolvidas da nossa ferramenta de uma forma mais profunda.
-% Isso implica na criação e inclusão de novos instrumentos para a verificação dos artefatos que podem ser gerados.
+A meta da avaliação experimental final foi realizar dinâmicas similares com a descrita na Seção \ref{sec_experiments:preliminaryEval}. 
+Contudo, desta vez o objetivo foi avaliar, além da linguagem, também a qualidade dos artefatos produzidos, a usabilidade e experiência dos participantes.
+Sendo assim, a pretensão foi comparar as abordagens (textual vs gráfica) em avaliações mais profundas para as novas funcionalidades desenvolvidas da nossa ferramenta.
+Isso implicou na criação e inclusão de novos instrumentos para a verificação dos artefatos gerados.
 
-% The goal of the final experimental evaluation (Experiment 2) is to perform similar tasks as described in Section \ref{sec_experiments:preliminaryEval}.
-% Unlike Experiment 1, which focused on the first release of the ERText language, the objective is to evaluate the quality of the produced artifacts and the usability of the new features from the second release.
-% Therefore, the intention is to compare approaches (textual vs graphical) and evaluate deeply the new features from release 2.
-% It implies the creation and inclusion of new instruments to verify the generation of the artifacts.
-
-% Existe um planejamento prévio onde será utilizado um grupo composto por acadêmicos de uma classe de projeto e modelagem de banco de dados na UNIPAMPA.
-% Esta turma iniciou as aulas em novembro de 2021 e tem previsão de término em março de 2022, possuindo cinquenta (50) alunos matriculados.
-% Esta Seção descreverá na versão final do volume da tese o planejamento completo, sua execução, os resultados obtidos, sua discussão e as ameaças identificadas.
-
-% For instance, the planning of the second controlled experiment (Experiment 2) is still ongoing work, the reason why we only briefly described it in this section. 
-% The experimental group is composed of academics from a \ac{db} design and modeling class at Unipampa. 
-% This class started in November 2021, and the schedule will end at the end of March 2022, with around fifty (50) students enrolled. 
-% For this reason, we planned the experiment for execution on December 16. 
-
-% In the final version of this document, we will add more details in a new chapter. 
-% Hence, it will include the complete planning, its execution, the results obtained, its discussion, and the identified threats.
-
+Houve um planejamento prévio para a utilização de um grupo composto por acadêmicos de uma classe de projeto e modelagem de banco de dados na UNIPAMPA.
+Esta turma começou as aulas em novembro de 2021 e chegou ao término em março de 2022, possuindo inicialmente cinquenta (50) alunos matriculados.
+Esta Seção descreve uma visão geral dos dois experimentos executados (\ac{ex2} e \ac{ex3}), suas execuções, resultados obtidos, discussão dos resultados e as ameaças identificadas.
 
 
 %######################################################
@@ -523,15 +509,35 @@ Além de reusarmos os quatro (4) instrumentos de avaliação anteriores, ainda a
 Este método, chamado de Emocards, tem como base o conceito de Circumplexo de Afeto de Russell \cite{desmet:2001}.
 Enquanto o Circumplexo de Russel divide as emoções humanas em quadrantes diferentes, o método Emocards o extende adicionando dezesseis (16) representações gráficas de faces humanas.
 Estas representações são pares masculino/feminino, que são então associados a cada um dos octantes contidos nos quadrantes do circumplexo. 
-A Figura \ref{fig:EmocardsMethod} apresenta o método Emocards inserido no Circumplexo de Afeto de Russel. 
+
+O conceito do circumplexo e suas divisões é de que a cada dois (2) octantes se forme um quadrante que defina um estado de espírito. 
+Os conjunto dos octantes 1 e 2 formam um quadrante que diz respeito as sensações de felicidade.
+O conjunto dos octantes 3 e 4 definem um quadrante relacionado as sensações de relaxamento.
+O conjunto de octantes 5 e 6 formam o quadrante onde a sensações de tristeza estão contidas.
+Finalmentem, os octantes 7 e 8 constituem o quadrante que abrange sensações de irritabilidade.
+A Figura \ref{fig:Octantes} mostra os quatro (4) estados de espírito que são previstos no circumplexo.
 
 \begin{figure}[!htb]
         \centering
-        \caption{Emocards method and its eight emotional categories.}
-        \label{fig:EmocardsMethod}
-        \includegraphics[width=0.5\textwidth]{img/Emocards.png}
+        \caption{The four (4) quadrants with the states of mind of the Russell circumplex.}
+        \label{fig:Octantes}
+        \include{img/Octantes}
         \fonte{Author.}
 \end{figure}
+
+A Figura \ref{fig:EmocardsMethod} apresenta o método Emocards inserido no Circumplexo de Afeto de Russel, mostrando os oito (8) octantes distribuídos nos quatro (4) estados de espírito, e com as dezesseis (16) representações gráficas associadas a eles. 
+
+\begin{figure}[!htb]
+        \centering
+        \caption{Emocards method and its eight categories within Russell's circumplex.}
+        \label{fig:EmocardsMethod}
+        \includegraphics[width=0.5\textwidth]{img/Emocards.png}
+        \fonte{\cite{Reijneveld:2003}.}
+\end{figure}
+
+A execução se deu em dezembro de 2021, ainda sem oferecer acesso aos participantes para que eles avaliassem os artefados produzidos pelos geradores implementados.
+Os geradores foram desativados dentro do ambiente controlado que distribuído.
+Isso se deu em razão de tentarmos replicar o experimento anterior visando comparar resultados e, por conta do tempo disponível ser limitado, isso poderia tornar somar mais uma ameaça aos resultados, já que demandaria mais esforço para realizar as tarefas adicionais.
 
 %###########################################################
 \subsubsection{Results Analysis}
@@ -600,16 +606,13 @@ A Figura \ref{fig:boxplotTempo2} exibe um gráfico boxplot com a variação obse
 
 \begin{figure}[!htb]
         \centering
-        \caption{Esforço (tempo) dos tratamentos no segundo experimento.}
+        \caption{Effort (time) of treatments in \ac{ex2}.}
         \label{fig:boxplotTempo2}
         \include{img/BoxPlotEsforco2}
         \fonte{Author.}
 \end{figure}
 
-
-
 Para avaliar a hipotése referente a efetividade do uso das abordagens, os artefatos produzidos pelos sujeitos foram avaliados conforme os modelos de referência previamente estabelecidos.
-
 Como dito, nesta avaliação foi utilizada a medida F1, uma medida proveniente da área de reconhecimento de padrões e recuperação de informação. 
 Essa medida representa a combinação da precisão e revocabilidade observada de um resultado em relação à uma referência.
 
@@ -628,7 +631,7 @@ A Figura \ref{tab:ResultsModelosGeral2} apresenta as medidas médias dos valores
 
 \rowcolors{1}{gray!15}{white}
 \begin{table}[!htb]
-    \caption{Measures of the conceptual data models produced in the second experiment.}
+    \caption{Measures of the conceptual data models produced in \ac{ex2}.}
     \label{tab:ResultsModelosGeral2}
     \centering
     % \scriptsize
@@ -669,7 +672,7 @@ Com base neste gráfico é possível verificar o resultado obtido no teste de hi
 
 \begin{figure}[!htb]
         \centering
-        \caption{Medida-F (qualidade) dos tratamentos no segundo experimento.}
+        \caption{F1 measure (quality) of treatments in \ac{ex2}.}
         \label{fig:boxplotMedidaF2}
         \include{img/boxplotMedidaF2}
         \fonte{Author.}
@@ -699,28 +702,39 @@ Isso nos leva a concluir que de fato é necessário, principalmente, uma reavali
     \fonte{Author.}
 \end{figure}
 
-\clearpage
 
-
+Finalmente, chegamos aos instrumentos adicionados para tentar verificar o estado de espírito, ou as emoções causadas, pela execução das atividades com cada abordagem.
+Os resultados das avaliações são dispostas em um circumplexo de Russell.
+É possível observar que em relação ao uso da abordagem textual com a ferramenta ERtext houve uma concentração maior nos quadrantes que dizem respeito aos sentimento de alegria (octantes 1 e 2) e relaxamento (octantes 3 e 4).
+Esses dois quadrantes concentraram um total de vinte (20) respondentes.
+Ainda, houve a distribuição de três (3) partipantes que expressaram sentimentos relacionados a tristeza (octantes 5 e 6), e dois (2) sujeitos que demonstraram se identificarem com os Emocards relacionados ao quadrante que diz respeito a emoções de irritabilidade (octantes 7 e 8).
+A Figura \ref{fig:Emocards1_alt} apresenta a distribuição dos sujeitos por cada octante previsto no método Emocards, e que utilizaram a abordagem textual.
 
 \begin{figure}[!htb]
     \centering
-    \caption{Emocards segundo experimento - ERtext}
+    \caption{\ac{ex2} Emocards - ERtext.}
     \label{fig:Emocards1_alt}
     \include{img/Emocards1_alt}
     \fonte{Author.}
 \end{figure}
 
+A avaliação da abordagem gráfica, utilizando a ferramenta brModelo, apresentou uma distribuição semelhante.
+Para os quadrantes que englobam sentimentos de alegria e relaxamento, foram dezenove (19) sujeitos.
+O quadrante que representa sentimentos relacionados a triteza, foram quatro (4) sujeitos, enquanto que no quadrante respectivo a sensações de irritabilidade foram apenas dois (2) participantes.
+A Figura \ref{fig:Emocards2_alt} apresenta a distribuição dos sujeitos por cada octante previsto no método Emocards, e que utilizaram a abordagem gráfica.
+
+
 \begin{figure}[!htb]
     \centering
-    \caption{Emocards segundo experimento - brModelo}
+    \caption{\ac{ex2} Emocards - brModelo.}
     \label{fig:Emocards2_alt}
     \include{img/Emocards2_alt}
     \fonte{Author.}
 \end{figure}
 
-
-\cleardoublepage
+Levando em consideração que são abordagens que em sua essência são diametralmente opostas, acreditamos que os resultados similares observados pode ser um bom sinal.
+Isso poderia indicar em um primeiro momento que nossa proposta alcançaria um nível similar de satisfação que o de outra ferramenta já madura e amplamente estabelecida.
+Contudo, foi então feito outro experimento visando avaliar os geradores implementados, de uma forma mais qualitativa um vez que tinhamos um material estatísticamente relevante que suportam nossas conclusões em relação as hipóteses tratadas.
 
 %######################################################
 \subsection{Experiment 3}
