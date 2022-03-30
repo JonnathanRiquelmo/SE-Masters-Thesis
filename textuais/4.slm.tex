@@ -41,7 +41,7 @@ Taking into account the general objective of this work, which is to develop a mo
     \item \textbf{RQ1.} What is the state of the art of mechanisms for transforming conceptual models?
     % \item \textbf{RQ2.} What transformation mechanisms among conceptual models are applied in the context of DSLs?
     \item \textbf{RQ2.} What are transformation mechanisms applied among conceptual models in the context of DSLs?
-    \item \textbf{RQ3.} What representations of database objects do the transformation mechanisms support?
+    \item \textbf{RQ3.} What representations of database resources do the transformation mechanisms support?
 \end{itemize}
 
 %#################################################################
@@ -270,7 +270,7 @@ Table \ref{tab:DataExtractionForm} presents the detailed description of this ext
     \\
     Reported shortcomings & Description of reported shortcomings
     \\
-    Database objects & Description of objects supported in the transformation process
+    Database resources & Description of objects supported in the transformation process
     \\
     DSL names & DSLs that apply transformation mechanisms among conceptual data models
     \\
@@ -342,18 +342,19 @@ Table \ref{tab:QualityEval} summarizes the results obtained in the quality asses
 \textbf{QC1} & \textbf{QC2} & \textbf{QC3} & 
 \textbf{Total} \\
 \hline
-\citeonline{deSousa:2018} & A & A & A & 1.5       \\
-\citeonline{Ristic:2016} & A & A & P & 1          \\
 \citeonline{Dimitrieski:2015} & G & G & G & 3     \\
 \citeonline{Dimitrieski:2014}  & G & G & P & 2    \\
-\citeonline{Subahi:2011} & A & G & P & 1.5        \\
 \citeonline{Kung:2010} & G & G & P & 2            \\
 \citeonline{Hartmann:2007} & G & G & P & 2        \\
-\citeonline{Vara:2007} & A & A & P & 1            \\
-\citeonline{Gogolla:2005} & G & G & P & 1         \\
 \citeonline{Dey:1999} & G & G & P & 2             \\
 \citeonline{Rosenthal:1994} & G & G & P & 2       \\
 \citeonline{Teorey:1986} & G & G & P & 2          \\
+\citeonline{Subahi:2011} & A & G & P & 1.5        \\
+\citeonline{deSousa:2018} & A & A & A & 1.5       \\
+\citeonline{Ristic:2016} & A & A & P & 1          \\
+\citeonline{Vara:2007} & A & A & P & 1            \\
+\citeonline{Gogolla:2005} & G & G & P & 1         \\
+
 \hline
 \end{tabular}
 \fonte{Author.}
@@ -424,8 +425,8 @@ Although there are similarities between practically all reported mechanisms, the
 % Em relação a \textbf {RQ3} (representações de objetos de banco de dados suportados nos mecanismos de transformação) os estudos analisados, quando citam explicitamente os objetos, em geral convergem em relação aos mais comuns como tabelas e relações, salvo exceções \cite{Dey:1999}.
 % Outros objetos de banco são abordados também como gatilhos, visões e procedimentos armazenados. 
 % Destacamos novamente os trabalhos que se referem a MIST, pois estes afirmam que existe suporte a funções também.
-Regarding \textbf {RQ3} (representations of database objects supported in transformation mechanisms), the analyzed studies, when explicitly mentioning the database objects, in general, converge in relation to the most common ones such as tables and relations, with exceptions \cite{Dey:1999}.
-Other database objects are also covered such as triggers, views, and stored procedures.
+Regarding \textbf {RQ3} (representations of database resources supported in transformation mechanisms), the analyzed studies, when explicitly mentioning the database resources, in general, converge in relation to the most common ones such as tables and relations, with exceptions \cite{Dey:1999}.
+Other database resources are also covered such as triggers, views, and stored procedures.
 We highlighted again the studies that refer to MIST, as they claim that there is support for database functions as well.
 
 % Podemos mencionar que poucas \acp{dsl} são reportadas com um nome próprio.
