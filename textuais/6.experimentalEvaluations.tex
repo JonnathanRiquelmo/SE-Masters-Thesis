@@ -544,8 +544,9 @@ Isso se deu em razão de tentarmos replicar o experimento anterior visando compa
 %###########################################################
 
 Esta seção apresenta os resultados obtidos da execução do \ac{ex2}.
+Os dados utilizados estão disponíveis em um repositório\footnote{: link do repositório no Zenodo.} público na plataforma Zenodo.
 Todos os testes estatísticos foram realizados com apoio da linguagem R em conjunto com a IDE RStudio. 
-Os scripts para este experimento estão disponíveis de forma pública em um repositório\footnote{\url{ https://github.com/JonnathanRiquelmo/misc/blob/main/some-scripts.r }}, portanto desta forma qualquer pessoa pode, além de consultar todos os dados brutos, executá-los localmente e verificar os resultados.
+Os scripts para este experimento estão disponíveis de forma pública em um repositório\footnote{\url{https://github.com/JonnathanRiquelmo/misc/blob/main/some-scripts.r}}, portanto desta forma qualquer pessoa pode, além de consultar todos os dados brutos, executá-los localmente e verificar os resultados.
 
 Levamos em consideração as mesmas hipóteses anteriores, relacionadas ao esforço (tempo) necessário e efetividade (qualidade) alcançada pelos modelos feitos.
 Para a avaliação referente ao esforço foram utilizados o teste de normalidade Shapiro-Wilk, em razão da amostra ter menos de trinta (30) elementos, e o Teste T pareado para amostras dependentes, em que foi levado em consideração os tempos coletados durante a execução das atividades de modelagem do experimento. 
@@ -606,7 +607,7 @@ A Figura \ref{fig:boxplotTempo2} exibe um gráfico boxplot com a variação obse
 
 \begin{figure}[!htb]
         \centering
-        \caption{Effort (time) of treatments in \ac{ex2}.}
+        \caption{Box-plot - Effort per treatments in \ac{ex2}.}
         \label{fig:boxplotTempo2}
         \include{img/BoxPlotEsforco2}
         \fonte{Author.}
@@ -672,7 +673,7 @@ Com base neste gráfico é possível verificar o resultado obtido no teste de hi
 
 \begin{figure}[!htb]
         \centering
-        \caption{F1 measure (quality) of treatments in \ac{ex2}.}
+        \caption{Box-plot - F1 per treatments in \ac{ex2}.}
         \label{fig:boxplotMedidaF2}
         \include{img/boxplotMedidaF2}
         \fonte{Author.}
@@ -685,7 +686,7 @@ Outro ponto a ser ressaltado é a diferença levemente menor no atributo de prod
 
 \begin{figure}[!htb]
     \centering
-    \caption{Avaliação dos atributos de qualidadade no segundo experimento.}
+    \caption{Quality attributes per treatments in \ac{ex2}.}
     \label{fig:inst3GERALExp2}
     \include{img/Inst3_2}
     \fonte{Author.}
@@ -696,7 +697,7 @@ Isso nos leva a concluir que de fato é necessário, principalmente, uma reavali
 
 \begin{figure}[!htb]
     \centering
-    \caption{Avaliação dos contrutores da DSL no segundo experimento.}
+    \caption{Evaluation of DSL designers in \ac{ex2}.}
     \label{fig:inst4GERALExp2}
     \include{img/Inst4_2}
     \fonte{Author.}
@@ -732,43 +733,89 @@ A Figura \ref{fig:Emocards2_alt} apresenta a distribuição dos sujeitos por cad
     \fonte{Author.}
 \end{figure}
 
-Levando em consideração que são abordagens que em sua essência são diametralmente opostas, acreditamos que os resultados similares observados pode ser um bom sinal.
-Isso poderia indicar em um primeiro momento que nossa proposta alcançaria um nível similar de satisfação que o de outra ferramenta já madura e amplamente estabelecida.
-Contudo, foi então feito outro experimento visando avaliar os geradores implementados, de uma forma mais qualitativa um vez que tinhamos um material estatísticamente relevante que suportam nossas conclusões em relação as hipóteses tratadas.
+Levando em consideração que são abordagens que em sua essência são diametralmente opostas, acreditamos que a similaridade dos resultados observados pode ser um bom sinal.
+Isso indica em um primeiro momento que nossa proposta alcança um nível similar de satisfação, semelhante ao de outra ferramenta já madura e amplamente estabelecida.
+Contudo, para verificarmos mais a fundo isto foi então feito um terceiro experimento visando avaliar os geradores implementados, de uma forma mais qualitativa, uma vez que já possuímos material estatísticamente relevante e que suporta nossas conclusões em relação as hipóteses tratadas.
 
 %######################################################
 \subsection{Experiment 3}
 \label{ssec_experiments:Experiment3}
 %######################################################
-Aqui o terceiro experimento...
 
+O \ac{ex3} foi realizado na segunda metade de fevereiro de 2022.
+Os vinte e cinto (25) participantes do \ac{ex2} foram novamente convidados a participarem.
+Houve a aceitação de quinze (15) sujeitos.
+
+Desta vez o protocolo original foi novamente modificado.
+Nesta execução não procuramos realizar a medição do tempo ou da qualidade dos modelos produzidos.
+Da mesma maneira, os participantes precisavam realizar a modelagem de dois (2) problemas simples, um com cada abordagem.
+
+O ambiente deixou de ser uma máquina virtual, uma vez que houve a geração de um plugin completo para o Eclipse e disponibilizado publicamente .
+Este plugin tinha como dependência de funcionamento apenas a instalação de uma IDE Eclipse e do Java, independentemente do sistema operacional usado.
+De toda a forma as atividades ocorreram de forma remota, quando como nos outros experimentos os pesquisadores acompanharam de maneira online os sujeitos.
+
+Os instrumentos também foram diferentes, já que nesta execução os instrumentos de avaliação dos contrutores e atributos de qualidade foram omitidos.
+Nossa intenção era que os sujeitos avaliassem os artefatos gerados pelas ferramentas que suportavam as abordagens, nos diferentes níveis suportados.
+Para isto utilizou-se uma escala likert para se obter a avaliação destes artefatos gerados em cada um dos níveis de modelagem (conceitual, lógico e físico).
+
+Foi ainda reutilizado o método Emocards descrito anteriormente, visando entender o estado de espírito que o uso das ferramentas por completo podiam causar.
+Também foram adicionadas uma série de perguntas abertas e, finalmente, um formulário com uma conhecida escala de usabilidade utilizada na engenharia de sistemas, nomeada \ac{sus}.
+ 
 %###########################################################
 \subsubsection{Results Analysis}
 %###########################################################
 
+No que diz respeito a avaliação dos artefatos relacionados aos níveis de modelagem, a Figura \ref{fig:ToolModelsEval} apresenta o resumo dos valores obtidos.
+Em relação a classificação os modelos conceituais produzidos, houve uma melhor aceitação por parte da abordagem gráfica, na ferramenta brModelo.
+Foram onze (11) avaliações com conceito máximo, em contraste a abordagem textual, utilizando a solução proposta ERtext.
+A abordagem textual, além de ter menos avaliações máximas, totalizando sete (7), ainda teve avaliações com score dois (2), ou seja, baixas.
+Para deixar registrado, a escala likert usada ia de um (1 - a pior avaliação) até seis (6 - a melhor avaliação), e enquanto o modelo conceitual da abordagem gráfica era apenas o diagrama, a abordagem textual era representado pelo modelo escrito e acompanhado de um equivalente gráfico que utilizava elementos \ac{uml}.
+
 \begin{figure}[!htb]
     \centering
-    \caption{Emocards terceiro experimento - ERtext}
+    \caption{Evaluation of Produced Artifacts - Both tools.}
+    \label{fig:ToolModelsEval}
+    \include{img/Eval_ToolModels}
+    \fonte{Author.}
+\end{figure}
+
+Quanto a avaliação dos modelos lógicos gerados a partir dos modelos conceituais, houve uma equivalência maior, mas com uma pequena vantagem para a abordagem textual.
+Em relação a avaliação dos modelos físicos, foi pedido que os códigos \ac{sql} em um \ac{dbms}, especificamente o PostgreSQL uma vez que o mesmo era utilizado de forma recorrente na classe de projeto e modelagem de banco de dados.
+
+Os resultados dos modelos físicos mostraram uma vantagem leve para a abordagem textual, tendo ainda abordagem gráfica recebido avaliações com score (2), ou seja, considerando os modelos com qualidade baixa.
+
+É importante salientar que a cada avaliação dos artefatos ainda era perguntado, de forma aberta, se existia critícas, elogios, dúvidas ou sugestões de melhoria quanto a representações observadas.
+As respostas coletadas serviriam depois para uma análise qualitativa utilizando codificação.
+
+Quanto a avaliação utilizando o método Emocards, os resultados são apresentados nas Figuras \ref{fig:Emocards4_alt} e \ref{fig:Emocards3_alt}.
+Novamente houveram resultados muito aproximados, demonstrando que ambas as ferramentas conseguem despertar sentimentos e estados de espírito similares.
+
+Nos Emocards relativos a abordagem textual (Figura \ref{fig:Emocards4_alt}), utilizando a ERtext, houve cinco (5) sujeitos que expressaram estarem no quadrante que engloba sentimentos de felicidade.
+Outros nove (9) sujeitos demonstraram estarem no quadrante que envolve sentimentos relacionados a relaxamento, e apenas um (1) participante escolheu uma representação gráfica de face humana que era classificada no quadrante que compreende sentimentos de irritabilidade. 
+
+\begin{figure}[!htb]
+    \centering
+    \caption{\ac{ex3} Emocards - ERtext.}
     \label{fig:Emocards4_alt}
     \include{img/Emocards4_alt}
     \fonte{Author.}
 \end{figure}
 
+Nos Emocards que dizem respeito a abordagem gráfica (Figura \ref{fig:Emocards3_alt}), utilizando a brModelo, houveram quatro (4) sujeitos que se declararam no quadrante que diz respeito a sentimentos de felicidade.
+Outros oito (8) sujeitos demonstraram estarem no quadrante que envolve sentimentos relacionados a relaxamento.
+Ainda, dois (2) participantes escolheram Emocards que são relacionados ao quadrante que expressa sentimentos de tristeza, e apenas um (1) ao quadrante que inclui os sentimentos de irritabilidade.
+
 \begin{figure}[!htb]
     \centering
-    \caption{Emocards terceiro experimento - brModelo}
+    \caption{\ac{ex3} Emocards - brModelo.}
     \label{fig:Emocards3_alt}
     \include{img/Emocards3_alt}
     \fonte{Author.}
 \end{figure}
 
-\begin{figure}[!htb]
-    \centering
-    \caption{Avaliação dos Modelos produzidos - Ambas as tools}
-    \label{fig:ToolModelsEval}
-    \include{img/Eval_ToolModels}
-    \fonte{Author.}
-\end{figure}
+O formulário \ac{sus} 
+
+
 
 % \begin{figure}[!htb]
 %     \centering
@@ -804,7 +851,7 @@ Aqui o terceiro experimento...
 
 \begin{figure}[!htb]
     \centering
-    \caption{Grouped Bar Chart SUS terceiro experimento - Ambas as tools}
+    \caption{Grouped Bar Chart of \ac{sus} Values - Both tools.}
     \label{fig:GroupedBarSUS_tools}
     \include{img/GroupedBarSUS}
     \fonte{Author.}
@@ -812,7 +859,7 @@ Aqui o terceiro experimento...
 
 \rowcolors{1}{gray!15}{white}
 \begin{table}[!htb]
-    \caption{Measures of the SUS (System Usability Scale) in the third experiment.}
+    \caption{Measures of the \ac{sus} values in \ac{ex3}.}
     \label{tab:ResultsSUS}
     \centering
     \scriptsize
