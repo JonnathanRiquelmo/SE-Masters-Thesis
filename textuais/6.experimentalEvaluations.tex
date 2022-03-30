@@ -510,7 +510,7 @@ Threats to internal validity are the influences that can affect independent vari
 \label{ssec_experiments:Experiment2}
 %######################################################
 
-Em geral o \ac{ex2} realizado replicou novamente o protocolo descrito na Seção \ref{ssec_experiments:preliminary_planning}.
+Em geral, o \ac{ex2} realizado replicou novamente o protocolo descrito na Seção \ref{ssec_experiments:preliminary_planning}.
 Utilizamos os mesmos tratamentos, as mesmas perguntas de pesquisa e hipóteses.
 Contudo, foi necessário que adotássemos métodos estatísticos diferentes em razão do tamanho das amostras.
 
@@ -533,10 +533,12 @@ A Figura \ref{fig:EmocardsMethod} apresenta o método Emocards inserido no Circu
         \fonte{Author.}
 \end{figure}
 
+%###########################################################
 \subsubsection{Results Analysis}
+%###########################################################
 
 Esta seção apresenta os resultados obtidos da execução do \ac{ex2}.
-Todos os testes estatísticos foram feitos utilizando a linguagem R com a IDE RStudio. 
+Todos os testes estatísticos foram realizados com apoio da linguagem R em conjunto com a IDE RStudio. 
 Os scripts para este experimento estão disponíveis de forma pública em um repositório\footnote{\url{ https://github.com/JonnathanRiquelmo/misc/blob/main/some-scripts.r }}, portanto desta forma qualquer pessoa pode, além de consultar todos os dados brutos, executá-los localmente e verificar os resultados.
 
 Levamos em consideração as mesmas hipóteses anteriores, relacionadas ao esforço (tempo) necessário e efetividade (qualidade) alcançada pelos modelos feitos.
@@ -563,9 +565,9 @@ t = \frac{m}{s/\sqrt{n}}
 \end{equation}
 
 Nesta fórmula o \textit{\textbf{m}} e o \textit{\textbf{s}} são a média e o desvio padrão da diferença (\textbf{\textit{d}}), respectivamente. 
-O \textit{\textbf{n}} corresponde ao tamanho de \textbf{\textbf{d}}, ou seja, o tamanho da amostra.
-Este teste de hipótese é usado para comparar as médias de duas amostras relacionadas, ou seja, quando se possui dois valores (par de valores) para uma mesma amostra. 
-Contudo, para comparar as médias dos dois conjuntos de dados emparelhados, as diferenças entre todos os pares devem ser calculadas primeiro.
+O \textit{\textbf{n}} corresponde ao tamanho de \textit{\textbf{d}}, ou seja, o tamanho da amostra.
+Este teste de hipótese é usado para comparar as médias de duas amostras relacionadas, ou seja, quando se possui dois valores (ou pares de valores) para uma mesma amostra. 
+Contudo, para comparar as médias dos dois conjuntos de dados emparelhados, as diferenças entre todos os pares precisaram ser calculadas primeiro.
 O nível de significância alfa ($\alpha$) utilizado foi de cinco por cento (5\%).
 
 Para os testes da efetividade foram adotados os mesmos métodos estatísticos, porém ao invés do uso da métrica de tempo gasto nas atividades, foi necessário outra grandeza.
@@ -595,41 +597,6 @@ Em outras palavras, a diferença entre as médias d brModelo e da ERtext não é
 A Figura \ref{fig:boxplotTempo2} exibe um gráfico boxplot com a variação observada dos dados obtidos. 
 % A \ref{tab:ResultsModelosGeral2} mostra os valores que possibilitam uma análise de dispersão. 
 
-
-% \textbf{NORMALIDADE DAS AMOSTRAS}\\
-% Método: \textbf{Shapiro-Wilk} (amostra com menos de 30 elementos)\\~\\
-
-% \textbf{TEMPO}\\
-% \textbf{P-value	= 0.5991} com com $\alpha$~=~5\%  (Significance level)\\
-% Sample size (n)	25\\
-% Os testes de Shapiro-Wilk não mostraram um desvio significativo da normalidade, W(25) = 0,968, p = 0,5991\\
-% Ou seja, o conjunto da diferença entre os valores dos tempos de execução de cada tratamento (textual X gráfico) pode ser cosiderado uma \textbf{distribuição normal}.
-% \\~\\ 
-% \textbf{MEDIDA-F}\\
-% \textbf{P-value = 0.5166} com $\alpha$~=~5\% (Significance level)\\
-% Sample size (n)	25\\
-% Os testes de Shapiro-Wilk não mostraram um desvio significativo da normalidade, W(25) = 0,965, p = 0,5166\\
-% Ou seja, o conjunto da diferença entre os valores das medidas-F de cada tratamento (textual X gráfico) pode ser cosiderado uma \textbf{distribuição normal}.
-
-
-% \\~\\
-
-% \textbf{TESTE DE HIPÓTESE}\\
-% Método: \textbf{Teste T pareado (amostras dependentes, com menos de 30 elementos)}\\~\\
-% \textbf{MEDIDA-F}\\
-% P-value	= 0.2147 com $\alpha$~=~5\% (Significance level)\\ 
-% Sample size (n)	25\\
-% Como o valor de P \textgreater $\alpha$, \textbf{H0 não pode ser rejeitada}.
-% A média dos valores da brModelo é considerada igual à média da população da ERtext.
-% Em outras palavras, a \textbf{diferença} entre as médias d brModelo e da ERtext \textbf{não é grande o suficiente para ser estatisticamente significativa}.\\
-% \textbf{Lembrete: Um resultado de não significância não pode provar que H0 está correta, apenas que a suposição nula não pode ser rejeitada, ou seja, não se aceita H0 mas sim deixa-se de rejeitar H0.}
-% \\~\\ 
-% \textbf{TEMPO}\\
-% P-value = 0.3492 com $\alpha$~=~5\% (Significance level)\\
-% Sample size (n)	25\\
-% Como o valor de P \textgreater $\alpha$, \textbf{H0 não pode ser rejeitada}.
-% A média dos valores da brModelo é considerada igual à média da população da ERtext.
-% Em outras palavras, a \textbf{diferença} entre as médias d brModelo e da ERtext \textbf{não é grande o suficiente para ser estatisticamente significativa}.
 
 \begin{figure}[!htb]
         \centering
@@ -709,9 +676,9 @@ Com base neste gráfico é possível verificar o resultado obtido no teste de hi
 \end{figure}
 
 A avaliação referente aos atributos de qualidade para as ferramentas é apresentado na Figura \ref{fig:inst3GERALExp2}.
-No geral os participantes a avaliação dos participantes foi proporcionalmente similar a obtida no experimento anterior. 
-% Os destaques desta vez ficaram por conta do atributo de satisfação para a abordagem textual, enquanto os atributos de conformidade e compreensão se sairam melhores na abordagem gráfica. 
-% Outro ponto a ser ressaltado é a diferença levemente menor no atributo de produtividade, mas ainda em favor da abordagem textual.
+No geral, o resultado da avaliação feita pelos participantes foi proporcionalmente similar a obtida no experimento anterior. 
+Os destaques desta vez ficaram por conta do atributo de satisfação para a abordagem textual, enquanto os atributos de conformidade e compreensão se sairam melhores na abordagem gráfica. 
+Outro ponto a ser ressaltado é a diferença levemente menor no atributo de produtividade, mas ainda se mantendo em favor da abordagem textual.
 
 \begin{figure}[!htb]
     \centering
@@ -722,7 +689,7 @@ No geral os participantes a avaliação dos participantes foi proporcionalmente 
 \end{figure}
 
 A avaliação referente aos construtores da DSL da abordagem textual, os resultados também seguiram a mesma proporção observada no primeiro experimento.
-Isso nos leva a concluir que de fato é necessário uma reavaliação da representação dos relacionamentos ternários para torná-los mais fáceis de aprender, interpretar e utilizar.
+Isso nos leva a concluir que de fato é necessário, principalmente, uma reavaliação da representação dos relacionamentos ternários para torná-los mais fáceis de aprender, interpretar e utilizar.
 
 \begin{figure}[!htb]
     \centering
@@ -734,7 +701,7 @@ Isso nos leva a concluir que de fato é necessário uma reavaliação da represe
 
 \clearpage
 
-A avaliação dos EMOCARDS...
+
 
 \begin{figure}[!htb]
     \centering
@@ -760,6 +727,10 @@ A avaliação dos EMOCARDS...
 \label{ssec_experiments:Experiment3}
 %######################################################
 Aqui o terceiro experimento...
+
+%###########################################################
+\subsubsection{Results Analysis}
+%###########################################################
 
 \begin{figure}[!htb]
     \centering
@@ -902,3 +873,42 @@ From the preliminary experimental results, we conclude that there is feasibility
 
 % Finalmente, nós esperamos complementar as lições deste capítulo em breve com a avaliação experimental que ainda será realizada.
 Finally, we hope to supplement the lessons in this chapter shortly by carrying out the experimental evaluation yet.
+
+
+
+% RESULTADOS DO EXPERIMENTO 2
+
+% \textbf{NORMALIDADE DAS AMOSTRAS}\\
+% Método: \textbf{Shapiro-Wilk} (amostra com menos de 30 elementos)\\~\\
+
+% \textbf{TEMPO}\\
+% \textbf{P-value	= 0.5991} com com $\alpha$~=~5\%  (Significance level)\\
+% Sample size (n)	25\\
+% Os testes de Shapiro-Wilk não mostraram um desvio significativo da normalidade, W(25) = 0,968, p = 0,5991\\
+% Ou seja, o conjunto da diferença entre os valores dos tempos de execução de cada tratamento (textual X gráfico) pode ser cosiderado uma \textbf{distribuição normal}.
+% \\~\\ 
+% \textbf{MEDIDA-F}\\
+% \textbf{P-value = 0.5166} com $\alpha$~=~5\% (Significance level)\\
+% Sample size (n)	25\\
+% Os testes de Shapiro-Wilk não mostraram um desvio significativo da normalidade, W(25) = 0,965, p = 0,5166\\
+% Ou seja, o conjunto da diferença entre os valores das medidas-F de cada tratamento (textual X gráfico) pode ser cosiderado uma \textbf{distribuição normal}.
+
+
+% \\~\\
+
+% \textbf{TESTE DE HIPÓTESE}\\
+% Método: \textbf{Teste T pareado (amostras dependentes, com menos de 30 elementos)}\\~\\
+% \textbf{MEDIDA-F}\\
+% P-value	= 0.2147 com $\alpha$~=~5\% (Significance level)\\ 
+% Sample size (n)	25\\
+% Como o valor de P \textgreater $\alpha$, \textbf{H0 não pode ser rejeitada}.
+% A média dos valores da brModelo é considerada igual à média da população da ERtext.
+% Em outras palavras, a \textbf{diferença} entre as médias d brModelo e da ERtext \textbf{não é grande o suficiente para ser estatisticamente significativa}.\\
+% \textbf{Lembrete: Um resultado de não significância não pode provar que H0 está correta, apenas que a suposição nula não pode ser rejeitada, ou seja, não se aceita H0 mas sim deixa-se de rejeitar H0.}
+% \\~\\ 
+% \textbf{TEMPO}\\
+% P-value = 0.3492 com $\alpha$~=~5\% (Significance level)\\
+% Sample size (n)	25\\
+% Como o valor de P \textgreater $\alpha$, \textbf{H0 não pode ser rejeitada}.
+% A média dos valores da brModelo é considerada igual à média da população da ERtext.
+% Em outras palavras, a \textbf{diferença} entre as médias d brModelo e da ERtext \textbf{não é grande o suficiente para ser estatisticamente significativa}.
