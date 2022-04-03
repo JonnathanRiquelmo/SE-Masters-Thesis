@@ -21,22 +21,22 @@ The Xtext Framework has an overview displayed in Section \ref{sec_back:xtext}, a
 
 % O modelo conceitual de dados é a descrição de um banco de dado de forma independente da implementação utilizada em um SGBD. 
 % Este modelo lista quais dados podem ocorrer no banco de dados, mas não registra como estes dados estão armazenados no nível de SGBD. 
-% A técnica mais difundida de modelagem conceitual de dados é a \ac{er} de \cite{Chen:1976}. 
+% A técnica mais difundida de modelagem conceitual de dados é a \ac{er} de~\cite{Chen:1976}. 
 % Esta abordagem foi tão bem aceita que passou a ser considerada uma referência definitiva para a modelagem de bancos de dados relacionais. 
 % É composta basicamente por um método de diagramação e de conceitos que devem ser respeitados. 
 The conceptual data model is the description of a \ac{db} independently of the implementation used in a \ac{dbms}.
 This model lists what data can occur in the \ac{db} but does not record how we stored this data at the \ac{dbms} level.
-The most widespread technique of conceptual data modeling is the \ac{er} approach of \cite{Chen:1976}.
+The most widespread technique of conceptual data modeling is the \ac{er} approach of~\cite{Chen:1976}.
 This approach was so well accepted that it is now considered a definitive reference for modeling relational \acp{db}.
 It is primarily composed of a diagramming method and concepts that must be respected.
 
-% Na abordagem \ac{er} o conceito principal é o de \textbf{entidade}, o qual é uma representação de um conjunto de objetos do domínio modelado \cite{Heuser:2009}. 
+% Na abordagem \ac{er} o conceito principal é o de \textbf{entidade}, o qual é uma representação de um conjunto de objetos do domínio modelado~\cite{Heuser:2009}. 
 % As entidades são simbolizadas por retângulos. 
 % Contudo, nesta abordagem ainda existem também outros conceitos que são essenciais e devem ser analisados.
 % Para melhor compreensão da modelagem conceitual que utiliza esta abordagem, a seguir são apresentados na Figura \ref{fig:ERConstructors} algumas representações gráficas dos construtores previstos no modelo \ac{er}.
-% In the \ac{er} approach, the principal concept is the \textbf{entity}, which is a representation of a set of objects from the modeled domain \cite{Heuser:2009}.
+% In the \ac{er} approach, the principal concept is the \textbf{entity}, which is a representation of a set of objects from the modeled domain~\cite{Heuser:2009}.
 % Entities are symbolized by rectangles.
-In the \ac{er} approach, the principal concept is the \textbf{entity}, representing a set of objects from the modeled domain \cite{Heuser:2009}. 
+In the \ac{er} approach, the principal concept is the \textbf{entity}, representing a set of objects from the modeled domain~\cite{Heuser:2009}. 
 Rectangles symbolize the entities in the diagram. 
 However, in this approach there are also other concepts that are essential and should be analyzed. 
 For a better understanding of the conceptual modeling that uses this approach, Figure \ref{fig:ERConstructors} presents some graphical representations of the constructors foreseen in the \ac{er} model.
@@ -94,12 +94,12 @@ This means that this model has a level of abstraction from the user's point of v
 Still, the logical model is independent of the type of \ac{dbms} in which that implements it.
 
 % Esse tipo de modelo deve necessariamente respeitar conceitos tais como chaves de acesso, controle de chaves duplicadas, normalização, integridade referencial, controle de redundância de dados, entre outros. 
-% Este modelo é intrinsecamente relacionado a fase de projeto \cite{Cougo:2013}. 
-% É importante salientar que essa é uma forma direcionada a um aspecto gráfico, porém existem meios alternativos de se representar estruturalmente o mesmo modelo de forma textual \cite{Martelli:2018}. 
+% Este modelo é intrinsecamente relacionado a fase de projeto~\cite{Cougo:2013}. 
+% É importante salientar que essa é uma forma direcionada a um aspecto gráfico, porém existem meios alternativos de se representar estruturalmente o mesmo modelo de forma textual~\cite{Martelli:2018}. 
 This type of model must necessarily respect concepts such as access keys, duplicate keys control, normalization, referential integrity, data redundancy control, among others.
-This model is intrinsically related to the design phase \cite{Cougo:2013}.
-% It is important to point out that this is a form directed to a graphic aspect, but there are alternative ways to structurally represent the same model in a textual form \cite{Martelli:2018}.
-It is worth pointing out that this is a directed way to graphical aspect, but there are alternative ways to represent the same structurally model in a textual form \cite{Martelli:2018}.
+This model is intrinsically related to the design phase~\cite{Cougo:2013}.
+% It is important to point out that this is a form directed to a graphic aspect, but there are alternative ways to structurally represent the same model in a textual form~\cite{Martelli:2018}.
+It is worth pointing out that this is a directed way to graphical aspect, but there are alternative ways to represent the same structurally model in a textual form~\cite{Martelli:2018}.
 
 %------------------------------------------------------------------------------
 \section{Physical Model}
@@ -107,17 +107,17 @@ It is worth pointing out that this is a directed way to graphical aspect, but th
 %------------------------------------------------------------------------------
 
 % Um modelo físico de dados caracteriza-se como um modelo em que a representação dos objetos de \ac{db} já estão em um nível físico de implementação das ocorrências, ou instâncias, das entidades de relacionamentos. 
-% Cada \ac{dbms} pode definir diferentes modos de implementação física das características e recursos indispensáveis para o armazenamento e manipulação das estruturas de dados \cite{Cougo:2013}.
+% Cada \ac{dbms} pode definir diferentes modos de implementação física das características e recursos indispensáveis para o armazenamento e manipulação das estruturas de dados~\cite{Cougo:2013}.
 A physical data model characterizes as a model in which the \ac{db} objects representation are already at a physical level of implementation of the occurrences (or instances) of the entities of relationships.
-Each \ac{dbms} can define different modes of physical implementation, involving characteristics and essential resources for the storage and manipulation of data structures. \cite{Cougo:2013}.
+Each \ac{dbms} can define different modes of physical implementation, involving characteristics and essential resources for the storage and manipulation of data structures.~\cite{Cougo:2013}.
 
 % Em geral os modelos físicos apresentam dois aspectos bem representados. 
 % Primeiramente, existem as ocorrências ou instâncias, seus relacionamentos e a disposição básica dos elementos. 
-% O outro aspecto diz respeito a alocação nos diversos níveis de agrupamentos possíveis, como as tabelas, linhas (registros), colunas (campos) e blocos \cite{West:2011}.
+% O outro aspecto diz respeito a alocação nos diversos níveis de agrupamentos possíveis, como as tabelas, linhas (registros), colunas (campos) e blocos~\cite{West:2011}.
 % Em suma, é a materialização dos objetos de \ac{db} em um esquema interno de um dado \ac{dbms} a partir da execução de uma sequência lógica de instruções em \ac{sql}.
 In general, physical models have two well-represented aspects.
 First, there are the occurrences or instances, their relationships, and the basic arrangement of elements.
-The other aspect concerns the allocation in the different levels of possible groupings, such as tables, rows (records), columns (fields), and blocks \cite{West:2011}.
+The other aspect concerns the allocation in the different levels of possible groupings, such as tables, rows (records), columns (fields), and blocks~\cite{West:2011}.
 In short, it is the materialization of \ac{db} objects in an internal schema of a given \ac{dbms} from the execution of a logical sequence of instructions in \ac{sql}.
 
 %------------------------------------------------------------------------------
@@ -127,26 +127,26 @@ In short, it is the materialization of \ac{db} objects in an internal schema of 
 
 % Conceitualmente um modelo é uma representação, protótipo ou exemplo que se tem por objetivo reproduzir ou imitar alguma forma. 
 % A construção de modelos são pontos centrais e importantes em diferentes áreas científicas. 
-% Na matemática, física, engenharia e química, por exemplo, o emprego de modelos é tido como vital para a investigação teórica e prática em diferentes campos de estudo \cite{Bailer:2009}.
+% Na matemática, física, engenharia e química, por exemplo, o emprego de modelos é tido como vital para a investigação teórica e prática em diferentes campos de estudo~\cite{Bailer:2009}.
 A model is, conceptually, a representation, prototype or example that has the objective of reproducing or imitating something in some way.
 Model building is central and relevant in different scientific areas.
-In mathematics, physics, engineering, and chemistry areas, for example, the use of models is considered vital for theoretical and practical research in different fields of study \cite{Bailer:2009}.
+In mathematics, physics, engineering, and chemistry areas, for example, the use of models is considered vital for theoretical and practical research in different fields of study~\cite{Bailer:2009}.
 
 % A \ac{mde}, ou \ac{mdse}, é um campo da Engenharia de Software que tem sua origem a partir da criação das primeiras ferramentas CASE surgidas nos anos 1980.
 % Enquanto subárea da Engenharia de Software, a \ac{mde} é uma abordagem que preconiza essencialmente que um processo de desenvolvimento tenha modelos como principais saídas (ou também como entradas) de alguma atividade.  
-% Esta abordagem tem como objetivo maximizar a produtividade, a compatibilidade entre sistemas (através da reutilização de modelos) e simplificar a complexidade envolvida no processo de projeto de software \cite{Brambilla:2017}. 
-% Dessa forma, isto resulta em programas ou atividades de computador executados em hardware ou software que são gerados automaticamente a partir de modelos \cite{Sommerville:2011}. 
+% Esta abordagem tem como objetivo maximizar a produtividade, a compatibilidade entre sistemas (através da reutilização de modelos) e simplificar a complexidade envolvida no processo de projeto de software~\cite{Brambilla:2017}. 
+% Dessa forma, isto resulta em programas ou atividades de computador executados em hardware ou software que são gerados automaticamente a partir de modelos~\cite{Sommerville:2011}. 
 \ac{mde}, or \ac{mdse}, is a field of Software Engineering that has its origins since the creation of the first \ac{case} tools that emerged in the 1980s.
 As a sub-area of Software Engineering, \ac{mde} is an approach that essentially calls for a development process to have models as the main inputs (or also outputs) of some activity.
-This approach aims to maximize productivity, compatibility between systems (through model reuse) and simplify the complexity involved in the software design process  \cite{Brambilla:2017}.
-In this way, this results in programs or computer activities executed in hardware or software that are automatically generated from models \cite{Sommerville:2015}.
+This approach aims to maximize productivity, compatibility between systems (through model reuse) and simplify the complexity involved in the software design process ~\cite{Brambilla:2017}.
+In this way, this results in programs or computer activities executed in hardware or software that are automatically generated from models~\cite{Sommerville:2015}.
 
 % Esta área de estudo vem evoluindo consideravelmente desde os anos 1990. 
-% Em resumo,  a MDE fez contribuições para potencializar a abstração, visando assim a automação, em quase todas as áreas de desenvolvimento e análise \cite{Bucchiarone:2020}. 
+% Em resumo,  a MDE fez contribuições para potencializar a abstração, visando assim a automação, em quase todas as áreas de desenvolvimento e análise~\cite{Bucchiarone:2020}. 
 % Essas contribuições podem ser identificadas em diversos domínios onde modelos são indispensáveis para o sucesso e.g. sistemas de software, sistemas de transporte, indústria automotiva, processos de negócio, biotecnologia e genética. 
 % Conceitualmente, a \ac{mde} fornece apoio a outros conceitos, como o \ac{mdd} e a \ac{mda}. Na Figura \ref{fig:MDE} a relação entre estes conceitos é ilustrada
 This area of study has been evolving considerably since the 1990s.
-In short, MDE has made contributions to leverage abstraction, thus aiming at automation, in almost all areas of development and analysis \cite{Bucchiarone:2020}.
+In short, MDE has made contributions to leverage abstraction, thus aiming at automation, in almost all areas of development and analysis~\cite{Bucchiarone:2020}.
 These contributions identified in several domains where models are indispensable for success e.g. software systems, transport systems, automotive industry, business processes, biotechnology, and genetics.
 Conceptually, \ac{mde} supports other concepts such as \ac{mdd} and \ac{mda}. 
 Figure \ref{fig:MDE} illustrates the relationship among these concepts.
@@ -156,7 +156,7 @@ Figure \ref{fig:MDE} illustrates the relationship among these concepts.
     \centering
     \caption{Relationship among MDE, MDD and MDA.}
     \include{img/MDE}
-    \fonte{Adapted from \cite{Ameller:2009}}
+    \fonte{Adapted from~\cite{Ameller:2009}}
     \label{fig:MDE}
 \end{figure}
 
@@ -167,20 +167,20 @@ Figure \ref{fig:MDE} illustrates the relationship among these concepts.
 In \ac{mdd}, the implementation is usually generated automatically or semi-automatically from the models.
 Despite being seen as the same thing, the concepts established in the literature about \ac{mde} and \ac{mdd} have direct origins in \ac{mda}, first formally proposed only in 2001 by \ac{omg}\footnote{MDA Guide 2.0: \url{ https://www.omg.org/cgi-bin/doc?ormsc/14-06-01.pdf}}.
 
-% Segundo \cite{Sommerville:2015} as diferenças são sutis, uma vez que a \ac{mda} concentra-se nos estágios de projeto e implementação do processo de desenvolvimento de software, sendo muito similar ao \ac{mdd}, porém implementando diretrizes específicas da \ac{omg}. 
+% Segundo~\cite{Sommerville:2015} as diferenças são sutis, uma vez que a \ac{mda} concentra-se nos estágios de projeto e implementação do processo de desenvolvimento de software, sendo muito similar ao \ac{mdd}, porém implementando diretrizes específicas da \ac{omg}. 
 % Isso faz com que os processos de \ac{mdd} se utilizem de diversas abstrações para esconder, ou até mesmo remover, detalhes que possam eventualmente tornar um modelo mais complexo. 
-According to \cite{Sommerville:2015}, the differences are subtle since \ac{mda} focuses on the design and implementation stages of the software development process, being very similar to \ac{mdd}, however implementing \ac{omg}-specific guidelines.
+According to~\cite{Sommerville:2015}, the differences are subtle since \ac{mda} focuses on the design and implementation stages of the software development process, being very similar to \ac{mdd}, however implementing \ac{omg}-specific guidelines.
 Hence, this causes the \ac{mdd} processes to use various abstractions to hide, or even remove, details that could eventually make a model more complex.
 
 % Dito isto, conclui-se que a \ac{mda} é um subconjunto do \ac{mdd}. 
 % Por outro lado, a \ac{mde} pode abordar muitos outros tópicos dos processos de Engenharia de Software, entre eles a engenharia de requisitos baseada em modelos, processos de software para desenvolvimento baseado em modelos, ou ainda, testes baseados em modelos.
 % A \ac{mde}, como uma metodologia, auxilia a aplicação das vantagens da modelagem nas atividades de Engenharia de Software. 
-% Para \cite{Brambilla:2017} essa abordagem leva em consideração quatro aspectos fundamentais, listados a seguir.
+% Para~\cite{Brambilla:2017} essa abordagem leva em consideração quatro aspectos fundamentais, listados a seguir.
 
 Once that is said, it follows that \ac{mda} is a subset of \ac{mdd}.
 On the other hand, \ac{mde} can address many others topics in Software Engineering processes, including model-based requirements engineering, model-based software processes for development, or even model-based testing.
 \ac{mde}, as a methodology, helps to apply the advantages of modeling in Software Engineering activities.
-For \cite{Brambilla:2017}, this approach takes into consideration four fundamental aspects listed below.
+For~\cite{Brambilla:2017}, this approach takes into consideration four fundamental aspects listed below.
 
 % \begin{enumerate}
 %   \item Conceitos: os componentes que constroem a metodologia, abrangendo desde artefatos de linguagem até atores, e assim por diante;
@@ -197,18 +197,18 @@ For \cite{Brambilla:2017}, this approach takes into consideration four fundament
 \end{enumerate}
 
 % A motivação por trás da \ac{mde} é a ideia de se aumentar o nível de abstração do processo de desenvolvimento em geral, para então assim capturar sistemas ou processos como uma coleção de modelos reutilizáveis. 
-% Logo, ela visa reduzir a dificuldade associada ao desenvolvimento de sistemas de software, em geral mais complexos, por meio do uso de técnicas de modelagem que suportam a separação de interesses e geração automatizada de artefatos de sistemas a partir de modelos \cite{Batory:2015, Kleppe:2003}.
+% Logo, ela visa reduzir a dificuldade associada ao desenvolvimento de sistemas de software, em geral mais complexos, por meio do uso de técnicas de modelagem que suportam a separação de interesses e geração automatizada de artefatos de sistemas a partir de modelos~\cite{Batory:2015, Kleppe:2003}.
 The motivation behind \ac{mde} is increasing the abstraction level of the development process in general and then capturing processes or systems as a collection of reusable models.
-Therefore, it aims to reduce the difficulty associated with the development of software systems, which are generally more complex, through the modeling techniques implementation that supports the separation of interests and the automated generation of system artifacts from models \cite{Batory:2015, Kleppe:2003}.
-% Therefore, it aims to reduce the difficulty associated with developing software systems, which are generally more complex, through the use of modeling techniques that support the separation of interests and automated generation of system artifacts from models \cite{Batory:2015, Kleppe:2003}.
+Therefore, it aims to reduce the difficulty associated with the development of software systems, which are generally more complex, through the modeling techniques implementation that supports the separation of interests and the automated generation of system artifacts from models~\cite{Batory:2015, Kleppe:2003}.
+% Therefore, it aims to reduce the difficulty associated with developing software systems, which are generally more complex, through the use of modeling techniques that support the separation of interests and automated generation of system artifacts from models~\cite{Batory:2015, Kleppe:2003}.
 
 % De uma forma objetiva, a abordagem \ac{mda} define uma estrutura para se realizar a \ac{mde}, ou também ainda a \ac{mdd}. 
-% Essa abordagem define três camadas que devem ser usadas como pilares para todo o processo \cite{Frantz:2012}, listados a seguir.
+% Essa abordagem define três camadas que devem ser usadas como pilares para todo o processo~\cite{Frantz:2012}, listados a seguir.
 % A relação conceitual entre esses níveis, com o uso de mecanismos de transformação e regras de transformação, é exemplificado na Figura \ref{fig:MDA}.
 
 Objectively, the \ac{mda} approach defines a structure to perform the \ac{mde}, or also the \ac{mdd}.
-% This approach defines three layers that should be used as pillars for the whole process \cite{Frantz:2012} listed below.
-This approach defines three layers used as pillars for the whole process \cite{Frantz:2012} listed below.
+% This approach defines three layers that should be used as pillars for the whole process~\cite{Frantz:2012} listed below.
+This approach defines three layers used as pillars for the whole process~\cite{Frantz:2012} listed below.
 The conceptual relationship between these levels, using transformation mechanisms and transformation rules, is exemplified in Figure \ref{fig:MDA}.
 
 % \begin{enumerate}
@@ -226,24 +226,24 @@ The conceptual relationship between these levels, using transformation mechanism
     \centering
     \caption{MDA abstraction levels.}
     \include{img/MDA}
-    \fonte{Adapted from \cite{Frantz:2012}}
+    \fonte{Adapted from~\cite{Frantz:2012}}
     \label{fig:MDA}
 \end{figure}
 
-% Para melhor esclarecimento, os mecanismos de transformação podem ser entendidos como geradores que tem como entrada as descrições de modelos \cite{Hutchinson:2011}.
+% Para melhor esclarecimento, os mecanismos de transformação podem ser entendidos como geradores que tem como entrada as descrições de modelos~\cite{Hutchinson:2011}.
 % Esses geradores devem processar tais modelos, tendo em si implementados uma série de regras de transformação. 
 % Por exemplo, no contexto deste estudo um artefato de entrada seria o modelo feito utilizando a \ac{dsl} implementada, e um mecanismo de transformação são os diversos geradores criados. 
 % Para tanto, estes geradores devem ter descritas todas ou parte das regras possíveis de transformação entre modelos, ou seja, deve realizar o mapeamento equivalente destes modelos.
-For better clarification, we can understand the transformation mechanisms as generators that have model descriptions as input \cite{Hutchinson:2011}.
-% For better clarification, the transformation mechanisms can be understood as generators that have model descriptions as input \cite{Hutchinson:2011}.
+For better clarification, we can understand the transformation mechanisms as generators that have model descriptions as input~\cite{Hutchinson:2011}.
+% For better clarification, the transformation mechanisms can be understood as generators that have model descriptions as input~\cite{Hutchinson:2011}.
 These generators must process such models, having a series of transformation rules implemented.
 For example, in the context of this study, an input artifact would be the model made using the implemented \ac{dsl}, and a transformation mechanism is the several generators created.
 Therefore, these generators must have described all or part of the possible rules for transformation between models, \textit{i.e.} they must carry out the equivalent mapping of these models.
 
 % A separação de interesses da \ac{mda} baseia-se, por exemplo, na exploração de diferentes \acp{dsl}, cada uma fornecendo construções baseadas em abstrações que são específicas do domínio de um sistema. 
-% Por conta disto, as \acp{dsl} podem desempenhar um papel de destaque na \ac{mde} \cite{Schmidt:2006}.
+% Por conta disto, as \acp{dsl} podem desempenhar um papel de destaque na \ac{mde}~\cite{Schmidt:2006}.
 The separation of interests of \ac{mda} is based, for example, on the exploration of different \acp{dsl}, each one providing constructs based on abstractions that are specific to the domain of a system.
-Because of this, \acp{dsl} can play a prominent role in \ac{mde} \cite{Schmidt:2006, Fowler:2010}.
+Because of this, \acp{dsl} can play a prominent role in \ac{mde}~\cite{Schmidt:2006, Fowler:2010}.
 
 % (2011) Model-driven engineering practices in industry
 % (2013) The state of practice in model-driven engineering
@@ -257,14 +257,14 @@ Because of this, \acp{dsl} can play a prominent role in \ac{mde} \cite{Schmidt:2
 \label{sec_back:dsl}
 %------------------------------------------------------------------------------
 
-% Para \cite{vanDeursen:2000} uma \ac{dsl} é uma linguagem de programação ou linguagem de especificação executável que oferece, por meio de notações e abstrações apropriadas, poder expressivo focado e, geralmente, restrito a um domínio de problema específico. 
+% Para~\cite{vanDeursen:2000} uma \ac{dsl} é uma linguagem de programação ou linguagem de especificação executável que oferece, por meio de notações e abstrações apropriadas, poder expressivo focado e, geralmente, restrito a um domínio de problema específico. 
 % Assim como outras linguagens, as \acp{dsl} devem apresentar um conjunto de sentenças bem definidas por uma sintaxe e semântica própria. 
-% Para \cite{Fowler:2010} uma \ac{dsl} é definida como uma linguagem de programação de computadores com expressividade limitada e focada em um domínio particular. 
+% Para~\cite{Fowler:2010} uma \ac{dsl} é definida como uma linguagem de programação de computadores com expressividade limitada e focada em um domínio particular. 
 % Entre exemplos conhecidos de \acp{dsl} estão: 
-According to \cite{vanDeursen:2000}, a \ac{dsl} is a programming language or executable specification language. It offers expressive power focused through appropriate notations and abstractions and in general restricted to a specific problem domain.
-% According to \cite{vanDeursen:2000}, an \ac{dsl} is a programming language or executable specification language that offers, through appropriate notations and abstractions, expressive power focused and generally restricted to a specific problem domain.
+According to~\cite{vanDeursen:2000}, a \ac{dsl} is a programming language or executable specification language. It offers expressive power focused through appropriate notations and abstractions and in general restricted to a specific problem domain.
+% According to~\cite{vanDeursen:2000}, an \ac{dsl} is a programming language or executable specification language that offers, through appropriate notations and abstractions, expressive power focused and generally restricted to a specific problem domain.
 Like other languages, \acp{dsl} must present a set of sentences well defined by their syntax and semantics.
-For \cite{Fowler:2010}, a \ac{dsl} is defined as a computer programming language with limited expressiveness and focused on a particular domain.
+For~\cite{Fowler:2010}, a \ac{dsl} is defined as a computer programming language with limited expressiveness and focused on a particular domain.
 Among known examples of \acp{dsl} are:
 
 % \begin{itemize}
@@ -286,32 +286,32 @@ Among known examples of \acp{dsl} are:
      \item \LaTeX, for document typography.
 \end{itemize}
 
-% Segundo \cite{Faveri:2013}, apesar do termo \ac{dsl} poder intuitivamente remeter para um campo de estudos recente, de fato isso não é uma realidade. 
-% Por exemplo, a APT é uma \ac{dsl} para programação de máquinas controladas numericamente que foi desenvolvida por dois anos a partir de 1957 \cite{Ross:1978}, enquanto o formalismo de especificação de sintaxe \ac{bnf}, o mais usado para notação das linguagens de programação nos dias de hoje, remonta o final da década de 1950 \cite{Backus:1959}.
-According to \cite{Faveri:2013}, although the term \ac{dsl} can intuitively refer to a recent field of study, in fact, this is not a reality.
-For example, the APT is a \ac{dsl} for numerically controlled machine programming developed for two years from 1957 \cite{Ross:1978}. 
-% while the \ac{bnf} syntax specification formalism, the most commonly used for the notation in programming languages these days, dates back to the late 1950s \cite{Backus:1959}.
-On the other hand, the \ac{bnf} syntax specification formalism, the most commonly used for the notation in programming languages nowadays, dates back to the late 1950s \cite{Backus:1959}.
+% Segundo~\cite{Faveri:2013}, apesar do termo \ac{dsl} poder intuitivamente remeter para um campo de estudos recente, de fato isso não é uma realidade. 
+% Por exemplo, a APT é uma \ac{dsl} para programação de máquinas controladas numericamente que foi desenvolvida por dois anos a partir de 1957~\cite{Ross:1978}, enquanto o formalismo de especificação de sintaxe \ac{bnf}, o mais usado para notação das linguagens de programação nos dias de hoje, remonta o final da década de 1950~\cite{Backus:1959}.
+According to~\cite{Faveri:2013}, although the term \ac{dsl} can intuitively refer to a recent field of study, in fact, this is not a reality.
+For example, the APT is a \ac{dsl} for numerically controlled machine programming developed for two years from 1957~\cite{Ross:1978}. 
+% while the \ac{bnf} syntax specification formalism, the most commonly used for the notation in programming languages these days, dates back to the late 1950s~\cite{Backus:1959}.
+On the other hand, the \ac{bnf} syntax specification formalism, the most commonly used for the notation in programming languages nowadays, dates back to the late 1950s~\cite{Backus:1959}.
     
 % Em razão disso é possível encontrar na literatura muitos estudos que abordam conceitualmente \acp{dsl}, porém com diferentes terminologias.
-% Entre estas, pode-se citar: \textit{Languages for specialized application} \cite{Sammet:1972}; \textit{Special-purpose languages} \cite{Wexelblat:1978};  \textit{Application Languages} \cite{Martin:1982}; \textit{Task-specific programming languages} \cite{Nardi:1993}; \textit{Specialized languages} \cite{Bergin:1996}. 
+% Entre estas, pode-se citar: \textit{Languages for specialized application}~\cite{Sammet:1972}; \textit{Special-purpose languages}~\cite{Wexelblat:1978};  \textit{Application Languages}~\cite{Martin:1982}; \textit{Task-specific programming languages}~\cite{Nardi:1993}; \textit{Specialized languages}~\cite{Bergin:1996}. 
 As a result, it is possible to find in the literature many studies that conceptually address \acp{dsl} but with different terminology.
-These include: \textit{Languages for specialized application} \cite{Sammet:1972}; \textit{Special-purpose languages} \cite{Wexelblat:1978}; \textit{Application Languages} \cite{Martin:1982}; \textit{Task-specific programming languages} \cite{Nardi:1993}; \textit{Specialized languages} \cite{Bergin:1996}.
+These include: \textit{Languages for specialized application}~\cite{Sammet:1972}; \textit{Special-purpose languages}~\cite{Wexelblat:1978}; \textit{Application Languages}~\cite{Martin:1982}; \textit{Task-specific programming languages}~\cite{Nardi:1993}; \textit{Specialized languages}~\cite{Bergin:1996}.
     
 % A aplicação de \acp{dsl} permite que softwares sejam desenvolvidos de forma mais rápida e eficaz. 
 % A maior vantagem observada no uso de \acp{dsl} é que o conhecimento necessário para a sua aplicabilidade é abstraído para outro nível. 
 % Desta forma, especialistas do domínio podem entender, validar e modificar o código, adaptando o modelo as suas necessidades, tornando o impacto das mudanças mais fácil de ser compreendido. 
-% Também existe um aumento significativo na produtividade, confiabilidade, facilidade de uso e flexibilidade \cite{Gronback:2009, vanDeursen:2000}.
+% Também existe um aumento significativo na produtividade, confiabilidade, facilidade de uso e flexibilidade~\cite{Gronback:2009, vanDeursen:2000}.
 The application of \acp{dsl} allows the development of the software more quickly and efficiently.
 % The application of \acp{dsl} allows the software to be developed more quickly and efficiently.
 The highest advantage in using \acp{dsl} is that the knowledge necessary for its applicability is abstracted to another level.
 In this way, domain experts can understand, validate and modify the code, adapting the model to their needs, making the impact of changes easier to understand.
-There is also a significant increase in productivity, reliability, ease of use and flexibility \cite{Gronback:2009, vanDeursen:2000}.
+There is also a significant increase in productivity, reliability, ease of use and flexibility~\cite{Gronback:2009, vanDeursen:2000}.
 
-% Segundo \cite{Mernik:2005} as \acp{dsl} podem ser classificadas sob três dimensões diferentes: \textbf{origem}, \textbf{aparência} e \textbf{implementação}. 
+% Segundo~\cite{Mernik:2005} as \acp{dsl} podem ser classificadas sob três dimensões diferentes: \textbf{origem}, \textbf{aparência} e \textbf{implementação}. 
 % As dimensões de classificação de \ac{dsl} são exibidas na Figura \ref{fig:dsl}. Em relação à origem de uma \ac{dsl}, as opções existentes são as \acp{dsl} \textbf{internas} e \textbf{externas}.
-According to \cite{Mernik:2005}, we can classify \acp{dsl} under three different dimensions: \textbf{origin}, \textbf{appearance}, and \textbf{implementation}.
-% According to \cite{Mernik:2005}, \acp{dsl} can be classified under three different dimensions: \textbf{origin}, \textbf{appearance} and \textbf{implementation}.
+According to~\cite{Mernik:2005}, we can classify \acp{dsl} under three different dimensions: \textbf{origin}, \textbf{appearance}, and \textbf{implementation}.
+% According to~\cite{Mernik:2005}, \acp{dsl} can be classified under three different dimensions: \textbf{origin}, \textbf{appearance} and \textbf{implementation}.
 % The classification dimensions of \ac{dsl} are shown in figure \ref{fig:dsl}.
 Figure \ref{fig:dsl} shows the classification dimensions of \ac{dsl}.
 Regarding the \textbf{origin} of a \ac{dsl}, the existing options are \textbf{internal} and \textbf{external} \acp{dsl}.
@@ -320,7 +320,7 @@ Regarding the \textbf{origin} of a \ac{dsl}, the existing options are \textbf{in
     \centering
     \caption{\ac{dsl} classification dimensions.}
     \include{img/dsl}
-    \fonte{Adapted from \cite{Faveri:2013}}
+    \fonte{Adapted from~\cite{Faveri:2013}}
     \label{fig:dsl}
 \end{figure}
 
@@ -354,18 +354,18 @@ These classifications comprise four groups:
 (iii) \acp{dsl} are not executable but useful as input to application generators;
 (iv) \acp{dsl} are not designed to be executed.
 
-% É prática usual que o principal aspecto levado em consideração para a construção de uma \acp{dsl} deve ser a sua \textbf{origem}, pois cada abordagem apresenta vantagens e desvantagens específicas que são inerentes a cada tipo \cite{Fowler:2010}. 
+% É prática usual que o principal aspecto levado em consideração para a construção de uma \acp{dsl} deve ser a sua \textbf{origem}, pois cada abordagem apresenta vantagens e desvantagens específicas que são inerentes a cada tipo~\cite{Fowler:2010}. 
 % Apesar das \acp{dsl} externas poderem ter um esforço associado a sua construção muitas vezes maior do que o de uma \ac{dsl} interna, atualmente existem ferramentas que dão grande suporte a construção de \acp{dsl}. 
-% Estas ferramentas são conhecidas como \acp{lw} e aplicam conceitos de programação orientada a linguagens, fornecendo um nível de abstração maior no que diz respeito as questões complexas de infraestrutura \cite{Fowler:2005}.
+% Estas ferramentas são conhecidas como \acp{lw} e aplicam conceitos de programação orientada a linguagens, fornecendo um nível de abstração maior no que diz respeito as questões complexas de infraestrutura~\cite{Fowler:2005}.
 
-% It is usual practice that the main aspect taken into account for the construction of an \acp{dsl} should be its \textbf{origin}, as each approach has specific advantages and disadvantages that are inherent to each type \cite{Fowler:2010}.
+% It is usual practice that the main aspect taken into account for the construction of an \acp{dsl} should be its \textbf{origin}, as each approach has specific advantages and disadvantages that are inherent to each type~\cite{Fowler:2010}.
 % Although the external \acp{dsl} may have an effort associated with its construction many times greater than that of an internal \ac{dsl}, currently there are tools that give great support to the construction of \acp{dsl}.
-% These tools are known as \acp{lw} and apply language-oriented programming concepts, providing a higher level of abstraction regarding complex infrastructure issues \cite{Fowler:2005}.
+% These tools are known as \acp{lw} and apply language-oriented programming concepts, providing a higher level of abstraction regarding complex infrastructure issues~\cite{Fowler:2005}.
 
-It is usual practice that the principal aspect taken into account for the development of \acp{dsl} should be its \textbf{origin}, as each approach has specific advantages and disadvantages inherent to each type \cite{Fowler:2010}.
+It is usual practice that the principal aspect taken into account for the development of \acp{dsl} should be its \textbf{origin}, as each approach has specific advantages and disadvantages inherent to each type~\cite{Fowler:2010}.
 Although the external \acp{dsl} may have an effort associated with their creation many times greater than that of an internal \ac{dsl}. 
 Currently, some tools give great support to the development of \acp{dsl}.
-These tools are known as \acp{lw} and apply language-oriented programming concepts, providing a higher level of abstraction regarding complex infrastructure issues \cite{Fowler:2005}.
+These tools are known as \acp{lw} and apply language-oriented programming concepts, providing a higher level of abstraction regarding complex infrastructure issues~\cite{Fowler:2005}.
 
 %------------------------------------------------------------------------------
 \section{Language Workbenches}
@@ -373,14 +373,14 @@ These tools are known as \acp{lw} and apply language-oriented programming concep
 %------------------------------------------------------------------------------
 
 % O desenvolvimento de uma \ac{dsl} não é tarefa trivial pois, como são linguagens de programação, possuem uma sintaxe que é, por consequência lógica, definida por uma gramática. 
-% Desta forma, se faz necessária a utilização de ferramentas que suportem a definição dos conceitos para a nova linguagem \cite{Fowler:2005}.
+% Desta forma, se faz necessária a utilização de ferramentas que suportem a definição dos conceitos para a nova linguagem~\cite{Fowler:2005}.
 The development of a \ac{dsl} is not a trivial task because, as they are programming languages, they have a syntax that is, as a logical consequence, defined by the grammar.
-Thus, it is necessary to use tools that support the definition of concepts for the new language \cite{Fowler:2005}.
+Thus, it is necessary to use tools that support the definition of concepts for the new language~\cite{Fowler:2005}.
 
-% Os \acp{lw} são ferramentas que fornecem mecanismos de infraestrutura para a implementação de linguagens de programação, tornando assim a criação de linguagens mais acessível \cite{Wachsmuth:2014}. 
+% Os \acp{lw} são ferramentas que fornecem mecanismos de infraestrutura para a implementação de linguagens de programação, tornando assim a criação de linguagens mais acessível~\cite{Wachsmuth:2014}. 
 % Entre os mecanismos fornecidos nesses ambientes está a formatação automática, validação com base nas restrições descritas na gramática, \textit{syntax highlighting}\footnote{Realce de código-fonte com cor, negrito, etc. Serve para indicar sua estrutura sintática.} e \textit{syntax completion}\footnote{Uma função, como em um mecanismo de busca, que fornece uma ou mais opções de palavras reservadas previstas na gramática a partir dos caracteres que um usuário já inseriu.}. 
 % A seguir são citados alguns dos mais conhecidos \acp{lw} da atualidade:
-\acp{lw} are tools that provide infrastructure mechanisms for implementing programming languages, thus making language creation more accessible \cite{Wachsmuth:2014}.
+\acp{lw} are tools that provide infrastructure mechanisms for implementing programming languages, thus making language creation more accessible~\cite{Wachsmuth:2014}.
 Amongst the mechanisms provided in these environments are automatic formatting, validation based on the restrictions described in the grammar, syntax highlighting, and syntax completion.
 The following are some of the most well-known \acp{lw} of the present time:
 
@@ -451,9 +451,9 @@ Xtext is an open-source framework for textual implementation of \acp{dsl} with f
 The framework emerged in 2006 created by the German developer Sven Efftinge and is currently developed in the Eclipse Project as part of the Eclipse Modeling Framework Project, \textit{i.e.} its new versions respect the annual release cycle and are licensed under the Eclipse Public License.
 
 % A estrutura do Xtext permite que o desenvolvedor implemente gramáticas rapidamente e cobre todos os aspectos de uma infraestrutura completa para a linguagem.
-% Estes aspectos vão desde o analisador, gerador de código, interpretador, até uma integração completa com todos os recursos típicos de IDE, como editor com destaque de sintaxe, completamento automático de código, feedback de aviso/erro, visualização da estrutura dos arquivos e infraestrutura de construção automática \cite{Bettini:2016}.
+% Estes aspectos vão desde o analisador, gerador de código, interpretador, até uma integração completa com todos os recursos típicos de IDE, como editor com destaque de sintaxe, completamento automático de código, feedback de aviso/erro, visualização da estrutura dos arquivos e infraestrutura de construção automática~\cite{Bettini:2016}.
 The Xtext framework allows the developer to implement grammar quickly and covers all aspects of a complete infrastructure for the language.
-These aspects range from the parser, code generator, interpreter to full integration with all typical \ac{ide} features, such as editor with syntax highlighting, code completion, warning/error markers, file outline visualization, and automatic build infrastructure \cite{Bettini:2016}.
+These aspects range from the parser, code generator, interpreter to full integration with all typical \ac{ide} features, such as editor with syntax highlighting, code completion, warning/error markers, file outline visualization, and automatic build infrastructure~\cite{Bettini:2016}.
 
 % A GPL Java pode ser usada para personalizar a implementação de uma DSL, bem como toda a infraestrutura gerada pelo framework Xtext.
 % Contudo, o Xtext proporciona o uso da GPL Xtend, uma linguagem de programação semelhante e completamente interoperável com Java. Em resumo o Xtend que apresenta uma sintaxe mais compacta, é fácil de usar e possui recursos avançados como inferência de tipo, métodos de extensão, templates complexos em forma de expressões string, e até mesmo expressões lambda.
@@ -462,7 +462,7 @@ These aspects range from the parser, code generator, interpreter to full integra
 
 We can use \ac{gpl} Java to customize the implementation of a \ac{dsl} as well as the entire infrastructure generated by the Xtext framework.
 However, Xtext provides the use of the \ac{gpl} Xtend, a similar programming language that is completely interoperable with Java. 
-In summary, Xtend has a more compact syntax, is easy to use and has advanced features like type inference, extension methods, complex templates in the form of string expressions, and even lambda expressions \cite{Bettini:2016}.
+In summary, Xtend has a more compact syntax, is easy to use and has advanced features like type inference, extension methods, complex templates in the form of string expressions, and even lambda expressions~\cite{Bettini:2016}.
 Xtext also supports the generation of language servers that comply with the Language Server Protocol (LSP), as well as providing, since version 2.9, an interface for integrating text editors into web applications.
 These text editors are implemented in JavaScript and language-related services, such as automatic code completion, are performed via HTTP requests to a server-side component.
 
@@ -470,7 +470,7 @@ These text editors are implemented in JavaScript and language-related services, 
 % Entre os artefatos que podem ser implementados estão classes de scoping, classes de validação e templates para a linguagem definida. 
 % O Framework ainda fornece suporte completo para o JUnit 5 desde sua versão 2.14.
 % Além disso é possível também alterar o comportamento da interface de usuário e a estrutura da prórpia IDE.
-Although the entire fundamental infrastructure of a language generated in the Xtext framework from the definition of grammar is automatic, \textit{i.e.} it has grammar-driven development (single source), we can modify all generated artifacts \cite{XtextSirius:2017}.
+Although the entire fundamental infrastructure of a language generated in the Xtext framework from the definition of grammar is automatic, \textit{i.e.} it has grammar-driven development (single source), we can modify all generated artifacts~\cite{XtextSirius:2017}.
 Among the artifacts that we can implement are scoping classes, validation classes, and templates for the defined language.
 The Framework still provides full support for JUnit 5 since its 2.14 release.
 Furthermore, it is also possible to change the behavior of the user interface and the structure of the \ac{ide} itself.

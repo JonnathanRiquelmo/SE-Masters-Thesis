@@ -11,12 +11,12 @@ Aspects about the definition of \ac{dsl} are detailed, as well as the modeling t
 \section{Development} \label{sec_tool:development}
 %------------------------------------------------------------------------------
 
-% O desenvolvimento da proposta de ferramenta de modelagem se deu a partir da continuação do trabalho de \cite{Lopes:2019}, recomeçando a apartir do mês de junho de 2020. 
+% O desenvolvimento da proposta de ferramenta de modelagem se deu a partir da continuação do trabalho de~\cite{Lopes:2019}, recomeçando a apartir do mês de junho de 2020. 
 % Naquele estudo foram definidos requisitos da linguagem, as decisões de projeto e a gramática derivada.
 % Na altura daquele estudo havia apenas a implementação de um protótipo de ferramenta com um gerador para um modelo lógico em \ac{html}. 
 % Este gerador foi totalmente reescrito para se adequar aos padrões adotados, principalmente no que diz respeito a modularização de métodos, no desenvolvimento dos outros geradores.
 % Nós utilizamos todos estes conceitos para a implementação da nova infraestrutura do editor que suporta esta DSL.
-The development of the modeling tool proposal took place from the work extension of \cite{Lopes:2019}, restarting from June 2020.
+The development of the modeling tool proposal took place from the work extension of~\cite{Lopes:2019}, restarting from June 2020.
 In that study, we have defined language requirements, design decisions, and derived grammar.
 % At the time of that study there was only the implementation of a tool prototype with a generator for a logical model.
 % This generator was completely rewritten to fit the adopted standards, mainly with regard to methods modularization, in the development of other generators.
@@ -87,16 +87,16 @@ For each design decision, we have indicated its associated requirements.
 
 \begin{itemize}
     % \item\textit{\textbf{DP1. A solução deve adotar um \ac{LW} open source no auxílio da implementação da \ac{dsl} textual (RQ1, RQ2).}} 
-    % Mediante a investigação conduzida no estudo previamente citado \cite{Lopes:2019}, foi selecionado o \ac{lw} Xtext para o desenvolvimento da proposta por ser um framework open source focado no desenvolvimento de \acp{dsl} textuais, fornecendo toda a infraestrutura necessária. 
+    % Mediante a investigação conduzida no estudo previamente citado~\cite{Lopes:2019}, foi selecionado o \ac{lw} Xtext para o desenvolvimento da proposta por ser um framework open source focado no desenvolvimento de \acp{dsl} textuais, fornecendo toda a infraestrutura necessária. 
     % Além disto, o Xtext é uma ferramenta com alto nível de maturidade, documentação detalhada e uma comunidade extremamente ativa. 
     \item\textit{\textbf{DP1. The solution should adopt an open-source \ac{lw} to help implement the textual \ac{dsl} (RQ1, RQ2).}}
-     Through the investigation conducted in the previously cited study \cite{Lopes:2019}, we have selected \ac{lw} Xtext for the development of the proposal as it is an open-source framework focused on the development of textual \acp{dsl}, providing all the necessary infrastructure.
+     Through the investigation conducted in the previously cited study~\cite{Lopes:2019}, we have selected \ac{lw} Xtext for the development of the proposal as it is an open-source framework focused on the development of textual \acp{dsl}, providing all the necessary infrastructure.
      Furthermore, Xtext is a tool with a high level of maturity, detailed documentation and an extremely active community.
     
     % \item\textit{\textbf{DP2. A \ac{DSL} deve fornecer uma representação textual que seja equivalente ao modelo \ac{ER} gráfico usualmente utilizado (RQ3, RQ4).}} 
-    % Para os requisitos cobertos por esta decisão de projeto foi adotada a estratégia de se realizar uma análise nas ferramentas averiguadas no mapeamento descrito no \autoref{mapeamentoLiteratura}, bem como no livro referência de \citeonline{Heuser:2009}.
+    % Para os requisitos cobertos por esta decisão de projeto foi adotada a estratégia de se realizar uma análise nas ferramentas averiguadas no mapeamento descrito no \autoref{mapeamentoLiteratura}, bem como no livro referência de~\citeonline{Heuser:2009}.
     \item\textit{\textbf{DP2. The \ac{dsl} must provide a textual representation equivalent to the commonly used graphical \ac{er} models (RQ3, RQ4).}}
-    For the requirements covered by this design decision, we have adopted the strategy of performing an analysis in the tools verified in the mapping described in \cite{Lopes:2019}, as well as in the reference book by \cite{Heuser:2009}.
+    For the requirements covered by this design decision, we have adopted the strategy of performing an analysis in the tools verified in the mapping described in~\cite{Lopes:2019}, as well as in the reference book by~\cite{Heuser:2009}.
     
     % \item\textit{\textbf{DP3. A solução deve realizar a transformação entre os modelos (RQ5).}} 
     % O Xtext usa modelos do \ac{EMF} como a representação na memória de qualquer arquivo de texto analisado. 
@@ -365,11 +365,11 @@ For this, the model is transformed from our \ac{dsl} to the necessary notation f
 Caption (3) shows the model transformed to a logical notation, already solving the relations, \textit{i.e.} the primary and foreign keys.
 Finally, in caption (4) we present the generated \ac{sql} \ac{ddl} code for \ac{dbms} PostgreSQL.
 
-% Para as tranformações dos modelos foi avaliado as opções de regras de transformações descritas por \cite{Heuser:2009}.
+% Para as tranformações dos modelos foi avaliado as opções de regras de transformações descritas por~\cite{Heuser:2009}.
 % Em relação aos relacionamentos do tipo 1:1 adotou-se a estratégia de adição de coluna para os três casos possíveis.
 % Para os relacionamentos 1:N seguiu-se a mesma premissa de transformação para os quatro (4) casos possíveis.
 % Já para a transformação de relacionamentos N:N optou-se pela única regra de transformação recomendada, ou seja, a regra de criação de tabelas próprias para os três (3) casos.
-For the transformations of the models, we have evaluated the transformation rule options described by \cite{Heuser:2009}.
+For the transformations of the models, we have evaluated the transformation rule options described by~\cite{Heuser:2009}.
 Regarding 1:1 type relationships, we have adopted the column addition strategy for the three (3) possible cases.
 For the 1:N relationships, we have followed the same transformation premise for the four (4) possible cases.
 For the transformation of N:N relationships, we have chosen the only recommended transformation rule, \textit{i.e.} the rule for creating own tables for the three (3) cases.

@@ -17,10 +17,10 @@ With this established scenario, it is notable that there is a growing duty of th
 The elementary principle that justifies the use of data modeling techniques for defining efficient storage structures is the ability to manipulate and retrieve data in a simple way.
 These data represent the minor portion of raw values, which together represent information, \textit{i.e.} another set of already processed data that has a relevant meaning for the information domain. % where it is embedded.
 
-% Segundo \citeonline{Date:1990}, uma base de dados pode ser definida como uma coleção de dados operacionais armazenados, usados pelos sistemas de aplicação de uma determinada organização. 
-% Já para \citeonline{Elmasri:2011}, um banco de dados pode ser definido como uma abstração do mundo real, também chamado de minimundo, uma vez que representa aspectos que, em conjunto, carregam um significado implícito.
-According to \citeonline{Date:1990}, a \ac{db} defines as a collection of stored operational data used by the application systems of some organization.
-For \citeonline{Elmasri:2011}, a \ac{db} determines as an abstraction of the real world, also called a mini-world, since it represents aspects that together carry an implicit meaning.
+% Segundo~\citeonline{Date:1990}, uma base de dados pode ser definida como uma coleção de dados operacionais armazenados, usados pelos sistemas de aplicação de uma determinada organização. 
+% Já para~\citeonline{Elmasri:2011}, um banco de dados pode ser definido como uma abstração do mundo real, também chamado de minimundo, uma vez que representa aspectos que, em conjunto, carregam um significado implícito.
+According to~\citeonline{Date:1990}, a \ac{db} defines as a collection of stored operational data used by the application systems of some organization.
+For~\citeonline{Elmasri:2011}, a \ac{db} determines as an abstraction of the real world, also called a mini-world, since it represents aspects that together carry an implicit meaning.
 
 % A literatura no geral indica três etapas básicas que compõem o processo de modelagem e projeto de um banco de dados: Modelagem Conceitual, Modelagem Lógica e Modelagem Física.
 % A primeira etapa visa descrever em alto nível o domínio e como o banco de dados deve ser estruturado.
@@ -38,7 +38,7 @@ In general, the \ac{db} literature indicates three basic steps that compose the 
     The \ac{er} approach deals in short with objects and their relationships;
     
     \item \textbf{Logical Modeling}: The second phase maps these objects and the relationships described in the conceptual model to corresponding elements within the implementation data model.
-    Furthermore, there are many models reported in the literature (relational, object-oriented, semi-structured, graph, key-value, etc), the most widespread has been the Relational Model \cite{Codd:1989, Karanikolas:2011, Paredaens:2012, Robinson:2015, Puangsaijai:2017};
+    Furthermore, there are many models reported in the literature (relational, object-oriented, semi-structured, graph, key-value, etc), the most widespread has been the Relational Model~\cite{Codd:1989, Karanikolas:2011, Paredaens:2012, Robinson:2015, Puangsaijai:2017};
 
     \item \textbf{Physical Modeling}: The third phase corresponds in transforming the logical model to \ac{db} code, \textit{i.e.} SQL.
 This is a typically automated step that results in a \ac{sql} specification with the \ac{db} schema to be created in a \ac{dbms}.
@@ -47,10 +47,10 @@ This is a typically automated step that results in a \ac{sql} specification with
 %The second phase of the process, 
 
 % Todo este processo pode ser classificado como parte da Model Driven Engineering (MDE), uma abordagem de desenvolvimento de software na qual os modelos são os principais artefatos de entrada no processo de desenvolvimento.
-% Uma das principais vantagens desta abordagem é o poder fornecido para expressar modelos usando conceitos mais simples e que são independentes de detalhes de implementação, ou seja, resultando em uma abstração de complexidade \cite{Brambilla:2017}. 
+% Uma das principais vantagens desta abordagem é o poder fornecido para expressar modelos usando conceitos mais simples e que são independentes de detalhes de implementação, ou seja, resultando em uma abstração de complexidade~\cite{Brambilla:2017}. 
 %This entire process can be classified 
 This entire process classifies as part of \ac{mde}, a software development approach in which models are the principal input artifacts in the development process.
-One of the main advantages of this approach is the power provided to express models using simpler concepts, which are independent of implementation details, \textit{i.e.} resulting in a complexity abstraction \cite{Brambilla:2017}.
+One of the main advantages of this approach is the power provided to express models using simpler concepts, which are independent of implementation details, \textit{i.e.} resulting in a complexity abstraction~\cite{Brambilla:2017}.
 
 % Os conceitos da abordagem MDE permitem a criação de ferramentas de modelagem que suportam o desenvolvimento de modelos, sua transformação e integração em diferentes etapas do processo de desenvolvimento de software e, no caso deste estudo, a modelagem de banco de dados.
 The concepts of the \ac{mde} approach allow the creation of modeling tools that support the development of models, their transformation and integration at different stages of the software development process and, in the case of this study, \ac{db} modeling.
@@ -59,10 +59,10 @@ The concepts of the \ac{mde} approach allow the creation of modeling tools that 
 \section{Motivation}
 %------------------------------------------------------------------------------
 
-% De acordo com \citeonline{Rashid:2014, Salgado:1995} o ensino na área de banco de dados é de suma importância no ensino superior durante a formação de profissionais de computação.
+% De acordo com~\citeonline{Rashid:2014, Salgado:1995} o ensino na área de banco de dados é de suma importância no ensino superior durante a formação de profissionais de computação.
 % Portanto, o processo de ensino-aprendizagem deve assumir a responsabilidade de apresentar os aspectos teóricos e práticos desta área em cursos de tecnologia.
 % Vale ressaltar ainda que os instrutores de bancos de dados e cursos relacionados devem se preocupar em como ensinar seus alunos para que estes atendam às necessidades e expectativas oriundas das demandas tanto da acadêmia quanto da indústria.
-According to \citeonline{Rashid:2014, Salgado:1995} teaching in the \ac{db} area is very important in higher education during the training of computer professionals.
+According to~\citeonline{Rashid:2014, Salgado:1995} teaching in the \ac{db} area is very important in higher education during the training of computer professionals.
 A teaching-learning process must integrate the theoretical and practical aspects that, gradually, explore abstraction levels independent and dependent from database management system providers and their technologies.
 Besides, it is noteworthy that \ac{db} instructors and related courses should be concerned with how to teach their students 
 %so that 
@@ -86,9 +86,9 @@ Considering this limitation, this research is motivated to offer a software prod
 %------------------------------------------------------------------------------
 
 % O objetivo principal deste trabalho é desenvolver uma ferramenta para modelagem conceitual, utilizando uma abordagem textual, para servir de opção de suporte ao processo de ensino-aprendizagem de modelagem de projeto de banco de dados em instituições de ensino superior.
-% Esta ferramenta tem como base a proposta de linguagem feita em um estudo anterior \cite{Lopes:2019}
+% Esta ferramenta tem como base a proposta de linguagem feita em um estudo anterior~\cite{Lopes:2019}
 The main goal of this study is to develop a tool for conceptual modeling, using a textual approach, to support the teaching-learning process of \ac{db} design modeling in higher education institutions.
-This tool was based on our first language proposal \cite{Lopes:2019}, improved after preliminary evaluations, resulting in the current version.
+This tool was based on our first language proposal~\cite{Lopes:2019}, improved after preliminary evaluations, resulting in the current version.
 
 % Para atingir o objetivo geral proposto é fundamental que exista a divisão do problema nos seguintes objetivos específicos que precisam ser atingidos:
 Hence, to achieve the proposed main goal, it is essential to divide the problem into the following specific objectives:
