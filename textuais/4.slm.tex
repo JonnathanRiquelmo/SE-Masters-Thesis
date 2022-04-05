@@ -219,7 +219,7 @@ Table \ref{tab:QAC} shows the quality assessment criteria.
     \centering
     %\small
     \footnotesize
-    \caption{Quality Assessment Criteria.}
+    \caption{Quality assessment criteria.}
     \label{tab:QAC}
     \begin{tabular}{l|p{12cm}|c}
     \bottomrule
@@ -251,7 +251,7 @@ Table \ref{tab:DataExtractionForm} presents the detailed description of this ext
 \begin{table}[!htb]
     \centering
     \scriptsize
-    \caption{Data Extraction Form.}
+    \caption{Data extraction form.}
     \label{tab:DataExtractionForm}
     \begin{tabular}{p{5cm}|p{10cm}}
     \bottomrule
@@ -329,7 +329,7 @@ Table \ref{tab:QualityEval} summarizes the results obtained in the quality asses
 \begin{table}[!htb]
 \footnotesize
 \centering
-\caption{Quality Assessment Results.}
+\caption{Quality assessment results.}
 \label{tab:QualityEval}
 \begin{tabular}{lcccccccr}
 \bottomrule
@@ -439,21 +439,125 @@ Finally, on the methods used to evaluate the proposals, there is only one prelim
 Among the students, six (6) were masters in the area of \acp{db} and five (5) doctoral students with experience in modeling.
 In general, all other studies indicate the lack of an evaluation of their propositions as possible future work.
 
+
+%------------------------------------------------------------------------------
+\section{Related Work} \label{sec_slm:relatedWork}
+%------------------------------------------------------------------------------
+
+% Quando consideramos estudos e projetos citados em estudos secundários, e similares a nossa proposta, podemos mencionar o levantamento apresentado no trabalho de ~\cite{eres:2021}.
+% Este estudo é uma revisão multivocal de literatura, ou seja, uma forma de mapeamento sistemático de literatura que inclui a literatura cinza.
+Considering solutions and projects cited in secondary studies, and similar to our proposal, we can mention the survey presented in the work of ~\cite{eres:2021}.
+This study is a Multivocal Literature Review, that is, a form of Systematic Literature Mapping that includes gray literature.
+
+% Este estudo abrange um conjunto final de dez (10) estudos primários focados em \acp{dsl} e identifica 55 ferramentas já aplicadas na indústria e academia para modelagem \ac{er} em nível conceitual, lógico e físico. 
+This cited study covers a final set of ten (10) primary studies focused on \acp{dsl} and identifies fifty-five (55) tools already applied in industry and academia for modeling \ac{er} at a conceptual, logical and physical level.
+
+% A Tabela \ref{tab:relatedWorkTools} apresenta uma visão compacta das soluções mais significativas quando comparadas a nossa proposta.
+% Além disso, adicionamos também a ferramenta bigER, um plugin lançado recentemente para VS Code e que utiliza o framework Xtext como base.
+Table \ref{tab:relatedWorkTools} presents a compact view of the most significant solutions of the cited study when compared to our proposal.
+Furthermore, we also added the \textit{bigER} tool, a recently released plugin for \textit{VS Code} that uses the Xtext framework basis.
+
+\rowcolors{1}{gray!15}{white}
+\begin{table}[!htb]
+    \centering
+    \footnotesize
+    \caption{Related ER modeling tools.}
+    \label{tab:relatedWorkTools}
+    \begin{tabular}{l|cccccc}
+    \rowcolor[HTML]{C0C0C0}
+    \bottomrule
+     & \multicolumn{6}{c}{\textbf{TOOLS}} \\
+    \textbf{\textit{Features}} & \textbf{ERtext} & \textbf{MIST} & \textbf{dbdiagram.io} & \textbf{QuickDBD} & \textbf{RelaX} & \textbf{bigER} \\
+    IDE Integration & Eclipse & Eclipse &  &  &  & VS Code \\
+    Web-based &  &  & \checkmark & \checkmark & \checkmark &  \\
+    LSP Implementation & \checkmark & \checkmark &  &  &  & \checkmark \\
+    Open Source & \checkmark & \checkmark &  &  & \checkmark & \checkmark \\
+    Free of Charge & \checkmark & \checkmark & partially & partially & \checkmark & \checkmark \\
+    Textual Editor & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+    Model Validation & \checkmark &  &  &  &  & \checkmark \\
+    Diagram View & \checkmark &  & \checkmark & \checkmark & \checkmark & \checkmark \\
+    Code Generation & \checkmark &  & \checkmark & \checkmark &  & \checkmark \\
+    Experimental Evaluation & \checkmark & \checkmark &  &  &  & \\
+    \toprule
+\end{tabular}
+\begin{tablenotes}
+    \scriptsize
+    \centering
+    \item \textit{Legend: IDE = Integrated Development Environment, LSP = Language Server Protocol.}
+\end{tablenotes}
+    \fonte{Author.}
+\end{table}
+
+% A ferramenta \textit{Multi-paradigm System Modeling Tool} (MIST) foi desenvolvida na universidade de Novi Sad na Sérvia.
+% Sua descrição foi feita de forma anteriormente, já que há publicações decorrentes de sua criação que foram selecionadas na revisão sistemática apresentada.
+The \textit{Multi-paradigm System Modeling Tool} (MIST) was conceived at the University of Novi Sad in Serbia.
+Its description was previously made, since there are publications that address its development that were selected in the systematic review presented.
+
+% A \textit{dbdiagram.io}\footnote{https://dbdiagram.io/} é uma ferramenta web gratuita para o desenho de diagrama \ac{er}, desenvolvida por uma empresa de Singapura, com uma abordagem textual que implementa uma \ac{dsl} própria.
+% Esta \ac{dsl} utiliza um modelo muito próximo do lógico. 
+% O diferencial da ferramenta é sua rápida curva de aprendizagem e, além disso, a apresentação de uma representação gráfica do que está sendo modelado.
+% A apresentação dos elementos do diagrama pode ser organizada livremente pelo usuário em tempo real. 
+% Entretanto é importante se salientar que toda a modelagem de fato é feita de modo textual. 
+% A ferramenta ainda oferece a geração automática de código \ac{sql}.
+\textit{dbdiagram.io}\footnote{\url{https://dbdiagram.io/}} is a free web tool for drawing \ac{er} diagrams, developed by a Singaporean company, with a textual approach that implements a own \ac{dsl}.
+This \ac{dsl} uses a model that is very close to the logical one.
+The tool's differential is its fast learning curve and, in addition, the presentation of a graphical representation of what is being modeled.
+The presentation of diagram elements can be freely organized by the user in real time.
+However, it is important to point out that all the modeling is actually done in a textual way.
+The tool even offers automatic \ac{sql} code generation.
+
+% Da mesma forma, a \textit{QuickDBD}\footnote{https://quickdatabasediagrams.com/}, desenvolvida por uma empresa na Irlanda, é uma ferrramenta web com exatamente o mesmo modo operacional que a \textit{dbdiagram.io}, também implementando uma \ac{dsl} textual própria para modelagem de \acp{db}.
+% Contudo é uma ferramenta proprietária, ou seja, possui custo e tem o foco declaradamente na indústria. 
+% Ambas as ferramentas são muito similares também quanto a geração de representações gráficas da modelagem e apresentam diversos argumentos para sua adoção, como a rápida compreensão de suas \acp{dsl}, a perspectiva de realização de trabalhos fluídos, o acesso de qualquer plataforma e o compartilhamento dos modelos com outros usuários.
+Likewise, \textit{QuickDBD}\footnote{\url{https://quickdatabasediagrams.com/}}, developed by a company in Ireland, is a web tool with exactly the same operating mode as \textit{dbdiagram.io}, also implementing a textual \ac{dsl} for modeling \acp{db}.
+However, it is a proprietary tool, that is, it has a cost and is clearly focused on the industry.
+Both tools are also very similar in terms of generating graphical representations of the modeling and present several arguments for their adoption, such as the quick understanding of their \acp{dsl}, the perspective of performing fluent work, access from any platform and the sharing the models with other users.
+
+% A ferramenta web gratuita \textit{RelaX (Relational Algebra Calculator)}\footnote{https://dbis-uibk.github.io/relax/}. 
+% Trata-se de uma ferramenta desenvolvida na universidade de Innsbruck, na Áustria, e voltada ao ensino de álgebra relacional fazendo operações sobre bases de dados relacionais. 
+% Tem uma abordagem textual, utilizando uma \ac{dsl} chamada RelAlg, e apresentando inclusive duas perspectivas de operação: instruções de RelAlg e instruções em \ac{sql}. 
+% A RelaX utiliza uma abordagem de modelo já em nível físico para operações, como as DDL de construção e DML para as consultas. 
+% Apesar de suas funcionalidades, a RelaX não se propõe a ser uma ferramenta de projeto e modelagem de \ac{db}, mas de uso restrito ao ensino dentro da academia.
+The free web tool \textit{RelaX (Relational Algebra Calculator)}\footnote{\url{https://dbis-uibk.github.io/relax/}}.
+It is a tool developed at the University of Innsbruck, Austria, and aimed at teaching relational algebra by performing operations on relational databases.
+It has a textual approach, using a \ac{dsl} called RelAlg, and including two operating perspectives: RelAlg instructions and \ac{sql} instructions.
+RelaX uses a physical-level model approach to operations, such as build DDL and DML for queries.
+Despite its functionalities, RelaX is not intended to be a professional tool for \ac{db} design and modeling, but its use is restricted to teaching within the academy.
+
+% Finalmente, a bigER oferta recursos para especificar e visualizar modelos de dados conceituais de \ac{er} de maneira flexível.
+% Dentro do editor de texto VS Code esta solução permite a modelagem por meio de uma \ac{dsl} própria para especificar elementos \ac{er}. 
+% Oferece ainda uma visualização interativa para exibição de diagramas \ac{er} e consegue gera código \ac{sql} em formato genérico. 
+% Esta solução ainda se destaca por ser uma das poucas a ferramentas a incorporar o Language Server Protocol (LSP), além de ser a única econtrada a ser distribuída através do ecossistema do amplamente conhecido VS Code.
+Finally, the \textit{bigER} tool offers features to flexibly specify and visualize \ac{er} conceptual data models.
+Within the \textit{VS Code} text editor, this solution allows modeling through its own \ac{dsl} to specify \ac{er} elements.
+It also offers an interactive visualization for displaying \ac{er} diagrams and manages to generate \ac{sql} code in a generic format.
+This solution still stands out for being one of the few tools to incorporate the Language Server Protocol (LSP), in addition to being the only one to be distributed through the ecosystem of the widely known \textit{VS Code}.
+
+% De uma forma geral, quando comparadas todas as ferramentas podemos verificar que nossa proposta atende as funcionalidades importantes. 
+% Talvez o principal diferencial positivo em relação a maioria das outras propostas concorrentes seja o fato de termos realizado avaliações experimentais para validar a ideia geral do projeto, além da gramática ser relativamente mais simples e a geração de código \ac{sql} ser direcionada a plataformas específicas.
+% A principal fraqueza observada é a falta de uma alternativa com base web, ou seja, que possa ser executado diretamente em navegadores. 
+% Contudo, graças a implementação LSP fornecida pelo Xtext, a migração para uma aplicação web será uma tarefa relativamente mais fácil do que se optássemos por partir from scratch.
+In general, when comparing all the tools we can verify that our proposal meets the important functionalities.
+Perhaps the main positive difference in relation to most of the other competing proposals is the fact that we carried out experimental evaluations to validate the conceived idea of the project, in addition to the grammar being relatively simpler and the \ac{sql} code generation being directed to specific platforms.
+The main weakness currently observed is the lack of a web-based alternative, \textit{i.e.} a version of ERtext that can run directly in web browsers.
+However, thanks to the LSP implementation provided by Xtext, migrating to a web application will be a relatively easier task than starting from scratch.
+
+
 %------------------------------------------------------------------------------
 \section{Chapter Lessons} \label{sec_slm:lessons}
 %------------------------------------------------------------------------------
 
 % Todos os anos, várias contribuições para a modelagem \ac{ER} são publicadas. 
 % A modelagem de \ac{db} é uma área essencial na computação e as \acp{dsl} que suportam essa atividade não são encontradas trivialmente na literatura.
-% A fim de acompanhar a evolução e as tendências de vários sistemas de \acp{BD}, uma pesquisa de alternativas para o design é essencial. 
-% Neste capítulo é fornecido uma visão geral sobre as \acp{DSL} usadas pela tranformação de modelos de dados por meio de um mapeamento sistemático de literatura.
+% A fim de acompanhar a evolução e as tendências de vários sistemas de \acp{db}, uma pesquisa de alternativas para o design é essencial. 
+% Neste capítulo é fornecido uma visão geral sobre as \acp{dsl} usadas pela tranformação de modelos de dados por meio de um mapeamento sistemático de literatura.
 Every year, several contributions to the ER modeling are published.
 % The modeling of \ac{db} is an fundamental area in computing and the \acp{dsl} that support this activity are not trivially found in the literature.
 Database modeling is a fundamental area in computing, and unfortunately, in the literature not trivially found DSLs that support this activity.
 To follow the evolution and trends of various \acp{db} systems, a search for alternatives to design is essential.
 This chapter provides an overview of the \acp{dsl} used for transforming data models through systematic literature mapping.
 
-% Este processo de mapeamento abrangeu 1602 artigos com a intenção de investigar estudos primários que fizeram propostas que mostrassem mecanismos de transformação para modelagem de \acp{bd}. 
+% Este processo de mapeamento abrangeu 1602 artigos com a intenção de investigar estudos primários que fizeram propostas que mostrassem mecanismos de transformação para modelagem de \acp{db}. 
 % O protocolo do mapeamento sistemático foi detalhado, assim como sua condução e subsequente análise dos resultados obtidos.
 % Ao final, 12 estudos primários foram selecionados para serem analisados de forma quantitativa e qualitativa. 
 % Entre os resultados destaca-se, entre os trabalhos relacionados, o estudo de~\citeonline{Dimitrieski:2015}, o qual apresenta uma ferramenta de modelagem bidirecional que aplica sua própria \ac{dsl} com base na abordagem EER e descreve de forma detalhada os mecanismos de tranformação entre os modelos.
