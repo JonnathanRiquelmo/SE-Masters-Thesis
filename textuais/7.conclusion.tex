@@ -6,9 +6,9 @@
 % Esta dissertação se propôs até o momento a realizar um estudo que aborda a área de projeto e modelagem conceitual de \acp{db} relacionais.
 % Para tanto, foi necessário realizar um desenho de pesquisa que orientou toda a execução das atividades necessárias para atingir os objetivos específicos.
 % O projeto envolve ainda uma pesquisa bibliográfica para o embasamento teórico, a condução de um mapeamento sistemático, encontrar estudos relacionados, o desenvolvimento da solução proposta e ao menos duas avaliações empíricas para sua avaliação.
-This master's thesis has so far proposed to execute a study that addresses the area of design and conceptual modeling of relational \acp{db}.
+This master's thesis has proposed to execute a study that addresses the area of design and conceptual modeling of relational \acp{db}.
 Therefore, it was necessary to carry out a research design that guided all the activities necessary to achieve the specific objectives.
-The project also involves a bibliographical research for the theoretical basis, conducting a systematic mapping, finding related studies, developing the proposed solution and at least two empirical evaluations for its evaluation.
+The project also involved a bibliographical research for the theoretical basis, conducting a systematic mapping, finding related studies, developing the proposed solution and three (3) empirical evaluations for its evaluation.
 
 % Sabemos que o conjunto de ferramentas que apoiam o projeto e modelagem de bancos de dados relacionais é relativamente amplo.
 % Não esperamos reinventar a roda ou apenas aumentar essa fragmentação composta por diversas soluções em uma área já madura. 
@@ -31,14 +31,26 @@ This was only possible through the Xtext framework, a known \ac{lw} for creating
 We performed the replication of an empirical experiment with a set of 33 subjects to verify the feasibility of the proposal and the preliminary results indicate that there may be relevance in the project built in our study.
 We are aware that even if the results, after the last planned experiment to be carried out, ultimately show that there is no significant difference from our proposal for the existing tools, still our collective body of knowledge will remain relevant with regard to development and evolution of modeling languages for specific domains.
 
+% Isto se confirmou na execução dos outros dois (2) experimentos empíricos.
+% Ao final, os três (3) experimentos combinados obtiveram setenta e três (73) participações.
+% Conseguimos então avaliar de forma quantitativa e qualitativa uma série suposições.
+% Nossa vontade principal era avaliar se nossa abordagem textual poderia ter um desempenho e aceitação de usuário tão efetiva, ou ao menos semelhante, a abordagem gráfica.
+% Chegamos a conclusão que ambas as são similares, sem uma diferença estatística ou de qualidade de uso que se mostre verdadeiramente significativa dentre o conjunto de sujeitos participantes dos experimentos controlados. 
+This was confirmed in the execution of the other two (2) empirical experiments.
+In the end, the three (3) combined experiments had seventy-three (73) participations.
+We were then able to quantitatively and qualitatively evaluate a series of assumptions.
+Our main goal was to assess whether our textual approach could perform and user acceptance as effectively, or at least similarly, to the graphical approach.
+We came to the conclusion that both are similar, without a statistical difference or quality of use that proves to be truly significant among the set of subjects participating in controlled experiments.
+
+
 % Temos ainda outras expectativas em relação a ferramenta desenvolvida que vão além de verificar se é uma alternativa viável  e promover colaboração, em razão de ser código aberto, bem como atender às necessidades dos usuários.
 % Isto diz respeito a nossa vontade de avaliar se a abordagem textual pode ser de fato tão efetiva quanto a abordagem gráfica. 
 % Pretendemos realizar uma melhor análise a partir de uma possível futura inclusão da solução nas atividades realizadas durante a condução de uma classe de banco de dados, assim performando as atividades continuamente da mesma forma com que ferramentas gráficas são utilizadas.
-We also have other expectations for the developed tool, which goes beyond checking whether it is a viable alternative and promoting collaboration since it is open-source, as far as to meet the users' needs.
+% !!!! We also have other expectations for the developed tool, which goes beyond checking whether it is a viable alternative and promoting collaboration since it is open-source, as far as to meet the users' needs.
 % We also have other expectations to the developed tool that goes beyond checking if it is a viable alternative and promoting collaboration, since it is open-source, as well as meeting the needs of users.
-Hence, this concerns our willingness to assess whether the textual approach can be as efficacious as the graphical approach.
+% !!!! Hence, this concerns our willingness to assess whether the textual approach can be as efficacious as the graphical approach.
 % We intend to carry out a better analysis based on a possible future inclusion of the solution in the activities performed while conducting a \ac{db} lessons, thus performing the activities continuously in the same way that graphical tools are used.
-We intend to conduct a better analysis based on the possible inclusion of the future solution in the activities carried out while teaching database lessons, thus performing the activities continuously in the same way used in the graphical tools.
+We still intend to conduct a better analysis based on the possible inclusion of the future solution in the activities carried out while teaching database lessons, thus performing the activities continuously in the same way used in the graphical tools.
 
 % Desta forma será possível reverificar algumas vantagens que observamos inicialmente (Seção \ref{sec:intro_rationale}), e ainda avaliar se outras vantagens não descritas anteriormente podem ser adicionadas neste conjunto de benefícios.
 % Entre as suposições iniciais que temos estão a de que a abordagem textual pode trazer grandes vantagem na velocidade de modelagem quando os usuários estão mais acostumados com a linguagem,  pode promever uma integração facilitada com outras linguagens, oferece qualidade superior de formatação, melhor controle de versão e indepêndencia de plataforma (no que diz respeito a sistemas operacionais).
@@ -92,33 +104,42 @@ As follows, we list some publications that originated in the context of our rese
 %     \end{enumerate} 
 
 %--------------------------------------------------------------------
-\section{Ongoing Work}
+\section{Future Work}
 %--------------------------------------------------------------------
 
-% Existem outras melhorias que estamos desenvolvendo mas que não são rigorosamente necessárias para a realização da última avaliação empírica. 
-% Pretendemos implementá-las até o final do período previsto para a dissertação, tornando-as públicas no repositório do projeto.
+% Existem outras melhorias que estamos desenvolvendo. 
+% Pretendemos implementá-las com a continuidade do projeto, tornando-as públicas no repositório do projeto.
 % Estes recursos buscam melhorar a experiência de uso e aumentar o espectro de artefatos que podem ser gerados.
 % Entre os principais recursos que pretendemos adcionar, estão:
-% \begin{itemize}
-%     \item mais templates proposals, especialmente para modelos completos;
-%     \item melhorar a validação com base em escopo, em especial para entidades ternárias;
-%     \item criar geradores de DDLs para procedimentos armazenados cobrindo operações CRUD;
-%     \item continuar a implementação do suporte de mineração de código\footnote {Code Mining: \url{https://www.eclipse.org/eclipse/news/4.8/platform_isv.php}} usando os recursos lançados inicialmente no projeto Eclipse Photon.
-%   O objetivo será mostrar resumos ao usuário do número de entidades, incluindo aquelas derivadas de relacionamentos N:N, bem como o total de relacionamentos.
-%     \item criar ao menos mais um gerador SQL, aumentando assim o conjunto de plataformas que podem ser alvo.
-% \end{itemize}
-There are other improvements that we are developing, but that is not strictly necessary to carry out the last experimental evaluation.
-We intend to implement them by the end of the period foreseen for the master's thesis, making them public in the project repository.
-These features seek to improve the user experience and increase the spectrum of artifacts generation.
+There are other improvements that we are developing.
+We intend to implement them as the project continues, making them public in the repository.
+These resources seek to improve the user experience and increase the spectrum of artifacts that can be generated.
 Among the main features we intend to add are:
 
-\begin{itemize}
-    \item more templates proposals, especially for complete (full) models;
-    \item improve scope-based validation, especially for ternary entities;
-    \item create DDL generators for stored procedures covering CRUD operations;
-    \item to continue implementing code mining\footnote{Code Mining: \url{https://www.eclipse.org/eclipse/news/4.8/platform_isv.php}} support using the features initially released in the Eclipse Photon project.
-    The objective will be to show the user summaries of the number of entities, including those derived from N:N relationships, as well as the total of relationships;
-    %\item create at least one more \ac{sql} generator, thus increasing the set of platforms that can be targeted.
-    \item create at least one more \ac{sql} generator, thus increasing our set of target platforms.
-\end{itemize}
+% \begin{itemize}
+%     \item mais templates proposals, especialmente para modelos completos (atualmente existe apenas um disponível);
+%     \item melhorar a validação com base em escopo, em especial para entidades ternárias (atualmente esta validação se dá de forma parcial);
+%     \item criar geradores de DDLs para procedimentos armazenados cobrindo operações CRUD;
+%     \item continuar a implementação do suporte de mineração de código\footnote {Code Mining: \url{https://www.eclipse.org/eclipse/news/4.8/platform_isv.php}} usando os recursos lançados no projeto Eclipse Photon (atualmente esta funcionalidade está parcialmente implementada, mas carece de mais testes de software para ser disponibilizada no plugin).
+%     O objetivo será mostrar resumos ao usuário do número de entidades, incluindo aquelas derivadas de relacionamentos N:N, bem como o total de relacionamentos.
+%     \item criar mais geradores \ac{sql}, aumentando assim o conjunto de plataformas que podem ser alvo (atualmente existe suporte a PostgreSQL e MySQL).
+%     \item implementar meios de personalização de coloração dos modelos conceitual (diagrama com a PlantUML), lógico (.html) e físico (\ac{sql}) gerados automaticamente. Atualmente a coloração é definida estaticamente nos geradores desenvolvidos, mas essa opção é algo que percebido como sugestão direta dos sujeitos dos experimentos.
+    % \item Disponibilizar a geração automática de diagramas de ocorrência para relacionamentos indicados na gramática.
+%     \item A geração de diagramas dinâmicos, possibilitando a modelagem de forma gráfica que gere nossa \ac{dsl} automaticamente, tornando assim nossa solução uma ferramenta de modelagem bidirecional.
+%     Atualmente temos como decisão de projeto utilizar o Sprotty\footnote{\url{https://github.com/eclipse/sprotty}} como framework para diagramação, substituindo a PlantUML Nos projetos relacionados que pretendemos dar continuidade. Isso acontece pelo Sprotty ter suporte total ao Xtext, possibilitando seu uso como backend (com requisições via Language Server Protocol - LSP) e Typescript  (um superset do Javascript com suporte a tipagem estática e OO) no frontend.   
+% \end{itemize}
+
+\begin{enumerate} [label=\roman*.]
+    \item more \textbf{templates proposals}, especially for full templates (currently there is only one available);
+    \item to \textbf{improve scope-based validation}, especially for ternary entities (currently this validation is partial);
+    \item create DDL \textbf{generators} for \textbf{stored procedures} covering CRUD operations;
+    \item continue to implement \textbf{code mining support}\footnote {Code Mining: \url{https://www.eclipse.org/eclipse/news/4.8/platform_isv.php}} using features released in the Eclipse Photon project ( currently this functionality is partially implemented, but needs more software testing to be made available in the plugin).
+    The objective will be to show the user summaries of the number of entities, including those derived from N:N relationships, as well as the total number of relationships;
+    \item create \textbf{more \ac{sql} generators}, thus increasing the set of platforms that can be targeted (currently we support PostgreSQL and MySQL);
+    \item implement \textbf{customized coloring feature} of the automatically generated conceptual (diagram with PlantUML), logical (.html) and physical (\ac{sql}) models. Currently, the coloring is defined statically in the developed generators, but this option is something that is perceived as a direct suggestion of the subjects of the experiments;
+    \item Provide automatic \textbf{generation of occurrence diagrams} for relationships indicated in the models;
+    \item The generation of \textbf{dynamic diagrams}, enabling the modeling in a graphical way that generates our \ac{dsl} automatically, thus making our solution a \textbf{bidirectional modeling tool}. We currently have the design decision to use Sprotty\footnote{Sprotty Framework: \url{https://github.com/eclipse/sprotty}} as a diagramming framework, replacing PlantUML in related projects that we intend to continue. This happens because Sprotty has full support for Xtext, allowing its use as a backend (with requests via Language Server Protocol - LSP) and Typescript (a Javascript superset with support for static typing and OO) on the frontend.
+\end{enumerate}
+
+
 
