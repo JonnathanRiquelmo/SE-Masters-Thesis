@@ -102,6 +102,7 @@ As follows, we list some publications that originated in the context of our rese
 %     \begin{enumerate}[label=\roman*.]
 %         \item ---
 %     \end{enumerate} 
+% Resgatando trabalhos prévios publicados, contando história da pesquisa, ao mesmo tempo mencionando os resultados do ultimo experimento em comparação com os experimentos anteriores.
 
 %--------------------------------------------------------------------
 \section{Future Work}
@@ -137,9 +138,25 @@ Among the main features we intend to add are:
     The objective will be to show the user summaries of the number of entities, including those derived from N:N relationships, as well as the total number of relationships;
     \item create \textbf{more \ac{sql} generators}, thus increasing the set of platforms that can be targeted (currently we support PostgreSQL and MySQL);
     \item implement \textbf{customized coloring feature} of the automatically generated conceptual (diagram with PlantUML), logical (.html) and physical (\ac{sql}) models. Currently, the coloring is defined statically in the developed generators, but this option is something that is perceived as a direct suggestion of the subjects of the experiments;
-    \item Provide automatic \textbf{generation of occurrence diagrams} for relationships indicated in the models;
-    \item The generation of \textbf{dynamic diagrams}, enabling the modeling in a graphical way that generates our \ac{dsl} automatically, thus making our solution a \textbf{bidirectional modeling tool}. We currently have the design decision to use Sprotty\footnote{Sprotty Framework: \url{https://github.com/eclipse/sprotty}} as a diagramming framework, replacing PlantUML in related projects that we intend to continue. This happens because Sprotty has full support for Xtext, allowing its use as a backend (with requests via Language Server Protocol - LSP) and Typescript (a Javascript superset with support for static typing and OO) on the frontend.
+    \item provide automatic \textbf{generation of occurrence diagrams} for relationships indicated in the models;
+    \item the generation of \textbf{dynamic diagrams}, enabling the modeling in a graphical way that generates our \ac{dsl} automatically, thus making our solution a \textbf{bidirectional modeling tool}. We currently have the design decision to use Sprotty\footnote{Sprotty Framework: \url{https://github.com/eclipse/sprotty}} as a diagramming framework, replacing PlantUML in related projects that we intend to continue. This happens because Sprotty has full support for Xtext, allowing its use as a backend (with requests via Language Server Protocol - LSP) and Typescript (a Javascript superset with support for static typing and OO) on the frontend.
 \end{enumerate}
+
+% Colocar como trabalho futuro
+% Ideia de fazer a enganharia reversa, recebendo um SQL para gerar a DSL (passando pelo lógico e diagrama conceitual) - Round-tripping engineering!
+% parser a partir de um SQL, ou conexão direta com o banco de dados e partindo desse usuário (eg dbAdmin) com acesso a tabelas de sistema (de repente puxando uma AST da estrutura do banco)
+% Também serve para migração e melhoria 
+
+
+% Colocar como trabalho futuro
+% Integração com ORMS (gerador? Quais as linguagens de programação seriam target?) 
+
+
+%  Não colocar como trabalho Futuro
+% Annotations em JAVA - Como usar no Xtext
+% Como tratar dados sensíveis? (lei de proteção de dados)
+% Usar anotações para estratégia de criação de banco de dados de teste 
+
 
 
 
