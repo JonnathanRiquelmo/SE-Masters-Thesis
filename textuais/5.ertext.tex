@@ -387,7 +387,17 @@ It happens through the \texttt {IFileSystemAccess2} interface that provides the 
 This interface provides an abstraction for file system operations, enabling logical path mapping (output artifact).
 This interface composes all the extension interfaces for \texttt {IFileSystemAccess} with other improvements implemented.
 
+% Para registro, nossos geradores especializados utilizam o padrão de projeto Template Method na sua implementação.
+% O Template Method é um padrão de projeto comportamental, que define o esqueleto de um algoritmo em uma superclasse, deixando as subclasses sobrescreverem etapas específicas do algoritmo sem modificar sua estrutura.
+For the record, our specialized generators use the Template Method design pattern~\cite{GOF:95} in their implementation.
+The Template Method is a behavioral design pattern, which defines a structure of an algorithm in a superclass, letting the subclasses override specific steps of the algorithm without modifying its structure.
 
+% Este padrão de projeto preconiza que o algoritmo precisa modularizado em uma série de etapas, transformando essas etapas em métodos, e colocando uma série de chamadas para esses métodos dentro de um único método padrão. 
+% Em nossa solução as etapas dessa tranformação são definidas em uma classe abstrata. 
+% Desta forma nossos geradores especializados implementam todas estas etapas abstratas, e eventualmente sobrescrevem algumas das opcionais quando necessário, mas nunca o próprio método padrão.
+This design pattern recommends that the algorithm needs to be modularized into a series of steps, transforming these steps into methods, and placing a series of calls to these methods within a single standard method.
+In our solution the steps of this transformation are defined in an abstract class.
+Thus our specialized generators implement all these abstract steps, and eventually override some of the optional ones when necessary, but never the default method itself.
 
 % \begin{figure}[!htb]
 %     \centering
@@ -460,6 +470,7 @@ If the tool considers the model valid according to the \ac{dsl} syntax, it dispa
 % If the model is considered valid according to the \ac{dsl} syntax, the in-memory Ecore model is dispatched to the main generator, which then forwards it to the other specialized generators, thus producing the diagram (conceptual model), \ac{html} (logical model) and the \ac{sql} files (physical model).
 In these generators, the tool generates the target files in a folder called ``src-gen'' at the root of the project folder.
 
+
 % A representação da herança entre a entidade User e as entidades People e Organization é apresentado na Figura \ref{fig:Diagram_Generalization}. 
 % Ao utilizar a PlantUML a notação UML para diagramas de classe é usada.
 % O equivalente gerado no modelo lógico é apresentado na Figura \ref{fig:Logical_Generalization}.
@@ -487,9 +498,6 @@ Figure \ref{fig:Logical_Generalization} shows the equivalent generated in the lo
   \end{minipage}
 \end{figure}
 
-% O modelo SQL gerado, para a plataforma PostgreSQL, também equivalente aos modelos anteriores é apresentado na Figura \ref{fig:SQL_Generalization}
-Figure \ref{fig:SQL_Generalization} shows the generated SQL model for the PostgreSQL platform, also equivalent to the previous models.
-% The generated SQL model, for the PostgreSQL platform, also equivalent to the previous models, is shown in Figure \ref{fig:SQL_Generalization}
 
 \begin{figure}[!htb]
     \centering
@@ -499,6 +507,9 @@ Figure \ref{fig:SQL_Generalization} shows the generated SQL model for the Postgr
     \label{fig:SQL_Generalization}
 \end{figure}
 
+% O modelo SQL gerado, para a plataforma PostgreSQL, também equivalente aos modelos anteriores é apresentado na Figura \ref{fig:SQL_Generalization}
+Figure \ref{fig:SQL_Generalization} shows the generated SQL model for the PostgreSQL platform, also equivalent to the previous models.
+% The generated SQL model, for the PostgreSQL platform, also equivalent to the previous models, is shown in Figure \ref{fig:SQL_Generalization}
 % A mesma lógica é usada para relações binárias e entidades tenárias nos modelos lógicos e físicos, ou seja, as entidades são criadas com as referências sendo resolvidas (chaves estrangeiras).
 % As relações tem seus mapeamentos sendo indicados logo em seguida da estrutura das entidades.
 % Nas Figuras a seguir (\ref{fig:Diagram_Binary} e \ref{fig:Logical_Binary}) os modelos são apresentados com três (3) relações binárias (PostSharing, PhotoPost e FriendShip).
@@ -508,7 +519,6 @@ Figure \ref{fig:SQL_Generalization} shows the generated SQL model for the Postgr
 % Os símbolos de globo em azul representam as chaves estrangeiras.
 % Quando um atributo é ambos os tipos de chaves, ambos os símbolos são utilizados.
 % A Figura \ref{fig:SQL_Binary} apresenta o modelo \ac{sql} equivalente gerado pela ferramenta.
-
 The same logic is used for binary relationships and ternary entities in both logical and physical models, that is, entities are created with the references being resolved (foreign keys).
 The relationships have their mappings being indicated right after the structure of the entities.
 In Figures \ref{fig:Diagram_Binary} and \ref{fig:Logical_Binary}, the models are presented with three (3) binary relations (PostSharing, PhotoPost, and FriendShip).

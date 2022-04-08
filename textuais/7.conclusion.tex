@@ -120,19 +120,20 @@ These resources seek to improve the user experience and increase the spectrum of
 %These resources seek to improve the user experience and increase the spectrum of artifacts that can be generated.
 Among the main features we intend to add are:
 
-\begin{itemize}
-    \item mais templates proposals, especialmente para modelos completos (atualmente existe apenas um disponível);
-    \item melhorar a validação com base em escopo, em especial para entidades ternárias (atualmente esta validação se dá de forma parcial);
-    \item criar geradores de DDLs para procedimentos armazenados cobrindo operações CRUD;
-    \item continuar a implementação do suporte de mineração de código\footnote {Code Mining: \url{https://www.eclipse.org/eclipse/news/4.8/platform_isv.php}} usando os recursos lançados no projeto Eclipse Photon (atualmente esta funcionalidade está parcialmente implementada, mas carece de mais testes de software para ser disponibilizada no plugin).
-    O objetivo será mostrar resumos ao usuário do número de entidades, incluindo aquelas derivadas de relacionamentos N:N, bem como o total de relacionamentos.
-    \item criar mais geradores \ac{sql}, aumentando assim o conjunto de plataformas que podem ser alvo (atualmente existe suporte a PostgreSQL e MySQL).
-    \item implementar meios de personalização de coloração dos modelos conceitual (diagrama com a PlantUML), lógico (.html) e físico (\ac{sql}) gerados automaticamente. Atualmente a coloração é definida estaticamente nos geradores desenvolvidos, mas essa opção é algo que percebido como sugestão direta dos sujeitos dos experimentos.
-    \item Disponibilizar a geração automática de diagramas de ocorrência para relacionamentos indicados na gramática.
-    \item A geração de diagramas dinâmicos, possibilitando a modelagem de forma gráfica que gere nossa \ac{dsl} automaticamente, tornando assim nossa solução uma ferramenta de modelagem bidirecional.
-    Atualmente temos como decisão de projeto utilizar o Sprotty\footnote{\url{https://github.com/eclipse/sprotty}} como framework para diagramação, substituindo a PlantUML Nos projetos relacionados que pretendemos dar continuidade. Isso acontece pelo Sprotty ter suporte total ao Xtext, possibilitando seu uso como backend (com requisições via Language Server Protocol - LSP) e Typescript  (um superset do Javascript com suporte a tipagem estática e OO) no frontend.
-    \item 
-\end{itemize}
+% \begin{itemize}
+%     \item mais templates proposals, especialmente para modelos completos (atualmente existe apenas um disponível);
+%     \item melhorar a validação com base em escopo, em especial para entidades ternárias (atualmente esta validação se dá de forma parcial);
+%     \item criar geradores de DDLs para procedimentos armazenados cobrindo operações CRUD;
+%     \item continuar a implementação do suporte de mineração de código\footnote {Code Mining: \url{https://www.eclipse.org/eclipse/news/4.8/platform_isv.php}} usando os recursos lançados no projeto Eclipse Photon (atualmente esta funcionalidade está parcialmente implementada, mas carece de mais testes de software para ser disponibilizada no plugin).
+%     O objetivo será mostrar resumos ao usuário do número de entidades, incluindo aquelas derivadas de relacionamentos N:N, bem como o total de relacionamentos.
+%     \item criar mais geradores \ac{sql}, aumentando assim o conjunto de plataformas que podem ser alvo (atualmente existe suporte a PostgreSQL e MySQL).
+%     \item implementar meios de personalização de coloração dos modelos conceitual (diagrama com a PlantUML), lógico (.html) e físico (\ac{sql}) gerados automaticamente. Atualmente a coloração é definida estaticamente nos geradores desenvolvidos, mas essa opção é algo que percebido como sugestão direta dos sujeitos dos experimentos.
+%     \item Disponibilizar a geração automática de diagramas de ocorrência para relacionamentos indicados na gramática.
+%     \item A geração de diagramas dinâmicos, possibilitando a modelagem de forma gráfica que gere nossa \ac{dsl} automaticamente, tornando assim nossa solução uma ferramenta de modelagem bidirecional.
+%     Atualmente temos como decisão de projeto utilizar o Sprotty\footnote{\url{https://github.com/eclipse/sprotty}} como framework para diagramação, substituindo a PlantUML Nos projetos relacionados que pretendemos dar continuidade. Isso acontece pelo Sprotty ter suporte total ao Xtext, possibilitando seu uso como backend (com requisições via Language Server Protocol - LSP) e Typescript  (um superset do Javascript com suporte a tipagem estática e OO) no frontend.
+    % \item Implementar técnicas de \ac{rte}, ou seja, métodos de engenharia reversa buscando maneiras de gerar os artefatos (modelos conceituais, lógicos e físicos) a partir de instruções \ac{sql}.
+    % \item Investigar uma possível integrações com frameworks \ac{orm} e linguagens de programação compatíveis.
+% \end{itemize}
 
 \begin{enumerate} [label=\roman*.]
     \item more \textbf{templates proposals}, especially for full templates (currently, there is only one available);
@@ -142,8 +143,10 @@ Among the main features we intend to add are:
     The objective will be to show the user summaries of the number of entities, including those derived from N:N relationships, as well as the total number of relationships;
     \item create \textbf{more \ac{sql} generators}, thus increasing the set of platforms that can be targeted (currently, we support PostgreSQL and MySQL);
     \item implement \textbf{customized coloring features} of the automatically generated conceptual (diagram with PlantUML), logical (.html), and physical (\ac{sql}) models. Currently, the coloring is defined statically in the developed generators, but this option is something that is perceived as a direct suggestion of the subjects of the experiments;
-    \item provide automatic \textbf{generation of occurrence diagrams} for relationships indicated in the models;
+    \item provide automatic generation of \textbf{occurrence diagrams} for indicated relationships in the models;
     \item the generation of \textbf{dynamic diagrams}, enabling the modeling in a graphical way that generates our \ac{dsl} automatically, thus making our solution a \textbf{bidirectional modeling tool}. We currently have the design decision to use Sprotty\footnote{Sprotty Framework: \url{https://github.com/eclipse/sprotty}} as a diagramming framework, replacing PlantUML in related projects that we intend to continue. It happens because Sprotty has full support for Xtext, allowing its use as a backend (with requests via Language Server Protocol - LSP) and Typescript (a Javascript superset with support for static typing and OO) on the frontend.
+    \item implement \ac{rte} techniques, \textit{i.e.} \textbf{reverse engineering} methods looking to generate artifacts (conceptual, logical and physical models) from \ac{sql} instructions.
+     \item investigate the possible \textbf{integration} with \textbf{\ac{orm} frameworks} and compatible programming languages.
 \end{enumerate}
 
 % Colocar como trabalho futuro
