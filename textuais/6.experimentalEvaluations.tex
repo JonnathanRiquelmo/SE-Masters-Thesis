@@ -87,25 +87,37 @@ However, the literature recommends alternative tests for samples equal to or gre
 For the effort, we chose the Kolmogorov-Smirnov test to verify normality and the Wilcoxon Signed-Rank test for paired samples to investigate the hypotheses using the time spent metric.
 In short, the Kolmogorov-Smirnov two-sample test is used to test the agreement between two cumulative distributions.
 The null hypothesis in this method states that there is no difference between the two distributions.
-A simplified version of the method is given in the Equation \ref{eq:KS} below:
+A simplified version of the method is given in the Equation \ref{eq:KS}:
 
 \begin{equation}
 \label{eq:KS}
-%\[ 
-D = Max|F_{n1}(X) - F_{n2}(X)|
-%\]
+    %\[ 
+    D = Max|F_{n1}(X) - F_{n2}(X)|
+    %\]
 \end{equation}
 
-Where \textbf{\textit{n1}} and \textbf{\textit{n2}} are the values observed in the distributions, respectively, and the \textbf{\textit{D}} represents the large maximum deviation indicating towards a difference between the two sample distributions. 
+Where \textit{n1} and \textit{n2} are the values observed in the distributions, respectively, and the \textbf{\textit{D}} represents the large maximum deviation indicating towards a difference between the two sample distributions. 
 
 Furthermore, the Wilcoxon Signed-Rank test for dependent samples compares a sample median against a hypothetical median.
-It can be expressed in a simplified form by the following Equation \ref{eq:WSR}:
+Initially, the hypothetical mean, $\mu_0$ , is subtracted from each data value. Then, the values are classified according to their absolute values.
+Next, the sum of the positive ranks $Sp$ and the sum of the negative ranks $Sn$ is calculated. 
+In the statistical test, $W_R$ is the minimum of $Sp$ and $Sn$. 
+With this, it is possible to calculate the mean and standard deviation of $W_R$ using the simplified version of the formulas shown below in Equations \ref{eq:WSR1} and \ref{eq:WSR2}, where $t$ represents the number of times the $i^th$ value occurs.
+Then, the \textit{z-value} is finally calculated using the Equation \ref{eq:WSR3}.
 
 \begin{equation}
-\label{eq:WSR}
-%\[ 
-Equacao - do - Wilcoxon
-%\]
+\label{eq:WSR1}
+   ^\mu W_R~=~\frac{n(n+1)}{4}
+\end{equation}
+
+\begin{equation}
+\label{eq:WSR2}
+    ^\sigma W_R~=~\frac{n(n+1)(2n+1)}{24}-\frac{\Sigma~t^3~-~\Sigma~t}{48}
+\end{equation}
+
+\begin{equation}
+\label{eq:WSR3}
+    Z_W~=~\frac{W_R~-~^\mu W_R}{^\sigma W_R}
 \end{equation}
 
 For the effectiveness tests, we have adopted the same statistical methods despite instead of using the time spent metric, another measure was necessary.
