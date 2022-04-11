@@ -44,7 +44,6 @@ Our main goal was to assess whether our textual approach could perform the user 
 We concluded that both approaches are similar, without a statistical difference or quality of use that proves significant among the subjects participating in the controlled experiments.
 %We came to the conclusion that both are similar, without a statistical difference or quality of use that proves to be truly significant among the set of subjects participating in controlled experiments.
 
-
 % Temos ainda outras expectativas em relação a ferramenta desenvolvida que vão além de verificar se é uma alternativa viável  e promover colaboração, em razão de ser código aberto, bem como atender às necessidades dos usuários.
 % Isto diz respeito a nossa vontade de avaliar se a abordagem textual pode ser de fato tão efetiva quanto a abordagem gráfica. 
 % Pretendemos realizar uma melhor análise a partir de uma possível futura inclusão da solução nas atividades realizadas durante a condução de uma classe de banco de dados, assim performando as atividades continuamente da mesma forma com que ferramentas gráficas são utilizadas.
@@ -61,6 +60,16 @@ We still intend to conduct a better analysis based on the possible inclusion of 
 In this way, as we initially observed (Section \ref{sec:intro_rationale}), it will be possible to recheck some advantages and assess whether others not previously described could be added to this benefits set.
 % Among the initial assumptions we have are that the textual approach can bring great advantages in modeling speed when users are more familiar with the language, can provide easier integration with other languages, offer superior formatting quality, better version control and platform independence (concerning operating systems).
 Among the initial assumptions, we can assert that the textual approach can: bring good advantages in modeling speed when users are more familiar with the language; provide easier integration with other languages; offer superior formatting quality; better version control, and; platform independence (concerning operating systems).
+
+% Por que usar Desktop e não Web? Incluir e responder esse questionamento. (JULIANO)
+% Sabemos que a solução proposta utiliza uma perspectiva de plugin no momento.
+% Isso se dá pela necessidade da construção ágil de uma infraestrutura completa que contemple desde parser, linker, typechecker até mesmo o compilador completo da linguagem criada.
+% Não existe na atualidade frameworks como o Xtext que disponibilizem isso diretamente, de forma especializada, em um contexto web.
+% Contudo, apesar da limitação imposta por um plugin Eclipse, i.e. funciona apenas localmente, o Xtext fornece suporte completo a LSP (Language Server Protocol), o que abre a possibilidade concreta da migração futura da nossa solução para uma plataforma web, capaz de ser executada diretamente em um navegador. 
+We know that the proposed solution uses a plugin perspective at the moment.
+This is due to the need for the agile construction of a full infrastructure that includes from parser, linker, typechecker, to the compiler of the created language.
+There are currently no Xtext-like framework that make this available directly in a specialized web context.
+However, despite the limitation imposed by an Eclipse plugin,\textit{ i.e.} works only locally, Xtext provides full \ac{lsp} support, which opens up the concrete possibility of future migration of our solution to a web platform capable of running directly in a browser.
 
 %--------------------------------------------------------------------
 \section{Publications}
@@ -102,7 +111,7 @@ As follows, we list some publications that originated in the context of our rese
 \\~\\
 \textbf{To be Submitted} 
     \begin{enumerate}[label=\roman*.]
-        \item We intend to write a complete paper to submit to a not yet defined journal.
+        \item We intend to write a complete paper and submit to \textbf{SSM - Software and System Modeling}.
         The general idea will be to condense all previous works already published, reporting the research story and comparing the results including the last controlled experiment.
     \end{enumerate} 
 % Resgatando trabalhos prévios publicados, contando história da pesquisa, ao mesmo tempo mencionando os resultados do ultimo experimento em comparação com os experimentos anteriores.
@@ -145,7 +154,7 @@ Among the main features we intend to add are:
     \item create \textbf{more \ac{sql} generators}, thus increasing the set of platforms that can be targeted (currently, we support PostgreSQL and MySQL);
     \item implement \textbf{customized coloring features} of the automatically generated conceptual (diagram with PlantUML), logical (.html), and physical (\ac{sql}) models. Currently, the coloring is defined statically in the developed generators, but this option is something that is perceived as a direct suggestion of the subjects of the experiments;
     \item provide automatic generation of \textbf{occurrence diagrams} for indicated relationships in the models;
-    \item the generation of \textbf{dynamic diagrams}, enabling the modeling in a graphical way that generates our \ac{dsl} automatically, thus making our solution a \textbf{bidirectional modeling tool}. We currently have the design decision to use Sprotty\footnote{Sprotty Framework: \url{https://github.com/eclipse/sprotty}} as a diagramming framework, replacing PlantUML in related projects that we intend to continue. It happens because Sprotty has full support for Xtext, allowing its use as a backend (with requests via Language Server Protocol - LSP) and Typescript (a Javascript superset with support for static typing and OO) on the frontend.
+    \item the generation of \textbf{dynamic diagrams}, enabling the modeling in a graphical way that generates our \ac{dsl} automatically, thus making our solution a \textbf{bidirectional modeling tool}. We currently have the design decision to use Sprotty\footnote{Sprotty Framework: \url{https://github.com/eclipse/sprotty}} as a diagramming framework, replacing PlantUML in related projects that we intend to continue. It happens because Sprotty has full support for Xtext, allowing its use as a backend (with requests via \ac{lsp}) and Typescript (a Javascript superset with support for static typing and OO) on the frontend.
     \item implement \ac{rte} techniques, \textit{i.e.} \textbf{reverse engineering} methods looking to generate artifacts (conceptual, logical and physical models) from \ac{sql} instructions.
      \item investigate the possible \textbf{integration} with \textbf{\ac{orm} frameworks} and compatible programming languages.
 \end{enumerate}
