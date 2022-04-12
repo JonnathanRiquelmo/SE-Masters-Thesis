@@ -194,7 +194,7 @@ Therefore, there is complete freedom to define the number of quality assessment 
 % Os critérios de qualidade visam quantificar a relevância para que seja possível realizar uma comparação entre os estudos selecionados. 
 % Foi definido também uma pontuação para ser atribuída a partir dos critérios de qualidade. 
 % Para a definição das pontuações foram estabelecidas siglas para as representar.
-We have defined three (3) quality assessment criteria to assess primary studies approved after applying the selection criteria.
+We have defined three (3) quality assessment criteria to rate primary studies approved after applying the selection criteria.
 The quality assessment criteria aim to quantify the relevance so that it is possible to realize a comparison among the selected studies.
 A score was also defined to be assigned based on the quality criteria.
 We have established acronyms to define the scores to represent them.
@@ -322,7 +322,7 @@ Thus, considering the minimum score restriction, we have reached the final numbe
 % A menor pontuação dos artigos aceitos foi de 1,0 com três (3) artigos, enquanto apenas um estudo alcançou a nota máxima 3,0. 
 % A Tabela \ref{tab:QualityEval} resume os resultados obtidos na avaliação da qualidade.
 We have evaluated the primary studies based on the quality criteria defined in Section \ref{ssec_slm:qualityCriteria}.
-The lowest score of accepted papers was 1.0 with three (3) articles, while only one study reached the maximum score of 3.0.
+The lowest score of accepted papers was 1.0 with three (3) articles, while only one study reached 3.0, the maximum score.
 Table \ref{tab:QualityEval} summarizes the results obtained in the quality assessment criteria.
 
 \rowcolors{1}{gray!15}{white}
@@ -370,7 +370,7 @@ Table \ref{tab:QualityEval} summarizes the results obtained in the quality asses
 Regarding \textbf{RQ1} (state of the art of mechanisms for transforming conceptual models), we identified as the most significant results three studies that are related~\cite{Ristic:2016, Dimitrieski:2015, Dimitrieski:2014}.
 These studies present research that generated the \textit{Multi-paradigm System Modeling Tool} (MIST), which uses bidirectional \ac{dsl} for conceptual modeling of \acp{db}.
 Furthermore, the proposal also argues using heuristics for transformations and describes them at a high level.
-It is relevant to point out that the public repository with the project code\footnote{MIST repository: \urel{https://github.com/vdimitrieski/mist}} presents the metamodel of the \ac{dsl} language as far as the JAVA implementation the reported heuristics but does not have the code for the proposed inverse transformation (from graphical models or \ac{sql} to the \ac{dsl}).
+It is relevant to point out that the public repository with the project code\footnote{MIST repository: \url{https://github.com/vdimitrieski/mist}} presents the metamodel of the \ac{dsl} language as far as the Java implementation, but does not have the code for the proposed inverse transformation (from graphical models or \ac{sql} to the \ac{dsl}).
 % As the main deficiency pointed out is the fact of the change in the framework initially used during development due to the discontinuation of the project that maintained it.
 As the main drawback pointed out, we highlighted the framework change initially used during development due to the project discontinuation that maintained it.
 For this reason, the authors claim to have adopted Xtext as the final implementation framework.
@@ -388,7 +388,7 @@ However, this work reports a lack of a query language (extended SQL) that covers
 % A principal deficiência apontada se refere aos dados subjacentes unificados, que podem ser redundantes em alguns casos.
 % O segundo define uma metodologia de design para bancos de dados relacionais em grande escala usando uma abordagem EER, porém a notação utilizada (linguagem) não é implementada.
 % Apesar de estar focado em bancos de dados de larga escala, os autores apontam que o estágio de normalização dos dados proposto na metodologia pode ser extenso e complexo para codificação.
-As more significant works in the final set (score >= 2.0), we cite two works that are older, from~\cite{Rosenthal:1994, Teorey:1986}.
+As more significant works in the final set (score >= 2.0), we cite two older works, from~\cite{Rosenthal:1994, Teorey:1986}.
 The first presents a prototype that is actually a toolchain.
 There is a description of the steps for transforming relational database models.
 The principal lack indicated refers to the underlying unified data, which can be redundant in some cases.
@@ -447,7 +447,7 @@ In general, all other studies indicate the lack of an evaluation of their propos
 % Quando consideramos estudos e projetos citados em estudos secundários, e similares a nossa proposta, podemos mencionar o levantamento apresentado no trabalho de ~\cite{eres:2021}.
 % Este estudo é uma revisão multivocal de literatura, ou seja, uma forma de mapeamento sistemático de literatura que inclui a literatura cinza.
 Considering solutions and projects cited in secondary studies, and similar to our proposal, we can mention the survey presented in the work of ~\cite{eres:2021}.
-This study is a Multivocal Literature Review, that is, a form of Systematic Literature Mapping that includes gray literature.
+This study is a Multivocal Literature Review, \textit{i.e.} a form of Systematic Literature Mapping that includes gray literature.
 
 % Este estudo abrange um conjunto final de dez (10) estudos primários focados em \acp{dsl} e identifica 55 ferramentas já aplicadas na indústria e academia para modelagem \ac{er} em nível conceitual, lógico e físico. 
 This study covers a final set of ten (10) primary studies focused on \acp{dsl}, which identifies fifty-five (55) tools already applied in industry and academia for modeling \ac{er} at a conceptual, logical, and physical level.
@@ -473,7 +473,7 @@ Furthermore, we also added the \textit{bigER} tool, a recently released plugin f
     Web-based &  &  & \checkmark & \checkmark & \checkmark &  \\
     LSP Implementation & \checkmark & \checkmark &  &  &  & \checkmark \\
     Open Source & \checkmark & \checkmark &  &  & \checkmark & \checkmark \\
-    Free of Charge & \checkmark & \checkmark & partially & partially & \checkmark & \checkmark \\
+    Free of Charge & \checkmark & \checkmark & \pm & \pm & \checkmark & \checkmark \\
     Textual Editor & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
     Model Validation & \checkmark &  &  &  &  & \checkmark \\
     Diagram View & \checkmark &  & \checkmark & \checkmark & \checkmark & \checkmark \\
@@ -484,7 +484,7 @@ Furthermore, we also added the \textit{bigER} tool, a recently released plugin f
 \begin{tablenotes}
     \scriptsize
     \centering
-    \item \textit{Legend: IDE = Integrated Development Environment, LSP = Language Server Protocol.}
+    \item \textit{Legend: IDE = Integrated Development Environment, LSP = Language Server Protocol, \pm = Partially.}
 \end{tablenotes}
     \fonte{Author.}
 \end{table}
@@ -540,7 +540,7 @@ Finally, the \textit{bigER} tool offers features for flexibly specifying and vis
 %Finally, the \textit{bigER} tool offers features to flexibly specify and visualize \ac{er} conceptual data models.
 Within the \textit{VS Code} text editor, this solution allows modeling through its \ac{dsl} to specify \ac{er} elements.
 It also offers an interactive visualization for displaying \ac{er} diagrams and manages to generate \ac{sql} code in a generic format.
-This solution still stands out for being one of the few tools to incorporate the \ac{lsp}. Besides, being the only one distributed through the widely known \textit{VS Code} ecosystem.
+This solution still stands out for being the only tool to incorporate the \ac{lsp} implementation use \textit{de facto}. Furthermore, being the only one distributed through the widely known \textit{VS Code} ecosystem.
 %This solution still stands out for being one of the few tools to incorporate the Language Server Protocol (LSP), in addition to being the only one to be distributed through the ecosystem of the widely known \textit{VS Code}.
 
 % De uma forma geral, quando comparadas todas as ferramentas podemos verificar que nossa proposta atende as funcionalidades importantes. 
@@ -552,7 +552,7 @@ Overall we can verify that our proposal meets the relevant functionalities when 
 Perhaps the main positive difference concerning most of the other competing proposals is that we carried out experimental evaluations to assess the conceived idea of the project. In addition, the grammar is relatively simple, and the \ac{sql} code generation is specific platforms directed.
 %Perhaps the main positive difference in relation to most of the other competing proposals is the fact that we carried out experimental evaluations to validate the conceived idea of the project, in addition to the grammar being relatively simpler and the \ac{sql} code generation being directed to specific platforms.
 The main weakness currently observed is the lack of a web-based alternative, \textit{i.e.} a version of ERtext that can run directly in web browsers.
-However, thanks to the \ac{lsp} implementation provided by Xtext, migrating to a web application will be a relatively easy task than starting from scratch.
+However, thanks to the \ac{lsp} implementation provided by Xtext, migrating to a web application will be a relatively easier task than starting from scratch.
 
 %------------------------------------------------------------------------------
 \section{Chapter Lessons} \label{sec_slm:lessons}
@@ -589,7 +589,7 @@ Therefore, we can highlight that there is a previous planning that is already be
 % Finalmente, podemos ainda destacar que foi apresentada uma tabela com propostas e ferramentas da academia e indústria que são similares a solução que desenvolvemos.
 % De uma forma geral, podemos afirmar que a ERtext atinge a maioria das principais caracteristicas esperadas de soluções desse tipo, com o diferencial de ter sido extensivamente avaliada com a execução de experimentos empíricos.
 % Ainda observando estes trabalhos relacionados, é possível inferir que um passo natural será a expansão do nosso projeto para dar suporte não apenas ao plugin que pode ser distribuído no ecosistema Eclipse, mas também a migração para o ecosistema VS Code e sistemas com base web.
-Finally, we can also highlight that the table presented proposals and tools from academia and industry are similar to our solution developed.
+Finally, we can also highlight the table that presented proposals and tools from academia and industry similar to our solution developed.
 %Finally, we can also highlight that a table was presented with proposals and tools from academia and industry that are similar to the solution we developed.
 In general, we can say that ERtext achieves most of the main characteristics expected from solutions of this type, with the differential of having been extensively evaluated with the execution of empirical experiments.
 Still analyzing these related work, we infer that a natural step of our project expansion will be supporting not only the plugin distributed into the Eclipse ecosystem albeit could implement the migration to the \textit{VS Code} ecosystem and web-based systems.

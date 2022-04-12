@@ -346,7 +346,7 @@ For example, we have manually needed and implemented the following aspects, all 
 % Esta versão será irá para a última avaliação experimental que será planejada para avaliar não só a \ac{dsl} como também os artefatos que podem ser produzidos por ela, bem como sua usabilidade.
 % A Figura \ref{fig:stableVersion} apresenta um fragmento visual da ferramenta em uso.
 The source code of the stable version of the produced modeling tool is available in a public repository on GitHub\footnote{Repository: \url{https://github.com/ProjetoDSL/ERDSL}}.
-This version will go to the last experimental evaluation which will be designed to evaluate not only the \ac{dsl} but also the artifacts that can be produced by it, as well as its usability.
+This version gone to the last experimental evaluation which was designed to evaluate not only the \ac{dsl} but also the artifacts that can be produced by it, as well as its usability.
 Figure \ref{fig:stableVersion} presents a visual fragment of the tool in use.
 
 \begin{figure} [!htb]
@@ -389,7 +389,7 @@ This interface composes all the extension interfaces for \texttt {IFileSystemAcc
 
 % Para registro, nossos geradores especializados utilizam o padrão de projeto Template Method na sua implementação.
 % O Template Method é um padrão de projeto comportamental, que define o esqueleto de um algoritmo em uma superclasse, deixando as subclasses sobrescreverem etapas específicas do algoritmo sem modificar sua estrutura.
-For the sake of the record, our specialized generators use the Template Method~\cite{GOF:95} design pattern in their implementation.
+For the sake of the record, our specialized generators use the Template Method design pattern~\cite{GOF:95} in their implementation.
 % For the record, our specialized generators use the Template Method design pattern~\cite{GOF:95} in their implementation.
 The Template Method is a behavioral design pattern that defines a structure of an algorithm in a superclass, letting the subclasses override specific steps of the algorithm without modifying its structure.
 
@@ -471,13 +471,13 @@ As stated earlier, the tool calls the generators each time that saves the model.
 % As stated earlier, the generators are called each time the model is saved.
 If the tool considers the model valid according to the \ac{dsl} syntax, it dispatches the in-memory Ecore model to the main generator. Then forwards it to the other specialized generators, thus producing the diagram (conceptual model), \ac{html} (logical model), and the \ac{sql} files (physical model).
 % If the model is considered valid according to the \ac{dsl} syntax, the in-memory Ecore model is dispatched to the main generator, which then forwards it to the other specialized generators, thus producing the diagram (conceptual model), \ac{html} (logical model) and the \ac{sql} files (physical model).
-In these generators, the tool generates the target files in a folder called ``src-gen'' at the root of the project folder.
+In these generators, the tool generates the target files in a folder called ``\texttt{src-gen}'' at the root of the project folder.
 
 
 % A representação da herança entre a entidade User e as entidades People e Organization é apresentado na Figura \ref{fig:Diagram_Generalization}. 
 % Ao utilizar a PlantUML a notação UML para diagramas de classe é usada.
 % O equivalente gerado no modelo lógico é apresentado na Figura \ref{fig:Logical_Generalization}.
-Figure \ref{fig:Diagram_Generalization} presents the representation of the inheritance between the \texttt{User} entity and the \texttt{People} and \texttt{Organization} entities.
+Figure \ref{fig:Diagram_Generalization} display the representation of the inheritance between the \texttt{User} entity and the \texttt{People} and \texttt{Organization} entities.
 The tool uses the UML notation for class diagrams when using PlantUML.
 Figure \ref{fig:Logical_Generalization} shows the equivalent generated in the logical model.
 % The representation of the inheritance among the \texttt{User} entity, the \texttt{People}, and \texttt{Organization} entities is presented in Figure \ref{fig:Diagram_Generalization}.
@@ -619,7 +619,7 @@ We tried to implement ways to generate the correct order, despite due to the com
 % Neste capítulo foram expostos os requisitos, as decisões de projeto e a arquitetura da \ac{dsl} proposta para a solução desenvolvida. 
 % Também é apresentada uma visão geral da versão estável que será testada na última avaliação experimental, bem como um exemplo de uso foi descrito, com os respectivos artefatos produzidos pelos geradores sendo exibidos.
 In this chapter, we have laid out the requirements, design decisions, and architecture for the developed solution.
-We also have presented an overview of the stable version that will test in the next experimental evaluation. 
+We also presented an overview of the stable version that was tested in subsequent experimental evaluations.
 Furthermore, we described an example of use with the respective artifacts produced by the generators.
 % In this chapter, the requirements, design decisions and architecture of the \ac{dsl} proposal for the developed solution were exposed.
 % An overview of the stable version that will be tested in the last experimental evaluation is also presented, as well as an example of use was described, with the respective artifacts produced by the generators being displayed.
@@ -633,7 +633,7 @@ Through interactions with these developers, our proposal matured,  even as we ac
 % Finalmente, para que este objetivo seja alcançado, é imprescindível que a avaliação experimental seja devidamente planeada, executada e analisada tendo em conta as funcionalidades que nos propomos oferecer.
 We hope that the developed modeling tool can collaborate with the teaching-learning process, providing an easy-to-understand grammar and ease of use facilitated by the Eclipse \ac{ide} integration.
 % We hope that the developed modeling tool can collaborate with the teaching-learning process, providing an easy-to-understand grammar and ease of use facilitated by the integration with the Eclipse \ac{ide}.
-Finally, to achieve this goal, the experimental evaluation must be duly planned, executed, and analyzed, taking into account the features that we propose to offer.
+Finally, to achieve this objective, the experimental evaluations were duly planned, executed and analyzed, taking into account the characteristics that we proposed to offer.
 % Finally, in order to achieve this goal, it is imperative that the experimental evaluation be properly planned, executed, and analyzed taking into account the features that we propose to offer.
 
 
