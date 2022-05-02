@@ -80,7 +80,7 @@ The solution needs to perform diagram generation based on the conceptual model.
 %------------------------------------------------------------------------------
 
 % Nesta seção são descritas as decisões de projeto para criar a \ac{DSL} textual que suporte todos os requisitos apresentados na Seção \ref{sec:reqDSL}.
-This section describes the design decisions to create the textual \ac{dsl} that supports all the requirements presented in Section \ref{ssec_tool:langRequirements}.
+This section describes the Design Decisions (DD) to create the textual \ac{dsl} that supports all the requirements presented in Section \ref{ssec_tool:langRequirements}.
 
 % Para cada decisão de projeto são indicados os seus requisitos associados.
 For each design decision, we have indicated its associated requirements.
@@ -89,13 +89,13 @@ For each design decision, we have indicated its associated requirements.
     % \item\textit{\textbf{DP1. A solução deve adotar um \ac{LW} open source no auxílio da implementação da \ac{dsl} textual (RQ1, RQ2).}} 
     % Mediante a investigação conduzida no estudo previamente citado~\cite{Lopes:2019}, foi selecionado o \ac{lw} Xtext para o desenvolvimento da proposta por ser um framework open source focado no desenvolvimento de \acp{dsl} textuais, fornecendo toda a infraestrutura necessária. 
     % Além disto, o Xtext é uma ferramenta com alto nível de maturidade, documentação detalhada e uma comunidade extremamente ativa. 
-    \item\textit{\textbf{DP1. The solution should adopt an open-source \ac{lw} to help implement the textual \ac{dsl} (RQ1, RQ2).}}
+    \item\textit{\textbf{DD1. The solution should adopt an open-source \ac{lw} to help implement the textual \ac{dsl} (RQ1, RQ2).}}
      Through the investigation conducted in the previously cited study~\cite{Lopes:2019}, we have selected \ac{lw} Xtext for the development of the proposal as it is an open-source framework focused on the development of textual \acp{dsl}, providing all the necessary infrastructure.
      Furthermore, Xtext is a tool with a high level of maturity, detailed documentation and an extremely active community.
     
     % \item\textit{\textbf{DP2. A \ac{DSL} deve fornecer uma representação textual que seja equivalente ao modelo \ac{ER} gráfico usualmente utilizado (RQ3, RQ4).}} 
     % Para os requisitos cobertos por esta decisão de projeto foi adotada a estratégia de se realizar uma análise nas ferramentas averiguadas no mapeamento descrito no \autoref{mapeamentoLiteratura}, bem como no livro referência de~\citeonline{Heuser:2009}.
-    \item\textit{\textbf{DP2. The \ac{dsl} must provide a textual representation equivalent to the commonly used graphical \ac{er} models (RQ3, RQ4).}}
+    \item\textit{\textbf{DD2. The \ac{dsl} must provide a textual representation equivalent to the commonly used graphical \ac{er} models (RQ3, RQ4).}}
     For the requirements covered by this design decision, we have adopted the strategy of performing an analysis in the tools verified in the mapping described in~\cite{Lopes:2019}, as well as in the reference book by~\cite{Heuser:2009}.
     
     % \item\textit{\textbf{DP3. A solução deve realizar a transformação entre os modelos (RQ5).}} 
@@ -104,7 +104,7 @@ For each design decision, we have indicated its associated requirements.
     % Esses conceitos também são chamados de gráficos de objeto de documento, do inglês \ac{DOM}, modelo semântico ou simplesmente modelo. 
     % Desta forma, existe a representação do modelo da gramática na forma de um metamodelo central no núcleo do \ac{EMF}, chamado de modelo \textit{Ecore}. 
     % Tendo o \textit{Ecore} da \ac{DSL} proposta como uma representação, é possível então aplicar regras de transformação, gerando assim outros modelos.
-    \item\textit{\textbf{DP3. The solution must perform the transformation between models (RQ5).}}
+    \item\textit{\textbf{DD3. The solution must perform the transformation between models (RQ5).}}
     Xtext uses \ac{emf} templates as the in-memory representation of any parsed text file.
     This in-memory object graph is called an \ac{ast}.
     These concepts are also called \ac{dom}, semantic model, or simply model.
@@ -114,7 +114,7 @@ For each design decision, we have indicated its associated requirements.
     
     % \item\textit{\textbf{DP4. A solução deve prover a integração entre a \ac{DSL} e outras tecnologias (RQ6).}} 
     % A solução deve permitir a realização da exportação dos modelos construídos para um formato de instruções \ac{SQL}, representando assim o modelo físico. % Inicialmente, essa integração será realizada para PostgreSQL e MySQL.
-    \item\textit{\textbf{DP4. The solution must provide the integration between the \ac{dsl} and other technologies (RQ6).}}
+    \item\textit{\textbf{DD4. The solution must provide the integration between the \ac{dsl} and other technologies (RQ6).}}
     The solution should allow the export of the built models to an \ac{sql} statement format, thus representing the physical model.
     % Initially, this integration will be performed for PostgreSQL and MySQL.
     % Initially, we intend to perform this integration for PostgreSQL and MySQL.
@@ -124,7 +124,7 @@ For each design decision, we have indicated its associated requirements.
     % A solução deve permitir a visualização dos modelos construídos para um formato gráfico, representando assim o modelo conceitual. 
     % Inicialmente, essa integração será realizada utilizando o PlantUml.
     % O PlantUML é uma ferramenta de código aberto que permite a criação de diagramas a partir de uma linguagem de texto simples.
-    \item\textit{\textbf{DP5. The solution should provide the generation and visualization of diagrams of the models built with \ac{dsl} (RQ7).}}
+    \item\textit{\textbf{DD5. The solution should provide the generation and visualization of diagrams of the models built with \ac{dsl} (RQ7).}}
     The solution must allow the visualization of data models built using a graphical format and representing the conceptual model.
     % Initially, we intend to perform this integration using PlantUML.
     Initially we perform this integration using PlantUML.
