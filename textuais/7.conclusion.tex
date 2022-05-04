@@ -160,7 +160,9 @@ Among the main features we intend to add are:
     \item provide automatic generation of \textbf{occurrence diagrams} for indicated relationships in the models;
     \item the generation of \textbf{dynamic diagrams} enables the modeling in a graphical way that generates our \ac{dsl} automatically, thus making our solution a \textbf{bidirectional modeling tool}. We currently have the design decision to use Sprotty\footnote{Sprotty Framework: \url{https://github.com/eclipse/sprotty}} as a diagramming framework, replacing PlantUML in related projects that we intend to continue. It happens because Sprotty has full support for Xtext, allowing its use as a backend (with requests via \ac{lsp}) and Typescript (a Javascript superset with support for static typing and OO) on the frontend;
     \item implement \ac{rte} techniques, \textit{i.e.}, \textbf{reverse engineering} methods looking to generate artifacts (conceptual, logical, and physical models) from \ac{sql} instructions;
-     \item investigate the possible \textbf{integration} with \textbf{\ac{orm} frameworks} and compatible programming languages.
+    \item investigate the possible \textbf{integration} with \textbf{\ac{orm} frameworks} and compatible programming languages;
+    \item Provide a semi-automatic process for transforming between models, allowing users to determine adjustments;
+    \item Generators for NoSQL database models.
 \end{enumerate}
 
 
