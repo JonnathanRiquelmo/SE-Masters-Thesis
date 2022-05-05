@@ -332,7 +332,7 @@ Table \ref{tab:QualityEval} summarizes the results obtained in the quality asses
 \centering
 \caption{Quality assessment results.}
 \label{tab:QualityEval}
-\begin{tabular}{lcccccccr}
+\begin{tabular}{l|cccccccr}
 \bottomrule
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{1}{c}{\textbf{Studies}} &
@@ -445,7 +445,28 @@ In general, all other studies indicate the lack of an evaluation of their propos
 \section{Related Work} \label{sec_slm:relatedWork}
 %------------------------------------------------------------------------------
 
-In addition, we also bring a set of tools similar to our proposal.
+
+%  citar o trabalho de 1989
+%  citar o trabalho 2019
+%  Na tabela pode ser incluido o de 2019 como uma nova abordagem  
+
+% Em geral abordagem textual é discutida em trabalhos diversos que investigam a modelagem de bancos de dados já há muitos anos.
+In general, the textual approach has been discussed in several works that have investigated database modeling for many years.
+% Por exemplo, podemos citar o trabalho de \cite{Malhotra:1989} que apresenta uma sintaxe para uma linguagem de programação \ac{er} integrada. 
+% Os problemas que surgem quando uma linguagem de consulta é incorporada em uma linguagem de programação de uso geral também são discutidos, apesar de não necessariamente ser apresentada a implementação da linguagem.
+For example, we can cite the work of ~\cite{Malhotra:1989} which presents a syntax for an integrated \ac{er} programming language.
+Problems that arise when a query language is incorporated into a general-purpose programming language are also discussed, although the implementation of the language is not necessarily presented.
+
+% Outro caso é, mais recente, é o estudo de \cite{Hossain:2019}, onde uma linguagem natural controlada para especificar e verbalizar modelos de relacionamento de entidade (ER) é apresentada.
+% A idéia é não apenas resolver o problema de verbalização para esses modelos, mas também fornecer os benefícios de verificação e validação automáticas e round-trip semântico para tornar o processo de comunicação transparente entre os especialistas do domínio e engenheiros do conhecimento.
+Another more recent case is the study by ~\cite{Hossain:2019}, where a controlled natural language for specifying and verbalizing entity relationship (ER) models is presented.
+The idea is not only to solve the verbalization problem for these models, but also to provide the benefits of automatic verification and validation and semantic round-trip to make the communication process transparent between domain experts and knowledge engineers.
+
+% Contudo, apesar da proposta apresentar a especificação em Prolog da gramática que define a linguagem natural controlada, maiores implementações de uso são desconhecidas.
+% Dito isto, partimos para uma comparação mais prática com um conjunto de ferramentas já implementas e que utilizem abordagens similares a nossa.
+However, although a grammar specification that defines the controlled natural language made in Prolog is presented, further implementations of usage are unknown.
+Having said that, we start with a more practical comparison with a set of tools already implemented and that use similar approaches to ours.
+
 % Quando consideramos estudos e projetos citados em estudos secundários, e similares a nossa proposta, podemos mencionar o levantamento apresentado no trabalho de ~\cite{eres:2021}.
 % Este estudo é uma revisão multivocal de literatura, ou seja, uma forma de mapeamento sistemático de literatura que inclui a literatura cinza.
 Considering solutions and projects cited in secondary studies, and similar to our proposal, we can mention the survey presented in the work of ~\cite{eres:2021}.
