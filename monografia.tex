@@ -622,7 +622,9 @@ module minimum width=1.5cm, module minimum height=1.0cm,arrow tip=to,uniform con
 % Folha de aprovação [OBRIGATÓRIO]
 % -----------------------------------------------
 % Veja alguns detalhes no arquivo.
-\input{pretextuais/folhadeaprovacao}
+% \input{pretextuais/folhadeaprovacao}
+\includepdf[pages=-,width=1.2\textwidth]{pretextuais/FolhaAprovacaoAssinada.pdf}
+\cleardoublepage
 
 % -----------------------------------------------
 % Dedicatória [OPCIONAL]
@@ -717,16 +719,11 @@ module minimum width=1.5cm, module minimum height=1.0cm,arrow tip=to,uniform con
 % Você pode dividir o seu texto em vários arquivos. Por exemplo, um para cada seção principal do
 % trabalho: introducao.tex, relacionados.tex, metodologia.tex, experimentos.tex, conclusao.tex.
 \input{textuais/1.introduction} % [OBRIGATORIO]
-%\part{Revisão de Literatura} % Pode-se usar partes para organizar os capítulos
-%\input{textuais/desenvolvimento} % [OBRIGATORIO]
-%\part{Resultados}
-%\input{textuais/outrospontos} % Outro capítulo
-%\bookmarksetup{startatroot} % Usar se o próximo capítulo não pertencer à parte anterior e não existir uma parte nova
-\input{textuais/2.methodology}
-\input{textuais/3.background}
-\input{textuais/4.slm}
-\input{textuais/5.ertext}
-\input{textuais/6.experimentalEvaluations}
+% \input{textuais/2.methodology}
+% \input{textuais/3.background}
+% \input{textuais/4.slm}
+% \input{textuais/5.ertext}
+% \input{textuais/6.experimentalEvaluations}
 \input{textuais/7.conclusion} % [OBRIGATORIO]
 
 % +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
