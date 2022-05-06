@@ -1,0 +1,103 @@
+%PDF-1.3
+1 0 obj
+<< /Type /Catalog
+/Outlines 2 0 R
+/Pages 3 0 R >>
+endobj
+2 0 obj
+<< /Type /Outlines /Count 0 >>
+endobj
+3 0 obj
+<< /Type /Pages
+/Kids [6 0 R
+]
+/Count 1
+/Resources <<
+/ProcSet 4 0 R
+/Font << 
+/F1 8 0 R
+/F2 9 0 R
+>>
+>>
+/MediaBox [0.000 0.000 595.280 841.890]
+ >>
+endobj
+4 0 obj
+[/PDF /Text ]
+endobj
+5 0 obj
+<<
+/Creator (DOMPDF)
+/CreationDate (D:20220505172510-03'00')
+/ModDate (D:20220505172510-03'00')
+>>
+endobj
+6 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Length 1403 >>
+stream
+
+0.000 0.000 0.000 rg
+BT 102.886 551.995 Td /F1 12.0 Tf  [(Ficha catalográfica elaborada automaticamente com os dados fornecidos)] TJ ET
+BT 159.244 537.343 Td /F1 12.0 Tf  [(pelo\(a\) autor\(a\) através do Módulo de Biblioteca do )] TJ ET
+BT 132.586 522.691 Td /F1 12.0 Tf  [(Sistema GURI \(Gestão Unificada de Recursos Institucionais\) .)] TJ ET
+0.000 0.000 0.000 RG
+0.75 w 0 J [  ] 0 d
+34.391 266.485 526.499 240.901 re S
+BT 95.441 472.385 Td /F2 12.0 Tf  [(Frescura, Jonnathan Riquelmo Lopes)] TJ ET
+BT 95.441 458.765 Td /F2 12.0 Tf  [(   ERtext: an approach for designing relational databases )] TJ ET
+BT 95.441 446.314 Td /F2 12.0 Tf  [(based on a textual approach for conceptual modeling / )] TJ ET
+BT 95.441 433.084 Td /F2 12.0 Tf  [(Jonnathan Riquelmo Lopes Frescura.)] TJ ET
+BT 95.441 418.684 Td /F2 12.0 Tf  [(   133 p.)] TJ ET
+BT 95.441 390.664 Td /F2 12.0 Tf  [(   Dissertação\(Mestrado\)-- Universidade Federal do Pampa, )] TJ ET
+BT 95.441 377.434 Td /F2 12.0 Tf  [(MESTRADO EM ENGENHARIA DE SOFTWARE, 2022.)] TJ ET
+BT 95.441 363.034 Td /F2 12.0 Tf  [(   "Orientação: Maicon Bernardino da Silveira".)] TJ ET
+BT 95.441 335.014 Td /F2 12.0 Tf  [(   1. Database Design and Modeling. 2. Conceptual Modeling. )] TJ ET
+BT 527.441 335.014 Td /F2 12.0 Tf  [(3. )] TJ ET
+BT 95.441 322.564 Td /F2 12.0 Tf  [(Domain-Specic Language. I. Título.)] TJ ET
+BT 44.516 473.429 Td /F2 12.0 Tf  [(F884e)] TJ ET
+endstream
+endobj
+8 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+>>
+endobj
+9 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F2
+/BaseFont /Courier
+/Encoding /WinAnsiEncoding
+>>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000008 00000 n 
+0000000073 00000 n 
+0000000119 00000 n 
+0000000283 00000 n 
+0000000312 00000 n 
+0000000426 00000 n 
+0000000489 00000 n 
+0000001944 00000 n 
+0000002051 00000 n 
+trailer
+<<
+/Size 10
+/Root 1 0 R
+/Info 5 0 R
+>>
+startxref
+2156
+%%EOF

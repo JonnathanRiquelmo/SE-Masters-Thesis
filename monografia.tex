@@ -277,8 +277,8 @@ module minimum width=1.5cm, module minimum height=1.0cm,arrow tip=to,uniform con
   %pdfproducer={LaTeX with abnTeX2},     % producer of the document
   pdfcreator={\@author},
   colorlinks=true,           % false: boxed links; true: colored links
-  linkcolor=blue,            % color of internal links
-  citecolor=blue,            % color of links to bibliography
+  linkcolor=black,            % color of internal links
+  citecolor=black,            % color of links to bibliography
   filecolor=black,         % color of file links
   urlcolor=black
 }
@@ -622,7 +622,11 @@ module minimum width=1.5cm, module minimum height=1.0cm,arrow tip=to,uniform con
 % Folha de aprovação [OBRIGATÓRIO]
 % -----------------------------------------------
 % Veja alguns detalhes no arquivo.
-% \input{pretextuais/folhadeaprovacao}
+% \input{pretextuais/folhadeaprovacao}s
+
+\includepdf[pages=-]{pretextuais/FichaCatalografica2Alt.pdf}
+\cleardoublepage
+
 \includepdf[pages=-,width=1.2\textwidth]{pretextuais/FolhaAprovacaoAssinada.pdf}
 \cleardoublepage
 
@@ -736,6 +740,7 @@ module minimum width=1.5cm, module minimum height=1.0cm,arrow tip=to,uniform con
 % -----------------------------------------------
 % Nome(s) do(s) arquivo(s) .bib (sem a extensão)
 \renewcommand{\bibname}{References}
+\bibliographystyle{abntex2-cite-min}
 \bibliography{bibliografia,abntex2-modelo-references}
 
 % -----------------------------------------------
